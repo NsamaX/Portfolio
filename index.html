@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li class="nav-link" data-section="home"><a href="#home">Home</a></li>
+            <li class="nav-link" data-section="about"><a href="#about">About</a></li>
+            <li class="nav-link" data-section="projects"><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+    <!-- Main -->
+    <main class="scroll-snap-container">
+        <!-- Home -->
+        <section class="home section scroll-snap-item" id="home">
+            <div class="line">
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+            </div>
+            <div class="content">
+                <div>
+                    <p>Welcome to my portfolio.</p>
+                    <h1>Vijuksama Hongthongdaeng</h1>
+                    <p>I am a Mobile and Web developer</p>
+                </div>
+            </div>
+        </section>
+        <!-- About -->
+        <section class="about section scroll-snap-item" id="about">
+            <!-- Menu -->
+            <div class="menu">
+                <ul>
+                    <li class="sub-nav-link" data-subsection="profile"><a href="#profile">Profile</a></li>
+                    <li class="sub-nav-link" data-subsection="education"><a href="#education">Education</a></li>
+                    <li class="sub-nav-link" data-subsection="skills"><a href="#skills">Skills</a></li>
+                </ul>
+            </div>
+            <div class="content section-content scroll-snap-container">
+                <!-- Profile -->
+                <div class="subsection scroll-snap-item" id="profile">
+                    <div class="subsection-text">
+                        <h1>Mobile & Web Developer</h1>
+                        <p>Skilled in Flutter, React, Node.js, Express, Java | Graduated with Mobile App NFC Tracking project | Interested in Backend, open to new learning</p>
+                    </div>
+                    <img class="subsection-image" src="./assets/profile.jpg" alt="Profile">
+                </div>
+                <!-- Education -->
+                <div class="subsection scroll-snap-item" id="education">
+                    <img class="subsection-image" src="./assets/silpakorn.jpg" alt="Silpakorn">
+                    <div class="subsection-text">
+                        <h1>Education</h1>
+                        <h2>Silpakorn University</h2>
+                        <h3>2021 - 2025</h3>
+                        <p>Information Technology focusing on algorithms, databases, network, software development, and basic business knowledge.</p>
+                    </div>
+                </div>
+                <!-- Skills -->
+                <div class="subsection scroll-snap-item" id="skills">
+                    <div class="subsection-text">
+                        <h1>Skills</h1>
+                        <p>Skills shown are from all the projects I have done</p>
+                        <div class="detail">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <hr>
+                        <div class="skill">
+                            <!-- Language -->
+                            <div>
+                                <img src="./assets/Dart.svg" alt="Dart" 
+                                    data-name="Dart" 
+                                    data-description="A programming language optimized for building mobile, desktop, server, and web applications."
+                                    color="blue">
+                                <img src="./assets/JavaScript.svg" alt="JavaScript" 
+                                    data-name="JavaScript" 
+                                    data-description="The programming language of the web, widely used for interactive and dynamic content."
+                                    color="yellow">
+                                <img src="./assets/HTML.svg" alt="HTML"
+                                    data-name="HTML"
+                                    data-description="The markup language for creating the structure and content of web pages."
+                                    color="orange">
+                                <img src="./assets/CSS.svg" alt="CSS" 
+                                    data-name="CSS" 
+                                    data-description="Stylesheet language for designing and formatting HTML elements."
+                                    color="blue">
+                                <img src="./assets/Java.svg" alt="Java"
+                                    data-name="Java"
+                                    data-description="A high-level, class-based, object-oriented programming language."
+                                    color="orange">
+                            </div>
+                            <!-- Framework -->
+                            <div>
+                                <img src="./assets/Flutter.svg" alt="Flutter"
+                                    data-name="Flutter"
+                                    data-description="A cross-platform framework for building native, hybrid, and web applications from a single codebase."
+                                    color="blue">
+                                <img src="./assets/React.svg" alt="React"
+                                    data-name="React"
+                                    data-description="A JavaScript library for building user interfaces."
+                                    color="blue">
+                                <img src="./assets/NodeJs.svg" alt="Node.js"
+                                    data-name="Node.js"
+                                    data-description="A runtime environment for executing JavaScript code on the server."
+                                    color="green">
+                                <img src="./assets/Express.svg" alt="Express"
+                                    data-name="Express"
+                                    data-description="A web application framework for Node.js."
+                                    color="purple">
+                            </div>
+                            <!-- Database -->
+                            <div>
+                                <img src="./assets/Firebase.svg" alt="Firebase"
+                                    data-name="Firebase"
+                                    data-description="A mobile and web application development platform."
+                                    color="orange">
+                                <img src="./assets/MongoDB.svg" alt="MongoDB"
+                                    data-name="MongoDB"
+                                    data-description="A document-based NoSQL database."
+                                    color="green">
+                                <img src="./assets/Supabase.svg" alt="Supabase"
+                                    data-name="Supabase"
+                                    data-description="A backend-as-a-service platform."
+                                    color="green">
+                                <img src="./assets/MySQL.svg" alt="MySQL"
+                                    data-name="MySQL"
+                                    data-description="A relational database management system."
+                                    color="blue">
+                            </div>
+                            <!-- Tools -->
+                            <div>
+                                <img src="./assets/Figma.svg" alt="Figma"
+                                    data-name="Figma"
+                                    data-description="A collaborative interface design tool."
+                                    color="pink">
+                                <img src="./assets/Drawio.svg" alt="Draw.io"
+                                    data-name="Draw.io"
+                                    data-description="A diagramming and prototyping tool."
+                                    color="orange">
+                                <img src="./assets/Git.svg" alt="Git"
+                                    data-name="Git" 
+                                    data-description="A distributed version control system. "
+                                    color="red">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section class="projects section scroll-snap-item" id="projects">
+            <!-- Menu -->
+            <div class="menu">
+                <ul>
+                    <li class="sub-nav-link" data-subsection="mobile-app"><a href="#mobile-app">MobileApp</a></li>
+                    <li class="sub-nav-link" data-subsection="web-app"><a href="#web-app">WebApp</a></li>
+                    <li class="sub-nav-link" data-subsection="design"><a href="#design">Design</a></li>
+                </ul>
+            </div>
+            <div class="content section-content scroll-snap-container">
+            <!-- Mobile App -->
+                <!-- NFC Deck Tracker -->
+                <div class="subsection scroll-snap-item" id="mobile-app">
+                    <div class="project-image">
+                        <img class="project-placeholder" src="./assets/profile.jpg" alt="NFC Deck Tracker Placeholder">
+                        <div class="project-links">
+                            <span><img src="./assets/link.png" alt="LinkProjectE">Thesis: <a href="#">?</a></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="subsection-text">
+                            <h2>NFC Deck Tracker</h2>
+                            <p>NFC Deck Tracker is a mobile app for managing and tracking TCG decks in real time with NFC. It supports deck creation, card search, custom cards, and game analytics. Built with Flutter, Firebase, Supabase, SQLite, and Clean Architecture. Developed as a Bachelor’s Thesis at Silpakorn University. </p>
+                        </div>
+                        <div class="tech-stack">
+                            <h3>Tech Stack</h3>
+                            <div class="tech-placeholders">
+                                <img src="./assets/Flutter.svg" alt="Flutter">
+                                <img src="./assets/Firebase.svg" alt="Firebase">
+                                <img src="./assets/Supabase.svg" alt="Supabase">
+                                <img src="./assets/SQLite.svg" alt="SQLite">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Web App -->
+                <!-- Astral Oracle -->
+                <div class="subsection scroll-snap-item" id="web-app">
+                    <div class="project-image">
+                        <img class="project-placeholder" src="./assets/profile.jpg" alt="Astral Oracle Placeholder">
+                        <div class="project-links">
+                            <span><img src="./assets/link.png" alt="LinkProjectB">Link: <a href="https://astral-oracle.vercel.app/" target="_blank">https://astral-oracle.vercel.app/</a></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="subsection-text">
+                            <h2>Astral Oracle</h2>
+                            <p>Astral Oracle is a web application offering AI-powered tarot readings with personalized predictions and the Tarot API. It features an interactive interface for drawing and interpreting tarot cards, stores past readings in MongoDB, and includes cookie consent management.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <h3>Tech Stack</h3>
+                            <div class="tech-placeholders">
+                                <img src="./assets/NodeJs.svg" alt="Node.js">
+                                <img src="./assets/Express.svg" alt="Express">
+                                <img src="./assets/MongoDB.svg" alt="MongoDB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- NZT Production Report -->
+                <div class="subsection scroll-snap-item" id="web-app">
+                    <div class="project-image">
+                        <img class="project-placeholder" src="./assets/profile.jpg" alt="NZT Production Report Placeholder">
+                        <div class="project-links">
+                            <span><img src="./assets/link.png" alt="LinkProjectC">Link: <a href="https://nzt-production-report.vercel.app/" target="_blank">https://nzt-production-report.vercel.app/</a></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="subsection-text">
+                            <h2>NZT Production Report</h2>
+                            <p>NZT Production Management is a web app for Nozomi Company to monitor and report production line operations. It offers role-based access, daily production tracking, and report generation in PDF and Excel formats.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <h3>Tech Stack</h3>
+                            <div class="tech-placeholders">
+                                <img src="./assets/React.svg" alt="React">
+                                <img src="./assets/Firebase.svg" alt="Firebase">
+                                <img src="./assets/Tailwind.svg" alt="Tailwind">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payroll System -->
+                <div class="subsection scroll-snap-item" id="web-app">
+                    <div class="project-image">
+                        <img class="project-placeholder" src="./assets/profile.jpg" alt="Payroll System Placeholder">
+                        <div class="project-links">
+                            <span><img src="./assets/link.png" alt="LinkProjectE">Document: <a href="#">?</a></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="subsection-text">
+                            <h2>Payroll System</h2>
+                            <p>Modern Payroll System that calculates and manages employee salaries, taxes, social security, and provident fund deductions, with flexible payment cycles, e-slip generation, and reporting in .csv/.docx formats.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <h3>Tech Stack</h3>
+                            <div class="tech-placeholders">
+                                <img src="./assets/PHP.svg" alt="PHP">
+                                <img src="./assets/JavaScript.svg" alt="JavaScript">
+                                <img src="./assets/MySQL.svg" alt="MySQL">
+                                <img src="./assets/Bootstrap5.svg" alt="Bootstrap5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Design -->
+                <!-- Japanese Dessert Shop -->
+                <div class="subsection scroll-snap-item" id="design">
+                    <div class="project-image">
+                        <img class="project-placeholder" src="./assets/profile.jpg" alt="Japanese Dessert Shop Placeholder">
+                        <div class="project-links">
+                            <span><img src="./assets/link.png" alt="LinkProjectE">Document: <a href="#">?</a></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="subsection-text">
+                            <h2>Japanese Dessert Shop</h2>
+                            <p>Japanese Dessert Shop system that applies OOP and design patterns (Factory Method, Command, Singleton) to manage dessert creation and order processing. It features a scalable architecture with UML diagrams (class and sequence) for clear system visualization.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <h3>Tech Stack</h3>
+                            <div class="tech-placeholders">
+                                <img src="./assets/Java.svg" alt="Java">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <a href="https://github.com/NsamaX" target="_blank"><img src="./assets/github.png" alt="GitHub"></a>
+        <a href="#" target="_blank"><img src="./assets/linkedin.png" alt="LinkedIn"></a>
+        <a href="#"><img src="./assets/gmail.png" alt="Gmail"></a>
+        <span>Tel: 061-561-6142</span>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+/* ========================================================================= */
+/* MOST REUSABLE: Global Styles */
+/* ========================================================================= */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-bg:   #0D1117;
+    --nav-bg:       #19212D;
+    --active-bg:    #202936;
+    --accent-color: #305998;
+    --border-color: #FFFFFF2d;
+    --text-color:   #FFFFFF;
+
+    --font-family:   'Poppins', sans-serif;
+    --font-size-el:  64px;
+    --font-size-lg:  32px;
+    --font-size-mg:  24px;
+    --font-size-sm:  16px;
+
+    --icon-lg:       48px;
+    --icon-md:       24px;
+
+    --spacing-lg:    48px;
+    --spacing-md:    24px;
+    --spacing-sm:    12px;
+
+    --transition:    0.3s;
+}
+
+/* General Reset */
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+h1 { font-size: var(--font-size-el); line-height: 1.2; }
+h2 { font-size: var(--font-size-lg); opacity: 0.8; }
+h3 { font-size: var(--font-size-mg); opacity: 0.6; }
+p  { font-size: var(--font-size-mg); opacity: 0.4; margin-top: var(--spacing-md); }
+
+/* Utility Classes */
+.scroll-snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scroll-snap-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-snap-item {
+    scroll-snap-align: start;
+}
+
+/* ========================================================================= */
+/* COMPONENT-SPECIFIC: Reusable Across Pages */
+/* ========================================================================= */
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    background-color: var(--nav-bg);
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    background-color: var(--active-bg);
+    border-top: 3px solid transparent;
+    opacity: 0.4;
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+nav ul li:hover,
+nav ul li.active {
+    background-color: var(--primary-bg);
+    border-top: 3px solid var(--accent-color);
+    opacity: 1;
+    transition: var(--transition);
+}
+
+/* Main Container */
+main {
+    background-color: var(--primary-bg);
+    height: 100vh;
+}
+
+/* Sections */
+.section {
+    display: flex;
+    height: 100vh;
+    padding: var(--spacing-lg) 0;
+}
+
+.section-content {
+    height: calc(100vh - 96px);
+}
+
+.section-content .subsection {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100%;
+    padding: 80px 12%;
+}
+
+/* Subsection Image */
+.subsection-image {
+    border-radius: var(--spacing-sm);
+    rotate: 4deg;
+    width: 300px;
+    height: 300px;
+    margin: 0 60px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+    padding-top: var(--spacing-lg);
+}
+
+.menu ul li {
+    list-style: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    opacity: 0.4;
+    margin-bottom: var(--spacing-md);
+    padding: 0 var(--spacing-md);
+    transition: var(--transition);
+}
+
+.menu ul li:hover,
+.menu ul li.active {
+    background-color: #30599868;
+    border: 1px solid var(--accent-color);
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-bg);
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    z-index: 1000;
+}
+
+footer img {
+    width: var(--spacing-md);
+    height: var(--spacing-md);
+    margin-right: var(--spacing-md);
+}
+
+/* ========================================================================= */
+/* PAGE-SPECIFIC: Portfolio Page */
+/* ========================================================================= */
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    height: 90%;
+    margin-left: var(--spacing-lg);
+}
+
+.line hr {
+    border: 1px solid var(--text-color);
+    margin-right: var(--spacing-md);
+}
+
+.line hr:nth-child(1) { height: 100%; opacity: 0.4; }
+.line hr:nth-child(2) { height: 80%; opacity: 0.3; }
+.line hr:nth-child(3) { height: 70%; opacity: 0.2; }
+.line hr:nth-child(4) { height: 60%; opacity: 0.1; }
+
+.home .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.home .content h1 {
+    margin: var(--spacing-sm) 0 var(--spacing-md) 0;
+}
+
+/* Skills Subsection */
+.container {
+    display: flex;
+    min-width: 40%;
+}
+
+#skills hr {
+    margin-right: var(--spacing-md);
+}
+
+#skills .skill img {
+    cursor: pointer;
+    width: var(--icon-lg);
+    height: var(--icon-lg);
+    margin-right: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    transition: var(--transition);
+}
+
+#skills .skill img:hover {
+    transform: scale(1.2);
+}
+
+.detail {
+    margin-top: var(--spacing-md);
+}
+
+/* Projects Section */
+.project-image {
+    width: 1700px;
+    height: 412px;
+    margin-right: var(--spacing-md);
+}
+
+.project-placeholder {
+    object-fit: cover;
+    background-color: var(--active-bg);
+    width: 100%;
+    height: 112%;
+}
+
+.project-links {
+    margin-top: var(--spacing-md);
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+} 
+
+#projects span {
+    opacity: 0.4;
+}
+
+#projects span img {
+    width: var(--icon-md);
+    height: var(--icon-md);
+    margin-right: var(--spacing-sm);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-content .subsection-text p {
+    font-size: var(--font-size-sm);
+}
+
+.tech-stack {
+    margin-bottom: var(--spacing-lg);
+}
+
+.tech-stack .tech-placeholders {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.tech-stack .tech-placeholders img {
+    width: var(--icon-md);
+    height: var(--icon-md);
+}
