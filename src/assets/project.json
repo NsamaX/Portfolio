@@ -1,0 +1,117 @@
+[
+    {
+        "title": "Astral Oracle",
+        "category": "website",
+        "thumbnail": "https://cdn.dribbble.com/userupload/32010150/file/still-acf45e15e702279fbec1f72b3185f0fb.png?resize=400x0",
+        "short": "AI Tarot Reading Web App with interactive card draws and personalized predictions.",
+        "description": "Welcome to Astral Oracle, a website that provides AI-powered tarot readings using external AI services to provide personalized predictions and using MongoDB to store your past tarot readings. Immerse yourself in the world of tarot and explore the insights it provides for your life's journey.",
+        "feature": {
+            "Tarot Card Reading": "Draw single or multiple cards to gain insights about your queries.",
+            "Interactive User Interface": "Click on the cards to shuffle and reveal their meanings.",
+            "AI Predictions": "Get personalized responses from an AI Tarot reader based on the cards drawn, powered by external AI.",
+            "History Tracking": "Save your past readings (questions and predictions) in a MongoDB database for future reference.",
+            "Cookie Consent Management": "Manage user cookie preferences for enhanced privacy."
+        },
+        "stack": {
+            "javascript": "Core programming language for client-side logic and interactions.", 
+            "css": "Styling the UI with responsive and user-friendly design.", 
+            "react": "Building interactive and dynamic user interfaces.", 
+            "mongodb": "Storing and retrieving data from a NoSQL database.", 
+            "groq": "Querying and manipulating data in a NoSQL database."
+        },
+        "gitrepo": "https://github.com/NsamaX/Astral-Oracle",
+        "demolink": "https://astral-oracle.vercel.app/"
+    },
+    {
+        "title": "Astral Oracle",
+        "category": "website",
+        "thumbnail": "https://cdn.dribbble.com/userupload/32010150/file/still-acf45e15e702279fbec1f72b3185f0fb.png?resize=400x0",
+        "short": "AI Tarot Reading Web App with interactive card draws and personalized predictions.",
+        "description": "Welcome to Astral Oracle, a website that provides AI-powered tarot readings using external AI services to provide personalized predictions and using MongoDB to store your past tarot readings. Immerse yourself in the world of tarot and explore the insights it provides for your life's journey.",
+        "feature": {
+            "Tarot Card Reading": "Draw single or multiple cards to gain insights about your queries.",
+            "Interactive User Interface": "Click on the cards to shuffle and reveal their meanings.",
+            "AI Predictions": "Get personalized responses from an AI Tarot reader based on the cards drawn, powered by external AI.",
+            "History Tracking": "Save your past readings (questions and predictions) in a MongoDB database for future reference.",
+            "Cookie Consent Management": "Manage user cookie preferences for enhanced privacy."
+        },
+        "stack": {
+            "javascript": "Core programming language for client-side logic and interactions.", 
+            "css": "Styling the UI with responsive and user-friendly design.", 
+            "react": "Building interactive and dynamic user interfaces.", 
+            "mongodb": "Storing and retrieving data from a NoSQL database.", 
+            "groq": "Querying and manipulating data in a NoSQL database."
+        },
+        "gitrepo": "https://github.com/NsamaX/Astral-Oracle",
+        "demolink": "https://astral-oracle.vercel.app/"
+    },
+    {
+        "title": "Astral Oracle",
+        "category": "website",
+        "thumbnail": "https://cdn.dribbble.com/userupload/32010150/file/still-acf45e15e702279fbec1f72b3185f0fb.png?resize=400x0",
+        "short": "AI Tarot Reading Web App with interactive card draws and personalized predictions.",
+        "description": "Welcome to Astral Oracle, a website that provides AI-powered tarot readings using external AI services to provide personalized predictions and using MongoDB to store your past tarot readings. Immerse yourself in the world of tarot and explore the insights it provides for your life's journey.",
+        "feature": {
+            "Tarot Card Reading": "Draw single or multiple cards to gain insights about your queries.",
+            "Interactive User Interface": "Click on the cards to shuffle and reveal their meanings.",
+            "AI Predictions": "Get personalized responses from an AI Tarot reader based on the cards drawn, powered by external AI.",
+            "History Tracking": "Save your past readings (questions and predictions) in a MongoDB database for future reference.",
+            "Cookie Consent Management": "Manage user cookie preferences for enhanced privacy."
+        },
+        "stack": {
+            "javascript": "Core programming language for client-side logic and interactions.", 
+            "css": "Styling the UI with responsive and user-friendly design.", 
+            "react": "Building interactive and dynamic user interfaces.", 
+            "mongodb": "Storing and retrieving data from a NoSQL database.", 
+            "groq": "Querying and manipulating data in a NoSQL database."
+        },
+        "gitrepo": "https://github.com/NsamaX/Astral-Oracle",
+        "demolink": "https://astral-oracle.vercel.app/"
+    },
+    {
+        "title": "Astral Oracle",
+        "category": "website",
+        "thumbnail": "https://cdn.dribbble.com/userupload/32010150/file/still-acf45e15e702279fbec1f72b3185f0fb.png?resize=400x0",
+        "short": "AI Tarot Reading Web App with interactive card draws and personalized predictions.",
+        "description": "Welcome to Astral Oracle, a website that provides AI-powered tarot readings using external AI services to provide personalized predictions and using MongoDB to store your past tarot readings. Immerse yourself in the world of tarot and explore the insights it provides for your life's journey.",
+        "feature": {
+            "Tarot Card Reading": "Draw single or multiple cards to gain insights about your queries.",
+            "Interactive User Interface": "Click on the cards to shuffle and reveal their meanings.",
+            "AI Predictions": "Get personalized responses from an AI Tarot reader based on the cards drawn, powered by external AI.",
+            "History Tracking": "Save your past readings (questions and predictions) in a MongoDB database for future reference.",
+            "Cookie Consent Management": "Manage user cookie preferences for enhanced privacy."
+        },
+        "stack": {
+            "javascript": "Core programming language for client-side logic and interactions.", 
+            "css": "Styling the UI with responsive and user-friendly design.", 
+            "react": "Building interactive and dynamic user interfaces.", 
+            "mongodb": "Storing and retrieving data from a NoSQL database.", 
+            "groq": "Querying and manipulating data in a NoSQL database."
+        },
+        "gitrepo": "https://github.com/NsamaX/Astral-Oracle",
+        "demolink": "https://astral-oracle.vercel.app/"
+    },
+    {
+        "title": "Astral Oracle",
+        "category": "website",
+        "thumbnail": "https://cdn.dribbble.com/userupload/32010150/file/still-acf45e15e702279fbec1f72b3185f0fb.png?resize=400x0",
+        "short": "AI Tarot Reading Web App with interactive card draws and personalized predictions.",
+        "description": "Welcome to Astral Oracle, a website that provides AI-powered tarot readings using external AI services to provide personalized predictions and using MongoDB to store your past tarot readings. Immerse yourself in the world of tarot and explore the insights it provides for your life's journey.",
+        "feature": {
+            "Tarot Card Reading": "Draw single or multiple cards to gain insights about your queries.",
+            "Interactive User Interface": "Click on the cards to shuffle and reveal their meanings.",
+            "AI Predictions": "Get personalized responses from an AI Tarot reader based on the cards drawn, powered by external AI.",
+            "History Tracking": "Save your past readings (questions and predictions) in a MongoDB database for future reference.",
+            "Cookie Consent Management": "Manage user cookie preferences for enhanced privacy."
+        },
+        "stack": {
+            "javascript": "Core programming language for client-side logic and interactions.", 
+            "css": "Styling the UI with responsive and user-friendly design.", 
+            "react": "Building interactive and dynamic user interfaces.", 
+            "mongodb": "Storing and retrieving data from a NoSQL database.", 
+            "groq": "Querying and manipulating data in a NoSQL database."
+        },
+        "gitrepo": "https://github.com/NsamaX/Astral-Oracle",
+        "demolink": "https://astral-oracle.vercel.app/"
+    }
+]

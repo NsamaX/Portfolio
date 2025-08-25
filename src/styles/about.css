@@ -1,0 +1,9 @@
+#about hr {
+    width: 100%;
+}
+
+#about .svg-flex a {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-tn);
+}
