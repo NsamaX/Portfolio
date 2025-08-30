@@ -1,0 +1,10 @@
+#about .svg-flex a {
+    display: flex;
+    align-items: center;
+    opacity: var(--opacity-md);
+    gap: var(--spacing-tn);
+}
+
+#about .svg-flex a:hover {
+    opacity: 1;
+}
