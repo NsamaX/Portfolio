@@ -1,0 +1,164 @@
+/* ========================================================================= */
+/* MOST REUSABLE: Global Styles */
+/* ========================================================================= */
+
+:root {
+    --font-style-default: 'Lato', sans-serif;
+    --font-style-cursive: 'Playfair Display', cursive;
+    --font-style-inp-btn: 'Ubuntu Mono', monospace;
+}
+
+:root {
+    --font-size-lg: 1.5rem;
+    --font-size-md: 1.25rem;
+    --font-size-sm: 1rem;
+
+    --letter-height: 1.5rem;
+    --letter-spacing: 0.125rem;
+}
+
+:root {
+    --icon-size-lg: 2rem;
+    --icon-size-md: 1.5rem;
+    --icon-size-sm: 1rem;
+}
+
+:root {
+    --spacing-lg: 5rem;
+    --spacing-md: 2.5rem;
+    --spacing-sm: 1.25rem;
+    --spacing-tn: 0.625rem;
+}
+
+:root {
+    --menu-width: 15rem;
+    --content-width: 20rem;
+
+    --component-radius: 1rem;
+
+    --opacity-md: 0.7;
+    --opacity-sm: 0.5;
+}
+
+:root {
+    --background-color:hsl(0, 0%, 93%);
+    --text-color:      hsl(0, 0%, 100%);
+    --input-color:     hsl(0, 0%, 90%);
+    --button-color:    hsl(0, 0%, 10%);
+    --font-color:      hsl(0, 0%, 10%);
+    --font-color-rgb: 0, 0, 0;
+}
+
+body.dark {
+    --background-color:hsl(0, 0%, 7%);
+    --text-color:      hsl(0, 0%, 0%);
+    --input-color:     hsl(0, 0%, 10%);
+    --button-color:    hsl(0, 0%, 90%);
+    --font-color:      hsl(0, 0%, 90%);
+    --font-color-rgb: 255, 255, 255;
+}
+
+* {
+    font-family: var(--font-style-default);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: var(--font-size-lg);
+}
+
+h3 {
+    font-size: var(--font-size-md);
+}
+
+h4 {
+    font-size: var(--font-size-sm);
+}
+
+p {
+    font-size: var(--font-size-sm);
+    line-height: var(--letter-height);
+    letter-spacing: var(--letter-spacing);
+    opacity: var(--opacity-md);
+}
+
+a {
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+svg {
+    fill: var(--font-color);
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+}
+
+/* ========================================================================= */
+/* COMPONENT-SPECIFIC: Reusable Across Pages */
+/* ========================================================================= */
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) 0;
+}
+
+.content {
+    width: var(--content-width);
+}
+
+.svg-flex {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+span.space {
+    display: inline-block;
+    width: var(--spacing-sm);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-style-inp-btn);
+    font-size: var(--font-size-sm);
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: var(--component-radius);
+    gap: var(--spacing-tn);
+    cursor: pointer;
+}
+
+button svg {
+    fill: var(--text-color);
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+}
+
+@media (min-width: 720px) {
+    :root {
+        --font-size-lg: 2rem;
+        --content-width: 26.25rem;
+    }
+}
