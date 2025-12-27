@@ -1,0 +1,111 @@
+:root {
+    --collage-lg: 9.375rem;
+    --collage-md: 5.625rem;
+    --collage-sm: 1.875rem;
+}
+
+.collage-container {
+    position: relative;
+}
+
+.collage {
+    position: absolute;
+    z-index: -1;
+}
+
+#pointing {
+    top: calc(var(--spacing-tn) * -1);
+    right: calc(var(--collage-sm) * -1);
+    width: var(--collage-lg);
+    height: var(--collage-lg);
+}
+
+#sunburst {
+    top: calc(var(--collage-sm) * -1);
+    right: calc(var(--collage-sm) * -1);
+    rotate: 8deg;
+    width: var(--collage-md);
+    height: var(--collage-md);
+}
+
+#double-quotes {
+    top: calc(var(--collage-sm) * -1);
+    right: 0px;
+    width: calc(var(--collage-sm) * 1.2);
+    height: calc(var(--collage-sm) * 0.8);
+}
+
+#writing {
+    top: 40%;
+    left: calc(var(--collage-md) * -1.2);
+    width: var(--collage-lg);
+    height: var(--collage-lg);
+}
+
+#skill-list img.collage {
+  top: calc(var(--spacing-tn) * -1);
+  left: calc(var(--spacing-tn) * -1);
+  width: calc(var(--collage-sm) * 1.7);
+  height: calc(var(--collage-sm) * 1.7);
+  opacity: 0;
+  clip-path: circle(0% at 50% 50%);
+}
+
+#skill-list img.collage.show {
+  opacity: 1;
+  animation: drawCircle 0.5s forwards;
+}
+
+@keyframes drawCircle {
+  from {
+    clip-path: circle(0% at 0% 50%);
+  }
+  to {
+    clip-path: circle(75% at 50% 50%);
+  }
+}
+
+#megaphone {
+    top: calc(var(--collage-md) * 2.1);
+    right: calc(var(--collage-md) * -1.6);
+    width: calc(var(--collage-lg) * 1.8);
+    height: calc(var(--collage-lg) * 1.2);
+}
+
+#palm-up {
+    top: calc(var(--spacing-md) * -1);
+    left: calc(var(--spacing-lg) * 0.8 * -1);
+    rotate: -12deg;
+    width: var(--collage-lg);
+    height: var(--collage-lg);
+}
+
+#reaching-out {
+    z-index: 1;
+    bottom: var(--spacing-lg);
+    right: calc(var(--collage-sm) * -1);
+    width: var(--collage-lg);
+    height: calc(var(--collage-lg) * 0.4);
+}
+
+@media (min-width: 720px) {
+    :root {
+        --collage-lg: 13.125rem;
+    }
+
+    #pointing {
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1080px) {
+    :root {
+        --collage-lg: 16.25rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    :root {
+        --collage-lg: 20rem;
+    }
+}

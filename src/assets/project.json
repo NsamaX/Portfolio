@@ -1,0 +1,177 @@
+[
+    {
+        "category": "mobile",
+        "title": "Bachelor Thesis",
+        "short": "NFC Deck Tracker is a Flutter-based that uses NFC technology to track and manage real card game decks in real time.",
+        "thumbnail": "/projects/nfc_deck_tracker/thumbnail.png",
+        "gitrepo": "https://github.com/NsamaX/NFC-Deck-Tracker",
+        "demolink": null,
+        "description": "NFC Deck Tracker is my thesis project developed during my studies at Silpakorn University, inspired by my passion for card games. I was influenced by the software 'Hearthstone Deck Tracker,' which helps players track their decks, revealed opponent cards, and game history. While such tools exist for digital games, I noticed that there was no convenient solution for real-world card games, where players usually rely on manual note-taking or video replays.\n\nThis project introduces a mobile application built with Flutter that brings the same functionality into physical card games using NFC technology. Users can import card data from an API, create their own decks, and write the card information onto NFC chips (Ntag213) attached to physical cards. During gameplay, scanning a card updates the deck state in real time, providing a smooth and efficient experience similar to digital deck trackers.\n\nThe application also supports extensibility with API adapters and custom card features, allowing developers or players to expand the tool for different games. The system was designed with Clean Architecture combined with Bloc and DJ patterns to ensure scalability, maintainability, and clear separation of concerns.\n\nOverall, NFC Deck Tracker demonstrates how digital tools can be integrated with physical gameplay, blending technology with traditional gaming experiences in a creative and practical way.",
+        "feature": {
+            "Real-Time Deck Tracking": "Updates the number of cards in a deck instantly when NFC-tagged cards are scanned.",
+            "NFC Integration": "Writes and reads card data using NFC chips (Ntag213) for fast and seamless gameplay tracking.",
+            "Deck Builder": "Allows users to create and manage decks by importing card data from APIs.",
+            "Custom Cards & API Adapter": "Supports user-generated cards and API adapters for multiple games.",
+            "Game History": "Stores match history for players to review past gameplay sessions.",
+            "Cross-Platform": "Built with Flutter to support both iOS and Android devices."
+        },
+        "stack": {
+            "Flutter": "Framework for cross-platform mobile development.",
+            "Firebase": "Manages user authentication and data through Google login.",
+            "Supabase": "Stores images for custom cards created by users.",
+            "SQLite": "Handles offline storage of decks, cards, and game history."
+        },
+        "iconkey": [ "flutter", "firebase", "supabase", "sqlite" ],
+        "images": [
+            "/projects/nfc_deck_tracker/wireframe_1.png",
+            "/projects/nfc_deck_tracker/wireframe_2.png",
+            "/projects/nfc_deck_tracker/wireframe_3.png",
+            "/projects/nfc_deck_tracker/wireframe_4.png",
+            "/projects/nfc_deck_tracker/wireframe_5.png"
+        ]
+    },
+    {
+        "category": "website",
+        "title": "Astral Oracle",
+        "short": "A tarot card reading web app designed for entertainment, combining traditional tarot draws with AI-powered fortune telling.",
+        "thumbnail": "/projects/astral_oracle/home.png",
+        "gitrepo": "https://github.com/NsamaX/Astral-Oracle",
+        "demolink": "https://astral-oracle.vercel.app/",
+        "description": "Astral Oracle is a web-based tarot reading platform created out of my personal interest in tarot and the idea of asking meaningful questions through card draws. The app is designed for entertainment purposes only, allowing users to perform tarot spreads of 1, 3, or 5 cards. Each card can appear upright or reversed, making the reading more dynamic. \n\n Users can also type their own questions, which are then sent together with the drawn cards to an AI model (powered by GROQ). The AI is pre-prompted to act as a tarot reader, generating personalized interpretations for the user’s query.\n\nThe platform also keeps a history of readings by storing cookies and logs user questions in a database for future reference. Overall, Astral Oracle combines the mysticism of tarot with the interactive capability of modern AI technology.",
+        "feature": {
+            "Interactive Tarot Draws": "Users can draw 1, 3, or 5 cards with both upright and reversed positions.",
+            "AI-Powered Readings": "User questions and drawn cards are interpreted by an AI model trained to act as a tarot reader.",
+            "Custom Questions": "Users can type their own queries and receive personalized readings.",
+            "History Tracking": "Cookies store past readings so users can revisit their tarot journey.",
+            "Database Logging": "User questions are securely stored in a database for analysis and reference."
+        },
+        "stack": {
+            "React": "Front-end framework for building the interactive user interface.",
+            "Node.js": "JavaScript runtime used to power the backend logic.",
+            "Express": "Backend framework for handling routes and API requests.",
+            "MongoDB": "Database for storing user questions and history.",
+            "GROQ": "AI API for generating tarot-based fortune telling responses."
+        },
+        "iconkey": [ "react", "nodejs", "express", "mongodb", "groq" ],
+        "images": [
+            "/projects/astral_oracle/home.png",
+            "/projects/astral_oracle/card.png",
+            "/projects/astral_oracle/cookie.png"
+        ]
+    },
+    {
+        "category": "website",
+        "title": "Payroll System",
+        "short": "A university group project and my first web application, designed as an HRIS payroll system with both HR and employee-facing features.",
+        "thumbnail": "/projects/payroll_system/login.png",
+        "gitrepo": "https://github.com/NsamaX/Payroll-System",
+        "demolink": null,
+        "description": "Payroll System is the first web application I developed as part of a university group project, where I was responsible for implementing most of the system as well as contributing to the design and interface.\n\nThe platform functions as an HRIS payroll management system. It provides a dashboard showing employee salaries by department, along with detailed pages for employee profiles, positions, salaries, and funds. The payroll calculation module accounts for workdays, absences, lateness, overtime, tax, and social security contributions. There is also an approval feature for salary processing and a reporting section that allows exporting company payroll data to Excel. Additionally, HR staff can write and manage reports directly within the system.\n\nThe system is not only designed for HR managers and executives but also for employees. Each employee can log in to view their salary history, download payslips in PDF format, and track their work records such as clock-in/out times and overtime activities.\n\nThis project helped me gain practical experience in building a complete web application, from backend logic to frontend design, while collaborating in a team setting.",
+        "feature": {
+            "Payroll Dashboard": "Displays salaries by department for quick HR overview.",
+            "Employee Management": "Includes employee list, positions, salary details, and funds.",
+            "Automated Payroll Calculation": "Calculates salaries with deductions for absences, taxes, and social security, plus overtime pay.",
+            "Attendance Tracking": "Tracks check-in/out times and overtime hours for employees.",
+            "Approval Workflow": "Allows HR or management to approve monthly payroll.",
+            "Reporting & Export": "Generates payroll reports and exports company data to Excel.",
+            "Employee Portal": "Employees can view salary history and download payslips in PDF format."
+        },
+        "stack": {
+            "PHP": "Used for backend development and server-side logic.",
+            "JavaScript": "Frontend scripting for interactivity and dynamic components.",
+            "CSS": "Custom styling to enhance the overall look and feel.",
+            "Bootstrap 5": "Framework for responsive and modern UI design.",
+            "MySQL": "Database for storing employee, payroll, and attendance data.",
+            "Java": "Used to generate mockup data for testing the system."
+        },
+        "iconkey": [ "php", "javascript", "css", "bootstrap5", "mysql", "java" ],
+        "images": []
+    },
+    {
+        "category": "website",
+        "title": "NZT Production Report",
+        "short": "A prototype web application for managing and reporting factory production, replacing the complexity of Excel-based workflows.",
+        "thumbnail": "/projects/nzt_production_report/home.png",
+        "gitrepo": "https://github.com/NsamaX/NZT-Production-Report",
+        "demolink": null,
+        "description": "NZT Production Report is a prototype web application developed as a side project for my father’s factory, aimed at simplifying the way production data is managed and reported. Previously, production reports were handled in Excel files, which were often difficult to edit and inconsistent in format.\n\nThe system introduces role-based access for different types of users. Administrators can create production records, add product models, set capacity, and view detailed reports. Employees can update production data for their assigned tasks, while visitors are allowed to view production records and reports without making changes.\n\nThis version was piloted in one department of NZT as a proof of concept, with plans to expand its scope to cover more production lines and employees in the future. By moving away from spreadsheets, the platform improves accessibility, consistency, and efficiency in handling factory production data.",
+        "feature": {
+            "Role-Based Access": "Provides different capabilities for administrators, employees, and visitors.",
+            "Production Record Management": "Allows administrators to create and manage production tasks and product models.",
+            "Capacity Planning": "Enables administrators to set production capacity for each model.",
+            "Employee Input": "Employees can submit production data for their assigned tasks.",
+            "Reporting": "Generates structured production reports that are easier to read than Excel sheets.",
+            "Visitor Access": "Visitors can view production records and reports without editing rights."
+        },
+        "stack": {
+            "React + Vite": "Used for building a fast and modern frontend application.",
+            "Tailwind": "Provides utility-first styling for a clean and responsive design.",
+            "Firebase": "Handles authentication, data storage, and hosting."
+        },
+        "iconkey": [ "react", "vite", "tailwind", "firebase" ],
+        "images": [
+            "/projects/nzt_production_report/home.png",
+            "/projects/nzt_production_report/create_production.png",
+            "/projects/nzt_production_report/production_line.png",
+            "/projects/nzt_production_report/export_pdf.png"
+        ]
+    },
+    {
+        "category": "design",
+        "title": "Japanese Dessert Shop",
+        "short": "A Java-based project designed to explore use case diagrams and design patterns through the concept of a Japanese dessert shop.",
+        "thumbnail": "/projects/bluej_design_pattern/thumbnail.png",
+        "gitrepo": "https://github.com/NsamaX/Japanese-Dessert-Shop",
+        "demolink": null,
+        "description": "Japanese Dessert Shop is a learning project focused on applying software design patterns and UML modeling using Java with the BlueJ environment. The project is based on the business model of a Japanese dessert shop that allows customers to view menus, order items, apply membership discounts, and process payments, while also enabling the shop owner and staff to manage products and orders.\n\nThe main goal of the project was to practice analyzing requirements through a use case diagram and implement multiple design patterns to create a system that is modular, scalable, and easy to maintain. The implementation includes several design patterns working together such as Factory Method, Iterator, Command, Singleton, Strategy, Template Method, and Composite.\n\nThe project demonstrates how these patterns can be applied in real-world business logic, such as generating product objects, iterating through menus, handling commands from users, calculating membership discounts, and managing product structures. A detailed explanation of the patterns and diagrams can be found in the project’s report (available in the Git repository).",
+        "feature": {
+            "Use Case Modeling": "Designed a use case diagram to represent customer, staff, and owner interactions.",
+            "Factory Method": "Used to create product objects (Bakery or Coffee) dynamically.",
+            "Iterator Pattern": "Implemented for menu navigation without exposing the internal data structure.",
+            "Command Pattern": "Separated user commands such as ordering, payment, and cancellation.",
+            "Singleton Pattern": "Ensured a single instance of shared resources like the Scanner object.",
+            "Strategy Pattern": "Applied for calculating membership discounts in payments.",
+            "Template Method": "Defined the payment process steps with customizable sub-operations.",
+            "Composite Pattern": "Managed shopping cart items as a unified structure for flexibility."
+        },
+        "stack": {
+            "Java": "Core programming language used to implement the system.",
+            "BlueJ": "Development environment for learning and implementing object-oriented concepts.",
+            "OOP Principles": "Applied to structure the system with modularity and scalability.",
+            "UML Diagrams": "Used to model use cases, class structures, and sequence flows.",
+            "Design Patterns": "Implemented multiple patterns to demonstrate practical applications."
+        },
+        "iconkey": [ "java" ],
+        "images": [
+            "/projects/bluej_design_pattern/design_pattern.png",
+            "/projects/bluej_design_pattern/class_diagram.png"
+        ]
+    },
+    {
+        "category": "design",
+        "title": "Crossword Solver",
+        "short": "A Java program that solves crossword-style puzzles with word paths and gravity rules.",
+        "thumbnail": "/projects/crossword_solver/thumbnail.png",
+        "gitrepo": "https://github.com/NsamaX/Crossword-Solver",
+        "demolink": null,
+        "description": "Crossword Solver is a Java-based project that implements an algorithm to calculate possible answers for the crossword-style puzzle game by [Ludobros] ({App Store[https://apps.apple.com/th/developer/ludobros/id871218554]}). The system works by exploring valid words that can be formed from a crossword grid based on target word lengths and the available letters. Each letter in the grid is represented as a node connected to its 8 neighbors, allowing traversal in all directions.\n\nThe solver applies the gravity rule used in the game, where letters fall down to fill empty spaces after a word is removed. It leverages backtracking to try different paths and efficiently explore all possible word combinations that satisfy the given constraints. The final output is a set of complete solutions, each showing the sequence of words formed step by step.\n\nThis project demonstrates how algorithms, graph traversal, and recursive backtracking can be applied to solve puzzle games with real-world mechanics like adjacency and gravity.",
+        "feature": {
+            "Word Search Algorithm": "Finds valid words in the grid using adjacency rules across 8 directions.",
+            "Graph Representation": "Represents each letter as a node with connections to neighbors.",
+            "Gravity Rule": "Implements falling letters after words are used, simulating the game mechanic.",
+            "Backtracking": "Explores all potential paths to find complete solutions efficiently.",
+            "Caching Optimization": "Stores possible words per letter set to reduce redundant calculations.",
+            "Solution Deduplication": "Ensures unique sets of words by tracking word signatures."
+        },
+        "stack": {
+            "Java": "Core programming language used to implement the system.",
+            "Backtracking": "Algorithmic approach to explore multiple paths recursively.",
+            "Graph Theory": "Used to represent the crossword grid and connections between letters.",
+            "File I/O": "Reads dictionary word lists and writes solution outputs to files."
+        },
+        "iconkey": [ "java" ],
+        "images": [
+            "/projects/crossword_solver/sample.png"
+        ]
+    }
+]

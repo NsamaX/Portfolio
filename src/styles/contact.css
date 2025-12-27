@@ -1,0 +1,46 @@
+#contact {
+    background-image: radial-gradient(circle, rgba(var(--font-color-rgb), 0.3) 1px, rgba(0, 0, 0, 0) 1px);
+    background-size: 40px 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+form input,
+form textarea {
+    resize: none;
+    font-family: var(--font-style-inp-btn);
+    font-size: var(--font-size-sm);
+    letter-spacing: calc(var(--letter-spacing) * 2);
+    background-color: var(--input-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: var(--component-radius);
+    padding: var(--spacing-tn) var(--spacing-sm);
+    cursor: pointer;
+    transition: letter-spacing 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+}
+
+form input:not(:placeholder-shown),
+form textarea:not(:placeholder-shown) {
+    letter-spacing: var(--letter-spacing);
+}
+
+form textarea:nth-child(4) {
+    height: calc(var(--content-width) * 0.7);
+}
+
+form button {
+    align-self: flex-end;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-tn) var(--spacing-sm);
+}

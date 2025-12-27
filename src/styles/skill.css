@@ -1,0 +1,34 @@
+#skill {
+    background-image: radial-gradient(circle, rgba(var(--font-color-rgb), 0.3) 1px, rgba(0, 0, 0, 0) 1px);
+    background-size: 40px 40px;
+}
+
+#skill-list {
+    display: grid;
+    grid-template-rows: repeat(4, minmax(var(--icon-size-lg), 1fr));
+    justify-items: center;
+    gap: var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+}
+
+.skill-group {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.skill-group svg {
+    width: var(--icon-size-lg);
+    height: var(--icon-size-lg);
+    cursor: pointer;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--icon-size-lg);
+}
+
+.skill p {
+    font-size: 0.8em;
+}

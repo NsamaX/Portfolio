@@ -1,0 +1,15 @@
+#about .content p {
+    text-indent: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+#about .svg-flex a {
+    display: flex;
+    align-items: center;
+    opacity: var(--opacity-md);
+    gap: var(--spacing-tn);
+}
+
+#about .svg-flex a:hover {
+    opacity: 1;
+}

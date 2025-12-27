@@ -1,0 +1,28 @@
+[
+    { 
+        "javascript": "The core language of the web, enabling dynamic and interactive user experiences on both frontend and backend (Node.js).", 
+        "html": "Defines the structure and semantic layout of web pages, forming the backbone of any website or web application.", 
+        "css": "Styles web pages for responsive, modern, and accessible designs. Supports Flexbox, Grid, and animations.", 
+        "java": "A robust, object-oriented programming language used for Android apps, enterprise solutions, and backend systems.", 
+        "dart": "Optimized for building cross-platform mobile, desktop, and web apps. Strongly typed and works seamlessly with Flutter for high-performance UI development."
+    },
+    {
+        "react": "A JavaScript library for building fast, component-based UIs with a virtual DOM for optimal performance.", 
+        "vite": "A modern build tool for JavaScript applications, offering fast and efficient development experience.",
+        "nodejs": "A JavaScript runtime built on Chrome's V8 engine, enabling server-side development with asynchronous, event-driven architecture.", 
+        "express": "A lightweight, unopinionated Node.js framework for building REST APIs and server-side applications efficiently.", 
+        "flutter": "A cross-platform UI toolkit by Google for building natively compiled applications from a single codebase. Ideal for mobile, desktop, and web."
+    },
+    { 
+        "supabase": "An open-source Firebase alternative with PostgreSQL database, authentication, and storage services.", 
+        "firebase": "Google's Backend-as-a-Service (BaaS) platform offering real-time databases, authentication, hosting, and analytics.", 
+        "sqlite": "A lightweight, file-based database for storing and managing structured data in a single file.",
+        "mongodb": "A NoSQL database that stores data in flexible, JSON-like documents for high scalability and speed.", 
+        "mysql": "A reliable relational database management system widely used for structured data storage and transactional applications."
+    },
+    {
+        "git": "A distributed version control system for tracking code changes, enabling efficient collaboration in software development.", 
+        "figma": "A collaborative UI/UX design tool for creating prototypes, wireframes, and responsive layouts in real time.", 
+        "drawio": "A diagramming tool for creating system architectures, flowcharts, and entity-relationship diagrams."
+    }
+]

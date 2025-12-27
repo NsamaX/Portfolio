@@ -1,0 +1,61 @@
+:root {
+    --picture-size: 15rem;
+}
+
+#home {
+    background-image:
+        linear-gradient(to right, rgba(var(--font-color-rgb), 0.125) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(var(--font-color-rgb), 0.125) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-repeat: repeat space;
+    height: 100vh;
+}
+
+#profile {
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    width: var(--picture-size);
+    height: var(--picture-size);
+}
+
+#home h2 {
+    font-size: calc(var(--font-size-lg) * 0.9);
+    margin: var(--spacing-sm) 0;
+}
+
+#home .content {
+    text-align: center;
+    width: calc(var(--content-width) * 1.2);
+}
+
+#scroll-down {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: var(--spacing-md);
+    opacity: var(--opacity-sm);
+    margin-right: var(--icon-size-md);
+    cursor: pointer;
+}
+
+@media (min-width: 720px) {
+    :root {
+        --picture-size: 16.25rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    :root {
+        --picture-size: 22.5rem;
+    }
+
+    #home {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+    }
+
+    #home .content {
+        max-width: 25rem;
+    }
+}
