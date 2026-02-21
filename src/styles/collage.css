@@ -42,6 +42,13 @@
   left: calc(var(--collage-md) * -1.2);
 }
 
+#experience-scribble {
+  width: calc(var(--collage-sm) * 4.6);
+  height: calc(var(--collage-sm) * 1.4);
+  top: calc(var(--spacing-sm) * -0.5);
+  left: calc(var(--collage-sm) * -0.4);
+}
+
 #skill-list img.collage {
   clip-path: circle(0% at 50% 50%);
   opacity: 0;

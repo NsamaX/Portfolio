@@ -33,6 +33,7 @@ const en = {
   experience: {
     sectionTitle: "Experience",
     current: {
+      label: "Current Role",
       title: "IT & Developer | Nozomi Enterprise (Thailand) Co., Ltd. | 2025 - Present",
       bullets: [
         "Lead on-premise digital transformation, moving paper-based workflows to a centralised ERP platform.",

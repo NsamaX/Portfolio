@@ -33,6 +33,7 @@ const th = {
   experience: {
     sectionTitle: "ประสบการณ์",
     current: {
+      label: "ตำแหน่งปัจจุบัน",
       title: "ไอที & นักพัฒนา | Nozomi Enterprise (Thailand) Co., Ltd. | 2025 - ปัจจุบัน",
       bullets: [
         "ขับเคลื่อนการทรานส์ฟอร์มดิจิทัลในรูปแบบ on-premise เปลี่ยนงานเอกสารกระดาษเป็นระบบ ERP ส่วนกลาง",

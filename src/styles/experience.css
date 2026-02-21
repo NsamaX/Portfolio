@@ -5,21 +5,39 @@
     rgba(0, 0, 0, 0) 1px
   );
   background-size: 40px 40px;
+  padding-bottom: var(--spacing-lg);
 }
 
 #experience .content {
   text-align: left;
 }
 
-#experience p {
+#experience .experience-header {
   margin-bottom: var(--spacing-sm);
 }
 
-#experience ul {
+#experience .experience-label {
+  font-family: var(--font-style-inp-btn);
+  font-size: calc(var(--font-size-sm) * 0.8);
+  letter-spacing: calc(var(--letter-spacing) * 1.5);
+  text-transform: uppercase;
+  opacity: var(--opacity-sm);
+  margin-bottom: calc(var(--spacing-tn) * 0.5);
+}
+
+#experience .experience-header h3 {
+  margin: 0;
+}
+
+#experience .experience-list {
   padding-left: var(--spacing-sm);
 }
 
-#experience li {
+#experience .experience-list li {
   line-height: var(--letter-height);
   margin-bottom: var(--spacing-tn);
+}
+
+#experience .experience-list p {
+  margin: 0;
 }

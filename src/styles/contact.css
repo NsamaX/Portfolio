@@ -1,10 +1,5 @@
 #contact {
-  background-image: radial-gradient(
-    circle,
-    rgba(var(--font-color-rgb), 0.3) 1px,
-    rgba(0, 0, 0, 0) 1px
-  );
-  background-size: 40px 40px;
+  background-color: var(--background-color);
 }
 
 form {

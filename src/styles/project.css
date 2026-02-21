@@ -1,3 +1,13 @@
+#project {
+  background-image: radial-gradient(
+    circle,
+    rgba(var(--font-color-rgb), 0.3) 1px,
+    rgba(0, 0, 0, 0) 1px
+  );
+  background-size: 40px 40px;
+  padding-bottom: var(--spacing-lg);
+}
+
 #project-filter {
   display: flex;
   gap: var(--spacing-tn);
