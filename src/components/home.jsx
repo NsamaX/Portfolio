@@ -1,83 +1,76 @@
 import { useCallback } from "react";
 
-import Icon from "./icon.jsx";
-
 import profile from "/profile.png";
+
 import pointing from "../assets/collages/pointing.png";
 import sunburst from "../assets/collages/sunburst.png";
+import arrow from "../assets/icons/arrow.svg";
+
+import { useI18n } from "../locales/i18n";
 
 import "../styles/home.css";
 
-const PROFILE_INFO = {
-  role: "Web & Mobile Developer",
-  name: "Vijuksama Hongthongdaeng",
-  location: "Samutprakan Thailand",
-  description: [
-    "I live in Samutprakan Thailand,",
-    "I enjoy building software that solves",
-    "real people's problems."
-  ]
-};
-
 function Home() {
+  const { t } = useI18n();
+
   const scrollToAbout = useCallback(() => {
-    const aboutSection = document.getElementById('about');
+    const aboutSection = document.getElementById("about");
     if (aboutSection) {
       aboutSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
+        behavior: "smooth",
+        block: "center",
       });
     }
   }, []);
 
   return (
     <section id="home">
-      <img 
-        id="pointing" 
-        src={pointing} 
-        alt="Pointing gesture decoration" 
-        className="collage" 
+      <img
+        id="pointing"
+        src={pointing}
+        alt="Pointing gesture decoration"
+        className="collage"
       />
-      
+
       <div className="collage-container">
-        <img 
-          id="profile" 
-          src={profile} 
-          alt="Vijuksama Hongthongdaeng profile picture" 
+        <img
+          id="profile"
+          src={profile}
+          alt="Vijuksama Hongthongdaeng profile picture"
         />
-        <img 
-          id="sunburst" 
-          src={sunburst} 
-          alt="Sunburst decoration" 
-          className="collage" 
+        <img
+          id="sunburst"
+          src={sunburst}
+          alt="Sunburst decoration"
+          className="collage"
         />
       </div>
-      
+
       <div className="content">
-        <p>{PROFILE_INFO.role}</p>
-        <h2>{PROFILE_INFO.name}</h2>
+        <p>{t("home.role")}</p>
+        <h2>{t("home.name")}</h2>
         <div className="description">
-          {PROFILE_INFO.description.map((line, index) => (
+          {t("home.descriptionLines").map((line, index) => (
             <p key={index}>{line}</p>
           ))}
         </div>
       </div>
-      
-      <div 
+
+      <div
         id="scroll-down"
         onClick={scrollToAbout}
         role="button"
         tabIndex={0}
         onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
+          if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
-            onClick();
+            scrollToAbout();
           }
         }}
-        aria-label="Scroll to about section"
+        aria-label={t("home.scrollDownAria")}
       >
-        <Icon iconKey="scroll-down" />
-        <h4>Scroll Down</h4>
+        <img src={arrow} alt="" aria-hidden="true" />
+        <h4>{t("home.scrollDown")}</h4>
       </div>
     </section>
   );

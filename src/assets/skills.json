@@ -1,0 +1,13 @@
+[
+  {
+    "nextjs": "A React-based framework for building production-ready web applications with built-in routing, API routes, and optimization features.",
+    "tailwind": "A utility-first CSS framework that speeds up styling with pre-defined classes for responsive and modern UI.",
+    "postgresql": "A powerful open-source relational database known for reliability, strong ACID compliance, and advanced SQL features.",
+    "docker": "A containerization platform that packages applications and dependencies into portable containers for consistent deployment."
+  },
+  {
+    "proxmox": "A virtualization platform for running virtual machines and containers, often used to manage home lab or on-premise infrastructure.",
+    "git": "A distributed version control system for tracking code changes and collaborating efficiently in software projects.",
+    "figma": "A collaborative design tool for creating UI/UX mockups, prototypes, and responsive layouts in real time."
+  }
+]

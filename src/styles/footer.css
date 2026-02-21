@@ -1,49 +1,70 @@
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-sm);
-    padding-bottom: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-md);
 }
 
 #contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: var(--opacity-md);
-    gap: var(--spacing-tn);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-tn);
+  opacity: var(--opacity-md);
 }
 
 #copyright {
-    font-family: var(--font-style-inp-btn);
-    opacity: var(--opacity-sm);
+  font-family: var(--font-style-inp-btn);
+  opacity: var(--opacity-sm);
+}
+
+.svg-flex a {
+  position: relative;
+}
+
+.svg-flex a::after {
+  background-color: currentColor;
+  width: 0;
+  height: 0.125rem;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.125rem;
+  transition: width 0.2s ease-in-out;
+}
+
+.svg-flex a:hover::after {
+  width: 100%;
 }
 
 #back-to-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    right: var(--spacing-sm);
-    bottom: var(--spacing-lg);
-    background-color: var(--button-color);
-    border-radius: 50%;
-    width: calc(var(--icon-size-lg) + var(--spacing-tn));
-    height: calc(var(--icon-size-lg) + var(--spacing-tn));
-    cursor: pointer;
-    transition: all 0.3s ease;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border-radius: 50%;
+  width: calc(var(--icon-size-lg) + var(--spacing-tn));
+  height: calc(var(--icon-size-lg) + var(--spacing-tn));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: var(--spacing-sm);
+  bottom: var(--spacing-lg);
+  cursor: pointer;
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #back-to-top svg {
-    fill: var(--text-color);
-    width: var(--icon-size-lg);
-    height: var(--icon-size-lg);
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
 }
 
 @media (min-width: 720px) {
-    #back-to-top {
-        right: var(--spacing-md);
-        bottom: var(--spacing-md);
-    }
+  #back-to-top {
+    right: var(--spacing-md);
+    bottom: var(--spacing-md);
+  }
 }

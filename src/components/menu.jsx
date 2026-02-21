@@ -1,22 +1,17 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Moon, Sun, Languages } from "lucide-react";
 
-import Icon from "./icon.jsx";
+import { useI18n } from "../locales/i18n";
 
 import "../styles/menu.css";
 
-const MENU_ITEMS = [
-  "home", 
-  "about", 
-  "skill", 
-  "project", 
-  "contact"
-];
+const MENU_ITEMS = ["home", "about", "experience", "skill", "project", "contact"];
 
 const SCREEN_BREAKPOINT = 720;
 
 const getInitialTheme = () => {
   const currentHour = new Date().getHours();
-  return (currentHour >= 6 && currentHour < 19) ? "light" : "dark";
+  return currentHour >= 6 && currentHour < 19 ? "light" : "dark";
 };
 
 const useScreenAndScroll = () => {
@@ -76,7 +71,7 @@ const useTheme = () => {
   }, [theme]);
 
   const toggleTheme = useCallback(() => {
-    setTheme(prev => prev === "light" ? "dark" : "light");
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   }, []);
 
   return [theme, toggleTheme];
@@ -88,7 +83,7 @@ const useDrawer = () => {
   const buttonRef = useRef(null);
 
   const closeDrawer = useCallback(() => setIsOpen(false), []);
-  const toggleDrawer = useCallback(() => setIsOpen(prev => !prev), []);
+  const toggleDrawer = useCallback(() => setIsOpen((prev) => !prev), []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -109,15 +104,15 @@ const useDrawer = () => {
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         toggleDrawer();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    
+    window.addEventListener("keydown", handleKeyDown);
+
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [toggleDrawer]);
 
@@ -126,21 +121,21 @@ const useDrawer = () => {
     drawerRef,
     buttonRef,
     closeDrawer,
-    toggleDrawer
+    toggleDrawer,
   };
 };
 
 const MenuButton = ({ isOpen, buttonRef, onToggle }) => (
   <div id="menu-container">
-    <div 
-      id="menu-btn" 
-      className={isOpen ? "close" : ""} 
-      ref={buttonRef} 
+    <div
+      id="menu-btn"
+      className={isOpen ? "close" : ""}
+      ref={buttonRef}
       onClick={onToggle}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+        if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           onToggle();
         }
@@ -155,72 +150,111 @@ const MenuButton = ({ isOpen, buttonRef, onToggle }) => (
   </div>
 );
 
-const ThemeButton = ({ theme, onToggle }) => (
-  <Icon 
-    id="theme-btn" 
-    iconKey={theme === "light" ? "moon" : "sun"} 
+const ThemeButton = ({ theme, onToggle }) => {
+  const IconComponent = theme === "light" ? Moon : Sun;
+  return (
+    <IconComponent
+      id="theme-btn"
+      onClick={onToggle}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onToggle();
+        }
+      }}
+      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
+    />
+  );
+};
+
+const LanguageButton = ({ language, onToggle }) => (
+  <Languages
+    id="language-btn"
     onClick={onToggle}
     role="button"
     tabIndex={0}
     onKeyDown={(e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+      if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         onToggle();
       }
     }}
-    aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
+    aria-label={`Switch language to ${language === "en" ? "Thai" : "English"}`}
   />
 );
 
-const MenuItem = ({ item, isActive, onScroll }) => (
-  <li key={item}>
-    <a 
-      className={isActive ? "active" : ""} 
-      onClick={(e) => onScroll(e, item)}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          onScroll(e, item);
-        }
-      }}
-      aria-label={`Navigate to ${item} section`}
-    >
-      {item}
-    </a>
-  </li>
-);
+const MenuItem = ({ item, isActive, onScroll }) => {
+  const { t } = useI18n();
+  const label = t(`nav.${item}`);
 
-const MobileMenu = ({ isOpen, drawerRef, currentPage, onScroll, theme, onThemeToggle }) => (
-  <ul 
-    id="menu-drawer" 
-    ref={drawerRef} 
-    className={isOpen ? "open" : ""}
-  >
+  return (
+    <li key={item}>
+      <a
+        className={isActive ? "active" : ""}
+        onClick={(e) => onScroll(e, item)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onScroll(e, item);
+          }
+        }}
+        aria-label={`Navigate to ${label} section`}
+      >
+        {label}
+      </a>
+    </li>
+  );
+};
+
+const MobileMenu = ({
+  isOpen,
+  drawerRef,
+  currentPage,
+  onScroll,
+  theme,
+  onThemeToggle,
+  language,
+  onLanguageToggle,
+}) => (
+  <ul id="menu-drawer" ref={drawerRef} className={isOpen ? "open" : ""}>
     {MENU_ITEMS.map((item) => (
-      <MenuItem 
+      <MenuItem
         key={item}
-        item={item} 
-        isActive={currentPage === item} 
-        onScroll={onScroll} 
+        item={item}
+        isActive={currentPage === item}
+        onScroll={onScroll}
       />
     ))}
-    <ThemeButton theme={theme} onToggle={onThemeToggle} />
+    <div id="menu-drawer-controls">
+      <ThemeButton theme={theme} onToggle={onThemeToggle} />
+      <LanguageButton language={language} onToggle={onLanguageToggle} />
+    </div>
   </ul>
 );
 
-const DesktopMenu = ({ currentPage, onScroll, theme, onThemeToggle }) => (
+const DesktopMenu = ({
+  currentPage,
+  onScroll,
+  theme,
+  onThemeToggle,
+  language,
+  onLanguageToggle,
+}) => (
   <ul id="menu-bar">
-    {MENU_ITEMS.filter(item => item !== "home").map((item) => (
-      <MenuItem 
+    {MENU_ITEMS.filter((item) => item !== "home").map((item) => (
+      <MenuItem
         key={item}
-        item={item} 
-        isActive={currentPage === item} 
-        onScroll={onScroll} 
+        item={item}
+        isActive={currentPage === item}
+        onScroll={onScroll}
       />
     ))}
     <ThemeButton theme={theme} onToggle={onThemeToggle} />
+    <LanguageButton language={language} onToggle={onLanguageToggle} />
   </ul>
 );
 
@@ -228,7 +262,9 @@ function Menu() {
   const showNavBar = useScreenAndScroll();
   const currentPage = useCurrentPage();
   const [theme, toggleTheme] = useTheme();
-  const { isOpen, drawerRef, buttonRef, closeDrawer, toggleDrawer } = useDrawer();
+  const { language, toggleLanguage, t } = useI18n();
+  const { isOpen, drawerRef, buttonRef, closeDrawer, toggleDrawer } =
+    useDrawer();
 
   useEffect(() => {
     if (showNavBar) {
@@ -236,32 +272,35 @@ function Menu() {
     }
   }, [showNavBar, closeDrawer]);
 
-  const scrollToSection = useCallback((e, sectionId) => {
-    e.preventDefault();
-    const targetSection = document.getElementById(sectionId);
-    
-    if (targetSection) {
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-        block: sectionId === "project" ? "start" : "center",
-      });
-    }
-    
-    closeDrawer();
-  }, [closeDrawer]);
+  const scrollToSection = useCallback(
+    (e, sectionId) => {
+      e.preventDefault();
+      const targetSection = document.getElementById(sectionId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+          block: sectionId === "project" ? "start" : "center",
+        });
+      }
+
+      closeDrawer();
+    },
+    [closeDrawer],
+  );
 
   return (
     <div id="nav-bar">
-      <h2>Portfolio</h2>
-      
+      <h2>{t("nav.portfolioTitle")}</h2>
+
       {!showNavBar && (
-        <MenuButton 
-          isOpen={isOpen} 
-          buttonRef={buttonRef} 
-          onToggle={toggleDrawer} 
+        <MenuButton
+          isOpen={isOpen}
+          buttonRef={buttonRef}
+          onToggle={toggleDrawer}
         />
       )}
-      
+
       <nav>
         {!showNavBar ? (
           <MobileMenu
@@ -271,6 +310,8 @@ function Menu() {
             onScroll={scrollToSection}
             theme={theme}
             onThemeToggle={toggleTheme}
+            language={language}
+            onLanguageToggle={toggleLanguage}
           />
         ) : (
           <DesktopMenu
@@ -278,6 +319,8 @@ function Menu() {
             onScroll={scrollToSection}
             theme={theme}
             onThemeToggle={toggleTheme}
+            language={language}
+            onLanguageToggle={toggleLanguage}
           />
         )}
       </nav>

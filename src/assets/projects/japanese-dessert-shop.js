@@ -1,0 +1,61 @@
+export const japaneseDessertShop = {
+  id: "japanese-dessert-shop",
+  slug: "bluej_design_pattern",
+  category: "design",
+  thumbnail: "/projects/bluej_design_pattern/thumbnail.png",
+  gitrepo: "https://github.com/NsamaX/Japanese-Dessert-Shop",
+  demolink: null,
+  iconkey: [
+    "java",
+  ],
+  images: [
+    "/projects/bluej_design_pattern/design_pattern.png",
+    "/projects/bluej_design_pattern/class_diagram.png",
+  ],
+  translations: {
+    en: {
+      title: "Japanese Dessert Shop",
+      short: "A Java-based project designed to explore use case diagrams and design patterns through the concept of a Japanese dessert shop.",
+      description: "Japanese Dessert Shop is a learning project focused on applying software design patterns and UML modeling using Java with the BlueJ environment. The project is based on the business model of a Japanese dessert shop that allows customers to view menus, order items, apply membership discounts, and process payments, while also enabling the shop owner and staff to manage products and orders.\n\nThe main goal of the project was to practice analyzing requirements through a use case diagram and implement multiple design patterns to create a system that is modular, scalable, and easy to maintain. The implementation includes several design patterns working together such as Factory Method, Iterator, Command, Singleton, Strategy, Template Method, and Composite.\n\nThe project demonstrates how these patterns can be applied in real-world business logic, such as generating product objects, iterating through menus, handling commands from users, calculating membership discounts, and managing product structures. A detailed explanation of the patterns and diagrams can be found in the project’s report (available in the Git repository).",
+      feature: {
+        "Use Case Modeling": "Designed a use case diagram to represent customer, staff, and owner interactions.",
+        "Factory Method": "Used to create product objects (Bakery or Coffee) dynamically.",
+        "Iterator Pattern": "Implemented for menu navigation without exposing the internal data structure.",
+        "Command Pattern": "Separated user commands such as ordering, payment, and cancellation.",
+        "Singleton Pattern": "Ensured a single instance of shared resources like the Scanner object.",
+        "Strategy Pattern": "Applied for calculating membership discounts in payments.",
+        "Template Method": "Defined the payment process steps with customizable sub-operations.",
+        "Composite Pattern": "Managed shopping cart items as a unified structure for flexibility.",
+      },
+      stack: {
+        Java: "Core programming language used to implement the system.",
+        BlueJ: "Development environment for learning and implementing object-oriented concepts.",
+        "OOP Principles": "Applied to structure the system with modularity and scalability.",
+        "UML Diagrams": "Used to model use cases, class structures, and sequence flows.",
+        "Design Patterns": "Implemented multiple patterns to demonstrate practical applications.",
+      },
+    },
+    th: {
+      title: "Japanese Dessert Shop",
+      short: "โปรเจคภาษา Java ที่ใช้ร้านขนมญี่ปุ่นเป็นโจทย์ในการฝึก use case diagram และ design pattern",
+      description: "Japanese Dessert Shop เป็นโปรเจคสำหรับฝึกใช้ design pattern และการออกแบบ UML โดยใช้ภาษา Java บนสภาพแวดล้อม BlueJ ออกแบบจากโมเดลธุรกิจของร้านขนมญี่ปุ่นที่ให้ลูกค้าเลือกรายการขนม สั่งซื้อ คิดส่วนลดสมาชิก และชำระเงิน พร้อมทั้งเปิดให้เจ้าของร้านและพนักงานจัดการสินค้าและคำสั่งซื้อภายในระบบ\n\nเป้าหมายหลักคือฝึกวิเคราะห์ความต้องการจาก use case diagram แล้วแปลงออกมาเป็นโค้ดที่ใช้หลาย ๆ design pattern ร่วมกัน เพื่อให้ระบบมีโครงสร้างที่ยืดหยุ่น แยกส่วนได้ดี และดูแลรักษาง่าย ตัวโปรเจคเดโมให้เห็นการใช้งานแพทเทิร์นต่าง ๆ ในบริบทจริง เช่น การสร้างออบเจ็กต์สินค้า การเดินเมนู การรับคำสั่งจากผู้ใช้ การคำนวณส่วนลดสมาชิก และการจัดโครงสร้างตะกร้าสินค้า",
+      feature: {
+        "Use Case Modeling": "ออกแบบ use case diagram เพื่ออธิบายบทบาทของลูกค้า พนักงาน และเจ้าของร้าน",
+        "Factory Method": "ใช้สร้างออบเจ็กต์สินค้า (เช่น Bakery หรือ Coffee) แบบยืดหยุ่นและขยายได้",
+        "Iterator Pattern": "ใช้เดินเมนูสินค้าโดยไม่ต้องเปิดเผยโครงสร้างข้อมูลภายใน",
+        "Command Pattern": "แยกคำสั่งหลัก ๆ เช่น การสั่งซื้อ ชำระเงิน หรือยกเลิกคำสั่งซื้อออกจากกันอย่างชัดเจน",
+        "Singleton Pattern": "จำกัดให้มีอินสแตนซ์เดียวสำหรับทรัพยากรที่ใช้ร่วมกัน เช่น ออบเจ็กต์ Scanner",
+        "Strategy Pattern": "ใช้สำหรับเปลี่ยนวิธีคิดส่วนลดสมาชิกตามกลยุทธ์ที่ต่างกัน",
+        "Template Method": "กำหนดโครงของขั้นตอนการชำระเงิน และให้แต่ละขั้นตอนย่อยสามารถปรับแต่งได้",
+        "Composite Pattern": "จัดการรายการสินค้าในตะกร้าให้ทำงานเหมือนโครงสร้างเดียวที่ยืดหยุ่น",
+      },
+      stack: {
+        Java: "ภาษาหลักที่ใช้สร้างตรรกะและโครงสร้างเชิงวัตถุของระบบ",
+        BlueJ: "สภาพแวดล้อมสำหรับเรียนรู้และทดลองแนวคิดเชิงวัตถุและ design pattern",
+        "OOP Principles": "ประยุกต์หลักการเชิงวัตถุเพื่อให้โค้ดแยกส่วน ขยายได้ และนำกลับมาใช้ซ้ำง่าย",
+        "UML Diagrams": "ใช้วาด use case, class diagram และ sequence diagram เพื่อสื่อโครงสร้างและการทำงาน",
+        "Design Patterns": "ใช้แพทเทิร์นหลายแบบร่วมกันเพื่อแก้ปัญหาทางธุรกิจในสถานการณ์จริง",
+      },
+    },
+  },
+};

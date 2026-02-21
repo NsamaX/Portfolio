@@ -1,15 +1,43 @@
 #about .content p {
-    text-indent: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
+  text-indent: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
 }
 
 #about .svg-flex a {
-    display: flex;
-    align-items: center;
-    opacity: var(--opacity-md);
-    gap: var(--spacing-tn);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-tn);
 }
 
-#about .svg-flex a:hover {
-    opacity: 1;
+#about .svg-flex svg {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+  stroke: currentColor;
+  fill: none;
+}
+
+#about .svg-flex .document-label {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.125rem;
+}
+
+#about .svg-flex .document-label::after {
+  background-color: currentColor;
+  width: 0;
+  height: 0.125rem;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+#about .svg-flex a:hover .document-label::after {
+  width: 100%;
+}
+
+#about .svg-flex a::after {
+  content: none;
 }

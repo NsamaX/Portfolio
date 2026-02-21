@@ -1,8 +1,11 @@
-import { useState, useCallback } from "react";
-import emailjs from '@emailjs/browser';
+import { useState, useCallback, useRef } from "react";
+import { Pen } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 import palmUp from "../assets/collages/palm-up.png";
 import reachingOut from "../assets/collages/reaching-out.png";
+
+import { useI18n } from "../locales/i18n";
 
 import "../styles/contact.css";
 
@@ -12,115 +15,133 @@ const EMAIL_CONFIG = {
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
 };
 
-const CONTACT_INFO = "If you would like to connect with me, please feel free to reach out via email or connect with me on social media.";
-
-const BUTTON_STATES = {
-  IDLE: "Send Message",
-  SENDING: "Sending...",
-};
-
-const MESSAGE_STATUS = {
-  SUCCESS: "✅ Sent Successfully!",
-  ERROR: "❌ Failed to send message.",
-  MISSING_CONFIG: "❌ Email service not configured.",
-};
-
 function Contact() {
+  const { t } = useI18n();
   const [isLoading, setIsLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
+  const [isFormValid, setIsFormValid] = useState(false);
+  const formRef = useRef(null);
 
   const validateConfig = useCallback(() => {
-    return EMAIL_CONFIG.serviceId && EMAIL_CONFIG.templateId && EMAIL_CONFIG.userId;
+    return (
+      EMAIL_CONFIG.serviceId && EMAIL_CONFIG.templateId && EMAIL_CONFIG.userId
+    );
   }, []);
 
-  const sendEmail = useCallback(async (e) => {
-    e.preventDefault();
+  const sendEmail = useCallback(
+    async (e) => {
+      e.preventDefault();
 
-    if (!validateConfig()) {
-      setStatusMessage(MESSAGE_STATUS.MISSING_CONFIG);
-      return;
+      if (!validateConfig()) {
+        setStatusMessage(t("contact.status.missingConfig"));
+        return;
+      }
+
+      setIsLoading(true);
+      setStatusMessage("");
+
+      try {
+        await emailjs.sendForm(
+          EMAIL_CONFIG.serviceId,
+          EMAIL_CONFIG.templateId,
+          e.target,
+          EMAIL_CONFIG.userId,
+        );
+
+        setStatusMessage(t("contact.status.success"));
+        e.target.reset();
+        setIsFormValid(false);
+      } catch (error) {
+        console.error("Failed to send email:", error);
+        setStatusMessage(t("contact.status.error"));
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [validateConfig, t],
+  );
+
+  const handleFieldChange = useCallback(() => {
+    if (formRef.current) {
+      setIsFormValid(formRef.current.checkValidity());
     }
-
-    setIsLoading(true);
-    setStatusMessage("");
-
-    try {
-      await emailjs.sendForm(
-        EMAIL_CONFIG.serviceId,
-        EMAIL_CONFIG.templateId,
-        e.target,
-        EMAIL_CONFIG.userId
-      );
-
-      setStatusMessage(MESSAGE_STATUS.SUCCESS);
-      e.target.reset();
-    } catch (error) {
-      console.error("Failed to send email:", error);
-      setStatusMessage(MESSAGE_STATUS.ERROR);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [validateConfig]);
+  }, []);
 
   return (
     <section id="contact">
-      <h2>Get in Touch</h2>
+      <h2>{t("contact.sectionTitle")}</h2>
 
-      <img 
-        id="palm-up" 
-        src={palmUp} 
-        alt="Collage Palm Up" 
-        className="collage" 
+      <img
+        id="palm-up"
+        src={palmUp}
+        alt="Collage Palm Up"
+        className="collage"
       />
 
       <div className="content">
-        <p>{CONTACT_INFO}</p>
-        
-        <form onSubmit={sendEmail}>
-          <input 
-            type="text" 
-            name="name" 
-            placeholder="Name" 
-            required 
-            disabled={isLoading}
-          />
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Email" 
-            required 
-            disabled={isLoading}
-          />
-          <textarea 
-            name="subject" 
-            placeholder="Subject" 
-            required 
-            disabled={isLoading}
-          />
-          <textarea 
-            name="message" 
-            placeholder="Message" 
-            required 
-            disabled={isLoading}
-          />
-          
-          {statusMessage && (
-            <p className="status-message">{statusMessage}</p>
-          )}
+        <p>{t("contact.info")}</p>
 
-          <img 
-            id="reaching-out" 
-            src={reachingOut} 
-            alt="Collage Reaching Out" 
-            className="collage" 
+        <form ref={formRef} onSubmit={sendEmail}>
+          <div className="form-field">
+            <input
+              type="text"
+              name="name"
+              placeholder={t("contact.placeholders.name")}
+              required
+              disabled={isLoading}
+              onChange={handleFieldChange}
+            />
+            <Pen className="field-icon" aria-hidden="true" />
+          </div>
+          <div className="form-field">
+            <input
+              type="email"
+              name="email"
+              placeholder={t("contact.placeholders.email")}
+              required
+              disabled={isLoading}
+              onChange={handleFieldChange}
+            />
+            <Pen className="field-icon" aria-hidden="true" />
+          </div>
+          <div className="form-field">
+            <textarea
+              name="subject"
+              placeholder={t("contact.placeholders.subject")}
+              required
+              disabled={isLoading}
+              onChange={handleFieldChange}
+            />
+            <Pen className="field-icon" aria-hidden="true" />
+          </div>
+          <div className="form-field message-field">
+            <textarea
+              name="message"
+              placeholder={t("contact.placeholders.message")}
+              required
+              disabled={isLoading}
+              onChange={handleFieldChange}
+            />
+            <Pen className="field-icon" aria-hidden="true" />
+          </div>
+
+          {statusMessage && <p className="status-message">{statusMessage}</p>}
+
+          <img
+            id="reaching-out"
+            src={reachingOut}
+            alt="Collage Reaching Out"
+            className="collage"
           />
-          
-          <button 
-            type="submit" 
-            disabled={isLoading}
-            aria-label={isLoading ? "Sending message" : "Send message"}
+
+          <button
+            type="submit"
+            disabled={isLoading || !isFormValid}
+            aria-label={
+              isLoading ? t("contact.button.sending") : t("contact.button.idle")
+            }
           >
-            {isLoading ? BUTTON_STATES.SENDING : BUTTON_STATES.IDLE}
+            {isLoading ? t("contact.button.sending") : t("contact.button.idle")}
           </button>
         </form>
       </div>
