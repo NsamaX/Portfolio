@@ -1,97 +1,90 @@
 [
   {
-    "id": "erp",
-    "title": "Factory ERP System",
-    "desc": "Production scheduling, inventory, and materials management for discrete manufacturing",
-    "longDesc": "A full-suite ERP system built for factory operations. Covers production order scheduling, bill of materials, real-time inventory management, purchase order planning, and forecast-driven MRP. Deployed on-premise with Docker and Portainer across factory sites — zero cloud dependency.",
-    "tags": ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
+    "id": "01",
+    "title": "Nexus",
+    "desc": "Personal crypto trading bot with full-auto and hybrid execution modes for Binance.",
+    "longDesc": "Personal crypto trading bot web interface with full-auto and hybrid execution modes for Binance. Features real-time WebSocket updates, AI-powered news analysis, and a REST API for Suwisa.",
+    "tags": ["TypeScript", "Python", "CSS"],
     "type": "website",
     "repo": null,
     "live": null,
     "images": [
-      { "label": "Dashboard", "src": "ph" },
-      { "label": "Forecast Module", "src": "ph" }
-    ],
-    "year": "2025 — Present",
-    "role": "IT & Developer"
-  },
-  {
-    "id": "mas",
-    "title": "Massage Administration System",
-    "desc": "Web-based administration system for Thai massage parlors with booking and staff management",
-    "longDesc": "A modular monolith system for managing massage parlor operations. Features PIN-based login with role-based access, appointment scheduling and room assignment, staff and service management, and a real-time dashboard. Deployed on-premise on a Mini PC.",
-    "tags": ["Next.js", "TypeScript", "MariaDB", "Drizzle ORM"],
-    "type": "website",
-    "repo": null,
-    "live": null,
-    "images": [
-      { "label": "Dashboard", "src": "ph" },
-      { "label": "Appointments", "src": "ph" }
+      { "label": "Thumbnail", "src": "https://cdn.dribbble.com/userupload/47879288/file/993ecf338d8ffd4ce95551a187ac6114.png?resize=600x752&vertical=center" }
     ],
     "year": "2025",
     "role": "Developer"
   },
   {
-    "id": "nfc",
-    "title": "NFC Deck Tracker",
-    "desc": "Mobile app for managing TCG decks with real-time NFC card tracking",
-    "longDesc": "A Flutter mobile application for trading card game deck management, developed as a Bachelor's Thesis at Silpakorn University. Features deck creation and editing, card search via public game APIs, real-time NFC tag tracking, custom card support, and game analytics with match history.",
-    "tags": ["Flutter", "Dart", "Firebase"],
-    "type": "mobile",
-    "repo": "https://github.com/NsamaX/NFC-Deck-Tracker",
+    "id": "02",
+    "title": "Suwisa",
+    "desc": "Personal assistant on Discord with conversation memory, Gmail access, and web search.",
+    "longDesc": "Personal assistant on Discord with conversation memory, Gmail access, and web search. Integrates with Nexus to deliver real-time alerts and portfolio queries, powered by Anthropic Claude.",
+    "tags": ["TypeScript"],
+    "type": "tool",
+    "repo": null,
     "live": null,
     "images": [
-      { "label": "App Overview", "src": "/projects/nfc_deck_tracker/thumbnail.png" },
-      { "label": "Deck Management", "src": "ph" }
+      { "label": "Thumbnail", "src": "https://cdn.dribbble.com/userupload/3831711/file/original-3bee1b26948595cb4fb7663906a68c8c.png?resize=1024x768&vertical=center" }
     ],
-    "year": "2024",
-    "role": "Developer (Thesis)"
-  },
-  {
-    "id": "payroll",
-    "title": "Payroll System",
-    "desc": "Web-based payroll management with automated salary calculation and financial reporting",
-    "longDesc": "A full-featured payroll system for calculating employee salaries, taxes, and welfare deductions. Supports overtime, absenteeism, diligence bonuses, social security, and provident fund processing. Generates e-slips and exports financial reports in CSV and DOCX. Role-based access for Accounting and Employee.",
-    "tags": ["PHP", "Java", "MySQL"],
-    "type": "website",
-    "repo": "https://github.com/NsamaX/Payroll-System",
-    "live": null,
-    "images": [
-      { "label": "Dashboard", "src": "ph" },
-      { "label": "E-Slip", "src": "ph" }
-    ],
-    "year": "2023",
+    "year": "2025",
     "role": "Developer"
   },
   {
-    "id": "astral",
-    "title": "Astral Oracle",
-    "desc": "Tarot card reading web app with AI-powered fortune telling via Groq",
-    "longDesc": "A web application for tarot card readings powered by an AI fortune teller. Draw 1, 3, or 5 cards at random with upright or reversed orientation, ask a question, and receive a mystical AI-generated reading via Groq. Saves reading history locally via cookies. Supports English and Thai.",
-    "tags": ["JavaScript", "Vite", "Groq AI"],
+    "id": "03",
+    "title": "Massage Administration System",
+    "desc": "Web app for managing Thai massage parlor operations with role-based access for Admin and Secretary.",
+    "longDesc": "Web app for managing Thai massage parlor operations with role-based access for Admin and Secretary. Features appointment scheduling, staff profiles, service management, and monthly revenue reports.",
+    "tags": ["TypeScript", "HTML", "CSS"],
     "type": "website",
-    "repo": "https://github.com/NsamaX/Astral-Oracle",
-    "live": "https://astral-oracle.vercel.app",
+    "repo": "https://github.com/NsamaX/Massage-Administration-System",
+    "live": null,
     "images": [
-      { "label": "Card Draw", "src": "/projects/astral_oracle/thumbnail.png" },
-      { "label": "Card Detail", "src": "/projects/astral_oracle/card.png" },
-      { "label": "Reading History", "src": "/projects/astral_oracle/cookie.png" }
+      { "label": "Thumbnail", "src": "https://cdn.dribbble.com/userupload/35276592/file/original-4f0cc5d78a77127f58f8c318659b2a50.jpg?resize=1024x768&vertical=center" }
     ],
-    "year": "2024",
+    "year": "2025",
     "role": "Developer"
   },
   {
-    "id": "crossword",
+    "id": "04",
     "title": "Crossword Solver",
-    "desc": "Automated solver for Ludobros crossword puzzle using image recognition and backtracking",
-    "longDesc": "A Java program that solves the Ludobros crossword puzzle automatically from a screenshot. Extracts the grid and answer lengths via image recognition, simulates the game's gravity mechanic as words are consumed, then uses backtracking to find valid word combinations from a ~4,700-word English database.",
+    "desc": "Algorithm that solves a crossword game with 8 interconnected paths using backtracking.",
+    "longDesc": "Algorithm that calculates the answer to a crossword game with 8 interconnected paths and moves down the grid as letters are used. Uses backtracking to find the correct path.",
     "tags": ["Java"],
     "type": "tool",
     "repo": "https://github.com/NsamaX/Crossword-Solver",
     "live": null,
     "images": [
-      { "label": "Solver Output", "src": "/projects/crossword_solver/thumbnail.png" },
-      { "label": "Sample Puzzle", "src": "/projects/crossword_solver/sample.png" }
+      { "label": "Thumbnail", "src": "https://cdn.dribbble.com/userupload/44561299/file/82da03aa2ebda8899202b01b36008b01.jpg?resize=1024x732&vertical=center" }
+    ],
+    "year": "2024",
+    "role": "Developer"
+  },
+  {
+    "id": "05",
+    "title": "NFC Deck Tracker",
+    "desc": "Mobile app for managing and tracking TCG decks in real time with NFC.",
+    "longDesc": "Mobile app for managing and tracking TCG decks in real time with NFC. Built with Flutter under the concept of Clean Architecture as a Bachelor's Thesis at Silpakorn University.",
+    "tags": ["Dart", "C++", "CMake"],
+    "type": "mobile",
+    "repo": "https://github.com/NsamaX/NFC-Deck-Tracker",
+    "live": null,
+    "images": [
+      { "label": "Thumbnail", "src": "https://cdn.dribbble.com/userupload/43494119/file/accbde84fa8cafd9a7088e4f36c27f62.png?resize=1024x732&vertical=center" }
+    ],
+    "year": "2024",
+    "role": "Developer"
+  },
+  {
+    "id": "06",
+    "title": "Astral Oracle",
+    "desc": "Web app for tarot card readings with personalized predictions powered by Groq AI.",
+    "longDesc": "Web app for tarot card readings with personalized predictions powered by Groq AI. It features an interactive interface for drawing and interpreting tarot cards.",
+    "tags": ["JavaScript", "CSS", "HTML"],
+    "type": "website",
+    "repo": "https://github.com/NsamaX/Astral-Oracle",
+    "live": "https://astral-oracle.vercel.app",
+    "images": [
+      { "label": "Thumbnail", "src": "https://cdn.dribbble.com/userupload/42769129/file/bfe68ecf4235aa0c39c82fc2c0a453fa.jpg?resize=1024x732&vertical=center" }
     ],
     "year": "2024",
     "role": "Developer"

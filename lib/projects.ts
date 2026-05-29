@@ -1,6 +1,7 @@
 import type { Lang } from './translations';
 import enProjects from '../locales/en.projects.json';
 import thProjects from '../locales/th.projects.json';
+import jpProjects from '../locales/jp.projects.json';
 
 export interface ProjectImage {
   label: string;
@@ -33,6 +34,7 @@ function resolvePH(projects: ProjectItem[]): ProjectItem[] {
 const projectsData: Record<Lang, ProjectItem[]> = {
   en: resolvePH(enProjects as ProjectItem[]),
   th: resolvePH(thProjects as ProjectItem[]),
+  jp: resolvePH(jpProjects as ProjectItem[]),
 };
 
 export default projectsData;

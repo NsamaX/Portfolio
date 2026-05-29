@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Lang } from '@/lib/translations';
+import { Lang, ENABLED_LANGS } from '@/lib/translations';
 
 interface NavProps {
   darkMode: boolean;
@@ -13,6 +13,7 @@ interface NavProps {
 const NAV_LABELS: Record<Lang, { about: string; experience: string; skills: string; projects: string; contact: string }> = {
   en: { about: 'About', experience: 'Experience', skills: 'Skill', projects: 'Project', contact: 'Contact' },
   th: { about: 'เกี่ยวกับ', experience: 'ประสบการณ์', skills: 'ทักษะ', projects: 'ผลงาน', contact: 'ติดต่อ' },
+  jp: { about: '自己紹介', experience: '経歴', skills: 'スキル', projects: '作品', contact: 'お問い合わせ' },
 };
 
 const SECTION_IDS = ['about', 'experience', 'skills', 'projects', 'contact'] as const;
@@ -110,12 +111,12 @@ export default function Nav({ darkMode, setDarkMode, lang, setLang }: NavProps) 
             }
           </button>
 
-          <button className="nav-lang-btn" onClick={() => setLang(l => l === 'en' ? 'th' : 'en')} aria-label="Toggle language">
+          <button className="nav-lang-btn" onClick={() => setLang(l => { const i = ENABLED_LANGS.indexOf(l); return ENABLED_LANGS[(i + 1) % ENABLED_LANGS.length]; })} aria-label="Toggle language">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" strokeWidth="1.6"/>
               <path d="M2 12h20M12 2c-2.5 3-4 6.5-4 10s1.5 7 4 10M12 2c2.5 3 4 6.5 4 10s-1.5 7-4 10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
             </svg>
-            <span className="nav-lang-text">{lang === 'en' ? 'TH' : 'EN'}</span>
+            <span className="nav-lang-text">{ENABLED_LANGS[(ENABLED_LANGS.indexOf(lang) + 1) % ENABLED_LANGS.length].toUpperCase()}</span>
           </button>
 
         </div>
@@ -142,7 +143,7 @@ export default function Nav({ darkMode, setDarkMode, lang, setLang }: NavProps) 
               : <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
             }
           </button>
-          <button className="panel-icon-btn" onClick={() => setLang(l => l === 'en' ? 'th' : 'en')} aria-label="Toggle language">
+          <button className="panel-icon-btn" onClick={() => setLang(l => { const i = ENABLED_LANGS.indexOf(l); return ENABLED_LANGS[(i + 1) % ENABLED_LANGS.length]; })} aria-label="Toggle language">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" strokeWidth="1.6"/>
               <path d="M2 12h20M12 2c-2.5 3-4 6.5-4 10s1.5 7 4 10M12 2c2.5 3 4 6.5 4 10s-1.5 7-4 10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>

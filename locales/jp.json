@@ -1,0 +1,88 @@
+{
+  "nav": { "about": "自己紹介", "experience": "経歴", "skills": "スキル", "projects": "作品", "contact": "お問い合わせ" },
+  "hero": {
+    "role": "フルスタック / インフラエンジニア",
+    "tagline": "製造業のデジタルトランスフォーメーション",
+    "sub": "オンプレミスインフラの運用と工場向けERPシステムの開発",
+    "cta_work": "作品を見る",
+    "cta_resume": "履歴書 ↗"
+  },
+  "about": {
+    "label": "自己紹介",
+    "body1": [
+      "工場が止まらないためのシステムを作っています — ",
+      { "text": "ベアメタルサーバー", "mark": true },
+      " から現場オペレーターが使うインターフェースまで。私の仕事は ",
+      { "text": "インフラの安定性", "mark": true },
+      " と実際に使われるソフトウェアの交差点にあります。"
+    ],
+    "body2": [
+      { "text": "コンピュータ工学", "mark": true },
+      " を専攻し、現在は離散製造向けERPシステムに注力しています。長く使えるソフトウェア、静かに壊れないハードウェア、そして ",
+      { "text": "未来の自分が感謝するドキュメント", "mark": true },
+      " を大切にしています。"
+    ],
+    "resume": "履歴書PDF",
+    "stats": [
+      { "val": "工学士", "label": "コンピュータ工学" },
+      { "val": "5年", "label": "業界経験" },
+      { "val": "現場", "label": "製造業フォーカス" }
+    ]
+  },
+  "experience": {
+    "label": "経歴",
+    "jobs": [
+      {
+        "tag": "現在",
+        "company": "Nozomi Enterprise (Thailand)",
+        "role": "IT & Developer",
+        "year": "2025 — 現在",
+        "bullets": [
+          "工場サイト向けオンプレミスサーバーインフラの設計・保守",
+          "生産スケジュール・在庫・品質管理向けERPモジュールの開発",
+          "リアルタイム監視パイプラインによるライン停止インシデントの削減"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "label": "スキル",
+    "categories": [
+      {
+        "label": "FRONTEND / BACKEND",
+        "skills": [
+          { "name": "Next.js", "icon": "nextjs", "desc": "サーバーサイドレンダリング・ファイルベースルーティング・本番最適化を備えたReactフレームワーク。" },
+          { "name": "Tailwind", "icon": "tailwind", "desc": "ユーティリティファーストのCSSフレームワーク — 小さく組み合わせ可能なクラス名でHTMLに直接スタイルを適用。" },
+          { "name": "PostgreSQL", "icon": "postgresql", "desc": "高機能なオープンソースRDB。信頼性が高く複雑なクエリにも対応。" },
+          { "name": "Docker", "icon": "docker", "desc": "アプリと依存関係をコンテナにまとめ、どのマシンでも同一環境で実行可能にする。" }
+        ]
+      },
+      {
+        "label": "DEVOPS & TOOLS",
+        "skills": [
+          { "name": "Proxmox", "icon": "proxmox", "desc": "ベアメタルサーバー上でVMとコンテナを管理するオープンソース仮想化プラットフォーム。" },
+          { "name": "Git", "icon": "git", "desc": "バージョン管理システム。コードの変更を追跡し、チーム開発を支援し、作業の消失を防ぐ。" },
+          { "name": "Figma", "icon": "figma", "desc": "UIモックアップ・プロトタイプ・デザインシステムを構築するコラボレーション設計ツール。" }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "label": "作品",
+    "filters": ["すべて", "ウェブ", "モバイル", "ツール"],
+    "filterMap": { "すべて": "all", "ウェブ": "website", "モバイル": "mobile", "ツール": "tool" }
+  },
+  "contact": {
+    "label": "お問い合わせ",
+    "intro": "プロジェクトやお仕事のご相談はお気軽にどうぞ。",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "message": "メッセージ",
+    "name_ph": "お名前を入力",
+    "email_ph": "you@example.com",
+    "message_ph": "ご用件をどうぞ",
+    "send": "送信する",
+    "sent": "送信済み ✓"
+  },
+  "footer": "Next.js で構築"
+}

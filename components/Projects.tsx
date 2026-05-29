@@ -45,7 +45,7 @@ function ProjectDetail({ project, onClose, lang }: { project: ProjectItem; onClo
         </button>
 
         <div className="pd-hero-img" style={{ position: 'relative' }}>
-          <img src={project.images[activeImg].src} alt={project.images[activeImg].label} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
+          <img src={project.images[activeImg].src} alt={project.images[activeImg].label} style={{ width: '100%', height: 'auto', display: 'block' }} />
           <svg className="pd-torn-bottom" viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}>
             <path d="M0,0 L0,28 L1200,28 L1200,10 C1160,18 1110,6 1060,14 C1010,22 970,8 920,14 C870,20 830,6 780,12 C730,18 680,4 630,10 C580,16 530,4 480,10 C430,16 380,4 330,12 C280,20 230,6 180,12 C130,18 80,6 40,12 C20,15 8,8 0,10 Z" fill="var(--bg)"/>
           </svg>
@@ -115,7 +115,7 @@ export default function Projects({ lang }: ProjectsProps) {
   }, []);
 
   function filterValue(f: string): string {
-    if (lang === 'th' && t.filterMap) return t.filterMap[f] || f;
+    if (t.filterMap) return t.filterMap[f] || f;
     return f;
   }
 

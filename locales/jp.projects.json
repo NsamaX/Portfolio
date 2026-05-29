@@ -1,0 +1,92 @@
+[
+  {
+    "id": "01",
+    "title": "Nexus",
+    "desc": "フルオートとハイブリッド実行モードを備えたBinance向け個人仮想通貨取引ボット。",
+    "longDesc": "Binanceのフルオートおよびハイブリッド実行モードに対応した個人仮想通貨取引ボットのウェブインターフェース。WebSocketによるリアルタイム更新、AIによるニュース分析、Suwisa向けREST APIを搭載。",
+    "tags": ["TypeScript", "Python", "CSS"],
+    "type": "website",
+    "repo": null,
+    "live": null,
+    "images": [
+      { "label": "サムネイル", "src": "https://cdn.dribbble.com/userupload/47879288/file/993ecf338d8ffd4ce95551a187ac6114.png?resize=600x752&vertical=center" }
+    ],
+    "year": "2025",
+    "role": "開発者"
+  },
+  {
+    "id": "02",
+    "title": "Suwisa",
+    "desc": "会話メモリ・Gmailアクセス・ウェブ検索を備えたDiscord上の個人アシスタント。",
+    "longDesc": "会話メモリ・Gmailアクセス・ウェブ検索を備えたDiscord上の個人アシスタント。Nexusと連携してリアルタイムアラートとポートフォリオ照会を提供し、Anthropic Claudeで動作。",
+    "tags": ["TypeScript"],
+    "type": "tool",
+    "repo": null,
+    "live": null,
+    "images": [
+      { "label": "サムネイル", "src": "https://cdn.dribbble.com/userupload/3831711/file/original-3bee1b26948595cb4fb7663906a68c8c.png?resize=1024x768&vertical=center" }
+    ],
+    "year": "2025",
+    "role": "開発者"
+  },
+  {
+    "id": "03",
+    "title": "マッサージ管理システム",
+    "desc": "AdminとSecretaryの役割ベースアクセスを備えたタイ式マッサージ店向けウェブ管理アプリ。",
+    "longDesc": "AdminとSecretaryの役割ベースアクセスを備えたタイ式マッサージ店運営管理ウェブアプリ。予約管理・スタッフプロフィール・サービス管理・月次売上レポートを搭載。",
+    "tags": ["TypeScript", "HTML", "CSS"],
+    "type": "website",
+    "repo": "https://github.com/NsamaX/Massage-Administration-System",
+    "live": null,
+    "images": [
+      { "label": "サムネイル", "src": "https://cdn.dribbble.com/userupload/35276592/file/original-4f0cc5d78a77127f58f8c318659b2a50.jpg?resize=1024x768&vertical=center" }
+    ],
+    "year": "2025",
+    "role": "開発者"
+  },
+  {
+    "id": "04",
+    "title": "Crossword Solver",
+    "desc": "バックトラッキングで8つの経路を持つクロスワードゲームを解くアルゴリズム。",
+    "longDesc": "8つの経路が交差するクロスワードゲームの解答を計算するアルゴリズム。文字が使われるたびにグリッドを下方向に移動させ、バックトラッキングで正しい経路を探索する。",
+    "tags": ["Java"],
+    "type": "tool",
+    "repo": "https://github.com/NsamaX/Crossword-Solver",
+    "live": null,
+    "images": [
+      { "label": "サムネイル", "src": "https://cdn.dribbble.com/userupload/44561299/file/82da03aa2ebda8899202b01b36008b01.jpg?resize=1024x732&vertical=center" }
+    ],
+    "year": "2024",
+    "role": "開発者"
+  },
+  {
+    "id": "05",
+    "title": "NFC Deck Tracker",
+    "desc": "NFCでTCGデッキをリアルタイム管理・追跡するモバイルアプリ。",
+    "longDesc": "NFCでTCGデッキをリアルタイム管理・追跡するモバイルアプリ。シルパコーン大学の学士論文としてClean Architectureコンセプトに基づきFlutterで開発。",
+    "tags": ["Dart", "C++", "CMake"],
+    "type": "mobile",
+    "repo": "https://github.com/NsamaX/NFC-Deck-Tracker",
+    "live": null,
+    "images": [
+      { "label": "サムネイル", "src": "https://cdn.dribbble.com/userupload/43494119/file/accbde84fa8cafd9a7088e4f36c27f62.png?resize=1024x732&vertical=center" }
+    ],
+    "year": "2024",
+    "role": "開発者"
+  },
+  {
+    "id": "06",
+    "title": "Astral Oracle",
+    "desc": "Groq AIによる個人予言付きタロットカード占いウェブアプリ。",
+    "longDesc": "Groq AIによる個人予言付きタロットカード占いウェブアプリ。カードを引いて解釈するインタラクティブなインターフェースを搭載。",
+    "tags": ["JavaScript", "CSS", "HTML"],
+    "type": "website",
+    "repo": "https://github.com/NsamaX/Astral-Oracle",
+    "live": "https://astral-oracle.vercel.app",
+    "images": [
+      { "label": "サムネイル", "src": "https://cdn.dribbble.com/userupload/42769129/file/bfe68ecf4235aa0c39c82fc2c0a453fa.jpg?resize=1024x732&vertical=center" }
+    ],
+    "year": "2024",
+    "role": "開発者"
+  }
+]

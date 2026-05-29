@@ -1,97 +1,90 @@
 [
   {
-    "id": "erp",
-    "title": "ระบบ ERP สำหรับโรงงาน",
-    "desc": "จัดตารางการผลิต คลังสินค้า และวัตถุดิบสำหรับอุตสาหกรรมการผลิต",
-    "longDesc": "ระบบ ERP ครบชุดสำหรับการดำเนินงานโรงงาน ครอบคลุมการจัดตารางคำสั่งผลิต บัญชีรายการวัสดุ การจัดการสินค้าคงคลังแบบ real-time การวางแผนคำสั่งซื้อ และ MRP ที่ขับเคลื่อนด้วยการพยากรณ์ ติดตั้งภายในองค์กรด้วย Docker และ Portainer ไม่พึ่ง cloud",
-    "tags": ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
+    "id": "01",
+    "title": "Nexus",
+    "desc": "บอทเทรดคริปโตส่วนตัว รองรับโหมด Full-Auto และ Hybrid บน Binance",
+    "longDesc": "เว็บอินเทอร์เฟซบอทเทรดคริปโตส่วนตัว รองรับโหมด Full-Auto และ Hybrid บน Binance มีระบบอัปเดตแบบ real-time ผ่าน WebSocket วิเคราะห์ข่าวด้วย AI และ REST API สำหรับ Suwisa",
+    "tags": ["TypeScript", "Python", "CSS"],
     "type": "website",
     "repo": null,
     "live": null,
     "images": [
-      { "label": "ภาพรวม Dashboard", "src": "ph" },
-      { "label": "โมดูลพยากรณ์", "src": "ph" }
-    ],
-    "year": "2025 — ปัจจุบัน",
-    "role": "IT & Developer"
-  },
-  {
-    "id": "mas",
-    "title": "ระบบจัดการสปานวด",
-    "desc": "ระบบจัดการเว็บสำหรับร้านนวดแผนไทย พร้อมการนัดหมายและจัดการพนักงาน",
-    "longDesc": "ระบบ Modular Monolith สำหรับจัดการการดำเนินงานร้านนวด มี PIN login พร้อม role-based access การนัดหมายและมอบหมายห้อง การจัดการพนักงานและบริการ และ dashboard ภาพรวมแบบ real-time ติดตั้งบน Mini PC ภายในองค์กร",
-    "tags": ["Next.js", "TypeScript", "MariaDB", "Drizzle ORM"],
-    "type": "website",
-    "repo": null,
-    "live": null,
-    "images": [
-      { "label": "Dashboard", "src": "ph" },
-      { "label": "การนัดหมาย", "src": "ph" }
+      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/47879288/file/993ecf338d8ffd4ce95551a187ac6114.png?resize=600x752&vertical=center" }
     ],
     "year": "2025",
     "role": "นักพัฒนา"
   },
   {
-    "id": "nfc",
-    "title": "NFC Deck Tracker",
-    "desc": "แอปมือถือสำหรับจัดการสำรับไพ่ TCG พร้อมติดตามไพ่แบบ real-time ด้วย NFC",
-    "longDesc": "แอปพลิเคชัน Flutter สำหรับจัดการสำรับการ์ดเกม พัฒนาเป็นวิทยานิพนธ์ปริญญาตรีที่มหาวิทยาลัยศิลปากร มีฟีเจอร์สร้างและแก้ไขสำรับ ค้นหาการ์ดผ่าน API สาธารณะ ติดตาม NFC แบบ real-time รองรับการ์ด custom และวิเคราะห์เกมพร้อมประวัติการแข่งขัน",
-    "tags": ["Flutter", "Dart", "Firebase"],
-    "type": "mobile",
-    "repo": "https://github.com/NsamaX/NFC-Deck-Tracker",
+    "id": "02",
+    "title": "Suwisa",
+    "desc": "ผู้ช่วยส่วนตัวบน Discord มีหน่วยความจำสนทนา เข้าถึง Gmail และค้นหาเว็บได้",
+    "longDesc": "ผู้ช่วยส่วนตัวบน Discord มีหน่วยความจำสนทนา เข้าถึง Gmail และค้นหาเว็บได้ เชื่อมต่อกับ Nexus เพื่อส่งการแจ้งเตือนและสอบถามข้อมูลพอร์ตโฟลิโอแบบ real-time ขับเคลื่อนด้วย Anthropic Claude",
+    "tags": ["TypeScript"],
+    "type": "tool",
+    "repo": null,
     "live": null,
     "images": [
-      { "label": "ภาพรวมแอป", "src": "/projects/nfc_deck_tracker/thumbnail.png" },
-      { "label": "จัดการสำรับ", "src": "ph" }
+      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/3831711/file/original-3bee1b26948595cb4fb7663906a68c8c.png?resize=1024x768&vertical=center" }
     ],
-    "year": "2024",
-    "role": "นักพัฒนา (วิทยานิพนธ์)"
-  },
-  {
-    "id": "payroll",
-    "title": "ระบบจัดการเงินเดือน",
-    "desc": "ระบบจัดการเงินเดือนบนเว็บ พร้อมคำนวณเงินเดือนอัตโนมัติและออกรายงานการเงิน",
-    "longDesc": "ระบบเงินเดือนครบชุดสำหรับคำนวณเงินเดือน ภาษี และสวัสดิการพนักงาน รองรับโอที การขาดงาน โบนัสขยัน ประกันสังคม และกองทุนสำรองเลี้ยงชีพ ออก e-slip และส่งออกรายงานการเงินในรูปแบบ CSV และ DOCX มี role-based access สำหรับฝ่ายบัญชีและพนักงาน",
-    "tags": ["PHP", "Java", "MySQL"],
-    "type": "website",
-    "repo": "https://github.com/NsamaX/Payroll-System",
-    "live": null,
-    "images": [
-      { "label": "Dashboard", "src": "ph" },
-      { "label": "E-Slip", "src": "ph" }
-    ],
-    "year": "2023",
+    "year": "2025",
     "role": "นักพัฒนา"
   },
   {
-    "id": "astral",
-    "title": "Astral Oracle",
-    "desc": "เว็บแอปดูดวงไพ่ทาโรต์พร้อม AI ทำนายดวงผ่าน Groq",
-    "longDesc": "เว็บแอปพลิเคชันสำหรับอ่านไพ่ทาโรต์ด้วย AI ทำนายดวง จั่วไพ่ 1, 3 หรือ 5 ใบแบบสุ่มทั้งตั้งและกลับ ถามคำถามแล้วรับคำทำนายจาก AI ผ่าน Groq บันทึกประวัติการอ่านผ่าน cookie รองรับทั้งภาษาอังกฤษและภาษาไทย",
-    "tags": ["JavaScript", "Vite", "Groq AI"],
+    "id": "03",
+    "title": "ระบบจัดการสปานวด",
+    "desc": "เว็บแอปจัดการร้านนวดแผนไทย รองรับสิทธิ์ Admin และเลขา",
+    "longDesc": "เว็บแอปจัดการการดำเนินงานร้านนวดแผนไทย รองรับสิทธิ์ผู้ใช้สำหรับ Admin และเลขา มีระบบนัดหมาย โปรไฟล์พนักงาน จัดการบริการ และรายงานรายรับรายเดือน",
+    "tags": ["TypeScript", "HTML", "CSS"],
     "type": "website",
-    "repo": "https://github.com/NsamaX/Astral-Oracle",
-    "live": "https://astral-oracle.vercel.app",
+    "repo": "https://github.com/NsamaX/Massage-Administration-System",
+    "live": null,
     "images": [
-      { "label": "จั่วไพ่", "src": "/projects/astral_oracle/thumbnail.png" },
-      { "label": "รายละเอียดไพ่", "src": "/projects/astral_oracle/card.png" },
-      { "label": "ประวัติการอ่าน", "src": "/projects/astral_oracle/cookie.png" }
+      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/35276592/file/original-4f0cc5d78a77127f58f8c318659b2a50.jpg?resize=1024x768&vertical=center" }
     ],
-    "year": "2024",
+    "year": "2025",
     "role": "นักพัฒนา"
   },
   {
-    "id": "crossword",
+    "id": "04",
     "title": "Crossword Solver",
-    "desc": "โปรแกรมแก้ปริศนาอักษรไขว้ Ludobros อัตโนมัติด้วย image recognition และ backtracking",
-    "longDesc": "โปรแกรม Java ที่แก้เกมปริศนาอักษรไขว้ Ludobros อัตโนมัติจาก screenshot ดึงตารางและความยาวคำตอบด้วย image recognition จำลองกลไก gravity ของเกมขณะใช้คำ แล้วใช้ backtracking ค้นหาการผสมคำที่ถูกต้องจากฐานข้อมูลคำภาษาอังกฤษ ~4,700 คำ",
+    "desc": "อัลกอริทึมแก้เกมอักษรไขว้ 8 เส้นทาง ด้วย backtracking",
+    "longDesc": "อัลกอริทึมคำนวณคำตอบเกมอักษรไขว้ที่มี 8 เส้นทางเชื่อมต่อกัน โดยเลื่อนตารางลงเมื่อใช้ตัวอักษร แล้วใช้ backtracking เพื่อหาเส้นทางที่ถูกต้อง",
     "tags": ["Java"],
     "type": "tool",
     "repo": "https://github.com/NsamaX/Crossword-Solver",
     "live": null,
     "images": [
-      { "label": "ผลลัพธ์", "src": "/projects/crossword_solver/thumbnail.png" },
-      { "label": "ตัวอย่างปริศนา", "src": "/projects/crossword_solver/sample.png" }
+      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/44561299/file/82da03aa2ebda8899202b01b36008b01.jpg?resize=1024x732&vertical=center" }
+    ],
+    "year": "2024",
+    "role": "นักพัฒนา"
+  },
+  {
+    "id": "05",
+    "title": "NFC Deck Tracker",
+    "desc": "แอปมือถือจัดการและติดตามสำรับ TCG แบบ real-time ด้วย NFC",
+    "longDesc": "แอปมือถือสำหรับจัดการและติดตามสำรับการ์ด TCG แบบ real-time ด้วย NFC พัฒนาด้วย Flutter ตามแนวคิด Clean Architecture เป็นวิทยานิพนธ์ปริญญาตรีที่มหาวิทยาลัยศิลปากร",
+    "tags": ["Dart", "C++", "CMake"],
+    "type": "mobile",
+    "repo": "https://github.com/NsamaX/NFC-Deck-Tracker",
+    "live": null,
+    "images": [
+      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/43494119/file/accbde84fa8cafd9a7088e4f36c27f62.png?resize=1024x732&vertical=center" }
+    ],
+    "year": "2024",
+    "role": "นักพัฒนา"
+  },
+  {
+    "id": "06",
+    "title": "Astral Oracle",
+    "desc": "เว็บแอปอ่านไพ่ทาโรต์พร้อมคำทำนายส่วนตัวด้วย Groq AI",
+    "longDesc": "เว็บแอปอ่านไพ่ทาโรต์พร้อมคำทำนายส่วนตัวขับเคลื่อนด้วย Groq AI มีอินเทอร์เฟซโต้ตอบสำหรับจั่วและตีความไพ่",
+    "tags": ["JavaScript", "CSS", "HTML"],
+    "type": "website",
+    "repo": "https://github.com/NsamaX/Astral-Oracle",
+    "live": "https://astral-oracle.vercel.app",
+    "images": [
+      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/42769129/file/bfe68ecf4235aa0c39c82fc2c0a453fa.jpg?resize=1024x732&vertical=center" }
     ],
     "year": "2024",
     "role": "นักพัฒนา"
