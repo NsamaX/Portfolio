@@ -1,0 +1,99 @@
+[
+  {
+    "id": "erp",
+    "title": "ระบบ ERP สำหรับโรงงาน",
+    "desc": "จัดตารางการผลิต คลังสินค้า และวัตถุดิบสำหรับอุตสาหกรรมการผลิต",
+    "longDesc": "ระบบ ERP ครบชุดสำหรับการดำเนินงานโรงงาน ครอบคลุมการจัดตารางคำสั่งผลิต บัญชีรายการวัสดุ การจัดการสินค้าคงคลังแบบ real-time การวางแผนคำสั่งซื้อ และ MRP ที่ขับเคลื่อนด้วยการพยากรณ์ ติดตั้งภายในองค์กรด้วย Docker และ Portainer ไม่พึ่ง cloud",
+    "tags": ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
+    "type": "website",
+    "repo": null,
+    "live": null,
+    "images": [
+      { "label": "ภาพรวม Dashboard", "src": "ph" },
+      { "label": "โมดูลพยากรณ์", "src": "ph" }
+    ],
+    "year": "2025 — ปัจจุบัน",
+    "role": "IT & Developer"
+  },
+  {
+    "id": "mas",
+    "title": "ระบบจัดการสปานวด",
+    "desc": "ระบบจัดการเว็บสำหรับร้านนวดแผนไทย พร้อมการนัดหมายและจัดการพนักงาน",
+    "longDesc": "ระบบ Modular Monolith สำหรับจัดการการดำเนินงานร้านนวด มี PIN login พร้อม role-based access การนัดหมายและมอบหมายห้อง การจัดการพนักงานและบริการ และ dashboard ภาพรวมแบบ real-time ติดตั้งบน Mini PC ภายในองค์กร",
+    "tags": ["Next.js", "TypeScript", "MariaDB", "Drizzle ORM"],
+    "type": "website",
+    "repo": null,
+    "live": null,
+    "images": [
+      { "label": "Dashboard", "src": "ph" },
+      { "label": "การนัดหมาย", "src": "ph" }
+    ],
+    "year": "2025",
+    "role": "นักพัฒนา"
+  },
+  {
+    "id": "nfc",
+    "title": "NFC Deck Tracker",
+    "desc": "แอปมือถือสำหรับจัดการสำรับไพ่ TCG พร้อมติดตามไพ่แบบ real-time ด้วย NFC",
+    "longDesc": "แอปพลิเคชัน Flutter สำหรับจัดการสำรับการ์ดเกม พัฒนาเป็นวิทยานิพนธ์ปริญญาตรีที่มหาวิทยาลัยศิลปากร มีฟีเจอร์สร้างและแก้ไขสำรับ ค้นหาการ์ดผ่าน API สาธารณะ ติดตาม NFC แบบ real-time รองรับการ์ด custom และวิเคราะห์เกมพร้อมประวัติการแข่งขัน",
+    "tags": ["Flutter", "Dart", "Firebase"],
+    "type": "mobile",
+    "repo": "https://github.com/NsamaX/NFC-Deck-Tracker",
+    "live": null,
+    "images": [
+      { "label": "ภาพรวมแอป", "src": "/projects/nfc_deck_tracker/thumbnail.png" },
+      { "label": "จัดการสำรับ", "src": "ph" }
+    ],
+    "year": "2024",
+    "role": "นักพัฒนา (วิทยานิพนธ์)"
+  },
+  {
+    "id": "payroll",
+    "title": "ระบบจัดการเงินเดือน",
+    "desc": "ระบบจัดการเงินเดือนบนเว็บ พร้อมคำนวณเงินเดือนอัตโนมัติและออกรายงานการเงิน",
+    "longDesc": "ระบบเงินเดือนครบชุดสำหรับคำนวณเงินเดือน ภาษี และสวัสดิการพนักงาน รองรับโอที การขาดงาน โบนัสขยัน ประกันสังคม และกองทุนสำรองเลี้ยงชีพ ออก e-slip และส่งออกรายงานการเงินในรูปแบบ CSV และ DOCX มี role-based access สำหรับฝ่ายบัญชีและพนักงาน",
+    "tags": ["PHP", "Java", "MySQL"],
+    "type": "website",
+    "repo": "https://github.com/NsamaX/Payroll-System",
+    "live": null,
+    "images": [
+      { "label": "Dashboard", "src": "ph" },
+      { "label": "E-Slip", "src": "ph" }
+    ],
+    "year": "2023",
+    "role": "นักพัฒนา"
+  },
+  {
+    "id": "astral",
+    "title": "Astral Oracle",
+    "desc": "เว็บแอปดูดวงไพ่ทาโรต์พร้อม AI ทำนายดวงผ่าน Groq",
+    "longDesc": "เว็บแอปพลิเคชันสำหรับอ่านไพ่ทาโรต์ด้วย AI ทำนายดวง จั่วไพ่ 1, 3 หรือ 5 ใบแบบสุ่มทั้งตั้งและกลับ ถามคำถามแล้วรับคำทำนายจาก AI ผ่าน Groq บันทึกประวัติการอ่านผ่าน cookie รองรับทั้งภาษาอังกฤษและภาษาไทย",
+    "tags": ["JavaScript", "Vite", "Groq AI"],
+    "type": "website",
+    "repo": "https://github.com/NsamaX/Astral-Oracle",
+    "live": "https://astral-oracle.vercel.app",
+    "images": [
+      { "label": "จั่วไพ่", "src": "/projects/astral_oracle/thumbnail.png" },
+      { "label": "รายละเอียดไพ่", "src": "/projects/astral_oracle/card.png" },
+      { "label": "ประวัติการอ่าน", "src": "/projects/astral_oracle/cookie.png" }
+    ],
+    "year": "2024",
+    "role": "นักพัฒนา"
+  },
+  {
+    "id": "crossword",
+    "title": "Crossword Solver",
+    "desc": "โปรแกรมแก้ปริศนาอักษรไขว้ Ludobros อัตโนมัติด้วย image recognition และ backtracking",
+    "longDesc": "โปรแกรม Java ที่แก้เกมปริศนาอักษรไขว้ Ludobros อัตโนมัติจาก screenshot ดึงตารางและความยาวคำตอบด้วย image recognition จำลองกลไก gravity ของเกมขณะใช้คำ แล้วใช้ backtracking ค้นหาการผสมคำที่ถูกต้องจากฐานข้อมูลคำภาษาอังกฤษ ~4,700 คำ",
+    "tags": ["Java"],
+    "type": "tool",
+    "repo": "https://github.com/NsamaX/Crossword-Solver",
+    "live": null,
+    "images": [
+      { "label": "ผลลัพธ์", "src": "/projects/crossword_solver/thumbnail.png" },
+      { "label": "ตัวอย่างปริศนา", "src": "/projects/crossword_solver/sample.png" }
+    ],
+    "year": "2024",
+    "role": "นักพัฒนา"
+  }
+]

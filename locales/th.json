@@ -1,0 +1,85 @@
+{
+  "nav": { "about": "เกี่ยวกับ", "experience": "ประสบการณ์", "skills": "ทักษะ", "projects": "ผลงาน", "contact": "ติดต่อ" },
+  "hero": {
+    "role": "นักพัฒนา Full-Stack / โครงสร้างพื้นฐาน",
+    "tagline": "ขับเคลื่อนการเปลี่ยนแปลงดิจิทัลในอุตสาหกรรมการผลิต",
+    "sub": "ดูแลโครงสร้างพื้นฐานเซิร์ฟเวอร์ภายในองค์กร และพัฒนาระบบ ERP สำหรับโรงงาน",
+    "cta_work": "ดูผลงาน",
+    "cta_resume": "เรซูเม่ ↗"
+  },
+  "about": {
+    "label": "เกี่ยวกับฉัน",
+    "body1": [
+      "ฉันสร้างระบบที่ทำให้โรงงานดำเนินงานได้อย่างต่อเนื่อง — ตั้งแต่เซิร์ฟเวอร์ ",
+      { "text": "bare-metal", "mark": true },
+      " ไปจนถึงหน้าจอที่ผู้ปฏิบัติงานใช้งานบนพื้นงาน"
+    ],
+    "body2": [
+      "จบการศึกษาด้าน",
+      { "text": "วิศวกรรมคอมพิวเตอร์", "mark": true },
+      " ปัจจุบันเน้นพัฒนาระบบ IT และ ERP สำหรับอุตสาหกรรม"
+    ],
+    "resume": "ดาวน์โหลด CV",
+    "stats": [
+      { "val": "วศ.บ.", "label": "วิศวกรรมคอมพิวเตอร์" },
+      { "val": "On-site", "label": "เน้นอุตสาหกรรมการผลิต" },
+      { "val": "2025", "label": "เริ่มทำงาน" }
+    ]
+  },
+  "experience": {
+    "label": "ประสบการณ์",
+    "jobs": [
+      {
+        "tag": "ปัจจุบัน",
+        "company": "Nozomi Enterprise (Thailand)",
+        "role": "IT & Developer",
+        "year": "2025 — ปัจจุบัน",
+        "bullets": [
+          "ออกแบบและดูแลโครงสร้างพื้นฐานเซิร์ฟเวอร์ภายในองค์กร",
+          "พัฒนาโมดูล ERP สำหรับการจัดตารางการผลิต คลังสินค้า และการควบคุมคุณภาพ",
+          "ลดเหตุการณ์หยุดทำงานผ่านระบบ monitoring แบบ real-time"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "label": "ทักษะ",
+    "categories": [
+      {
+        "label": "FRONTEND / BACKEND",
+        "skills": [
+          { "name": "Next.js", "icon": "nextjs", "desc": "Framework ของ React ที่มี server-side rendering, routing แบบ file-based และการ optimize สำหรับ production" },
+          { "name": "Tailwind", "icon": "tailwind", "desc": "CSS framework แบบ utility-first — จัดสไตล์โดยตรงใน HTML ด้วย class ขนาดเล็กที่ประกอบกันได้" },
+          { "name": "PostgreSQL", "icon": "postgresql", "desc": "ฐานข้อมูล relational open-source ที่มีประสิทธิภาพ น่าเชื่อถือและรองรับ query ที่ซับซ้อนได้ดี" },
+          { "name": "Docker", "icon": "docker", "desc": "บรรจุแอปและ dependencies ลงใน container ให้รันได้เหมือนกันทุกเครื่อง" }
+        ]
+      },
+      {
+        "label": "DEVOPS & TOOLS",
+        "skills": [
+          { "name": "Proxmox", "icon": "proxmox", "desc": "แพลตฟอร์ม virtualization open-source สำหรับจัดการ VM และ container บน bare-metal server" },
+          { "name": "Git", "icon": "git", "desc": "ระบบควบคุมเวอร์ชัน ติดตามการเปลี่ยนแปลงโค้ดทุกครั้ง รองรับการทำงานร่วมกัน" },
+          { "name": "Figma", "icon": "figma", "desc": "เครื่องมือออกแบบ UI แบบ collaborative สำหรับสร้าง mockup, prototype และ design system" }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "label": "ผลงาน",
+    "filters": ["ทั้งหมด", "เว็บไซต์", "มือถือ", "เครื่องมือ"],
+    "filterMap": { "ทั้งหมด": "all", "เว็บไซต์": "website", "มือถือ": "mobile", "เครื่องมือ": "tool" }
+  },
+  "contact": {
+    "label": "ติดต่อ",
+    "intro": "มีโปรเจคหรือโอกาสดีๆ อยากคุยไหม?",
+    "name": "ชื่อ",
+    "email": "อีเมล",
+    "message": "ข้อความ",
+    "name_ph": "ชื่อของคุณ",
+    "email_ph": "you@example.com",
+    "message_ph": "มีอะไรอยากบอก?",
+    "send": "ส่งข้อความ",
+    "sent": "ส่งแล้ว ✓"
+  },
+  "footer": "พัฒนาด้วย Next.js"
+}

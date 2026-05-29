@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vijuksama Hongthongdaeng — Résumé</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:       #F5F0E8;
+      --surface:  #EDE7DB;
+      --text:     #1C1917;
+      --muted:    #8C7B6B;
+      --accent:   #C96442;
+      --amber:    #E8B84B;
+      --border:   #D4C9BB;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'DM Sans', sans-serif;
+      --font-mono:  'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background: #9E9E9E;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    /* ---------- A4 PAGE ---------- */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      background: #FBF8F2;
+      color: var(--text);
+      padding: 13mm 18mm 12mm;
+      position: relative;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.35);
+      align-self: flex-start;
+    }
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-top: 4px solid var(--accent);
+      pointer-events: none;
+    }
+
+    /* ---------- Header ---------- */
+    .r-name {
+      font-family: var(--font-serif);
+      font-weight: 800;
+      font-size: 35px;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+    .r-title {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .r-contact {
+      font-size: 12.5px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 0;
+      line-height: 1.5;
+    }
+    .r-contact a { color: var(--muted); text-decoration: none; }
+    .r-contact .sep { margin: 0 9px; color: var(--border); }
+
+    .header-rule {
+      height: 1.5px;
+      background: var(--text);
+      margin: 13px 0 0;
+    }
+
+    /* ---------- Section ---------- */
+    .section { margin-top: 10px; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .sec-head h2 {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .sec-head .tick {
+      width: 7px; height: 7px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .sec-head .line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .body-text {
+      font-size: 13px;
+      line-height: 1.55;
+      color: #3a342f;
+      max-width: 62ch;
+    }
+    .body-text strong { color: var(--text); font-weight: 600; }
+
+    /* ---------- Education / entry rows ---------- */
+    .entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+    .entry + .entry { margin-top: 10px; }
+    .entry-main .e-org {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+    .entry-main .e-sub {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .entry .e-meta {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--muted);
+      white-space: nowrap;
+      text-align: right;
+    }
+    .e-meta .gpa { color: var(--accent); }
+
+    /* ---------- Skills ---------- */
+    .skill-groups {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 8px 16px;
+      font-size: 12.5px;
+    }
+    .skill-cat {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-top: 2px;
+    }
+    .skill-list { line-height: 1.55; color: #3a342f; }
+    .skill-list .chip {
+      display: inline-block;
+      margin: 2px 5px 2px 0;
+      padding: 2px 9px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: var(--bg);
+      font-size: 12px;
+    }
+
+    /* ---------- Projects ---------- */
+    .proj {
+      margin-bottom: 5px;
+      page-break-inside: avoid;
+    }
+    .proj:last-child { margin-bottom: 0; }
+    .proj-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 2px;
+    }
+    .proj-name { flex: 0 0 auto; white-space: nowrap; }
+    .proj-stack { margin-left: auto; flex: 0 0 auto; }
+    .proj-name {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 14.5px;
+    }
+    .proj-stack {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.03em;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .proj-desc {
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: #3a342f;
+      max-width: 70ch;
+    }
+
+    /* ---------- Two-column lower block ---------- */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 11px;
+    }
+    .mini-fact {
+      display: flex;
+      gap: 8px;
+      font-size: 12.5px;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+    .mini-fact .k {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      min-width: 88px;
+    }
+    .mini-fact .v { color: #3a342f; }
+
+    /* ---------- Footer ---------- */
+    .r-footer {
+      margin-top: 16px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ---------- Print ---------- */
+    @media print {
+      @page { size: A4; margin: 0; }
+      html, body { background: #fff; }
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        padding: 13mm 18mm 12mm;
+        background: #fff;
+      }
+      .skill-list .chip { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1 class="r-name">Vijuksama Hongthongdaeng</h1>
+      <div class="r-title">Full-Stack Developer</div>
+      <div class="r-contact">
+        <span>Samut Prakan, Thailand 10280</span>
+        <span class="sep">·</span>
+        <a href="tel:+66615766142">061 576 6142</a>
+        <span class="sep">·</span>
+        <a href="mailto:vijuksama@gmail.com">vijuksama@gmail.com</a>
+        <span class="sep">·</span>
+        <a href="https://portfolio-nsamax.vercel.app" target="_blank" rel="noopener">portfolio-nsamax.vercel.app</a>
+      </div>
+      <div class="header-rule"></div>
+    </header>
+
+    <section class="section">
+      <div class="sec-head"><span class="tick"></span><h2>Summary</h2><span class="line"></span></div>
+      <p class="body-text">
+        Full-stack developer proficient in building both <strong>web</strong> and <strong>mobile</strong> applications —
+        web apps with <strong>React</strong> and cross-platform mobile apps with <strong>Flutter</strong>.
+        Skilled in <strong>UI/UX design</strong> with Figma and version control with Git, with a growing focus on the
+        unglamorous-but-vital business systems factories and back offices rely on every day.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="sec-head"><span class="tick"></span><h2>Education</h2><span class="line"></span></div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="e-org">Silpakorn University</div>
+          <div class="e-sub">B.Sc. in Information Technology</div>
+        </div>
+        <div class="e-meta">
+          Jun 2021 — Aug 2025<br />
+          <span class="gpa">GPA 3.06</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sec-head"><span class="tick"></span><h2>Technical Skills</h2><span class="line"></span></div>
+      <div class="skill-groups">
+        <div class="skill-cat">Languages</div>
+        <div class="skill-list">
+          <span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Java</span><span class="chip">Dart</span><span class="chip">PHP</span>
+        </div>
+        <div class="skill-cat">Frameworks</div>
+        <div class="skill-list">
+          <span class="chip">React</span><span class="chip">Vite</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Flutter</span>
+        </div>
+        <div class="skill-cat">Data</div>
+        <div class="skill-list">
+          <span class="chip">Supabase</span><span class="chip">Firebase</span><span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">SQLite</span>
+        </div>
+        <div class="skill-cat">Tools</div>
+        <div class="skill-list">
+          <span class="chip">Git</span><span class="chip">Figma</span><span class="chip">Draw.io</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sec-head"><span class="tick"></span><h2>Projects</h2><span class="line"></span></div>
+
+      <div class="proj">
+        <div class="proj-head"><span class="proj-name">NFC Deck Tracker</span><span class="proj-stack">Flutter · Dart · NFC</span></div>
+        <p class="proj-desc">Mobile app that uses NFC to track trading-card-game decks in real time, helping players accurately monitor how many cards remain in their deck during gameplay.</p>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head"><span class="proj-name">Astral Oracle</span><span class="proj-stack">React · Groq AI</span></div>
+        <p class="proj-desc">Web app delivering tarot-card readings powered by Groq's AI, generating tailored predictions from the user's question inside a friendly, engaging interface.</p>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head"><span class="proj-name">NZT Production Report</span><span class="proj-stack">React · PDF / CSV</span></div>
+        <p class="proj-desc">Web app for tracking daily factory production, with one-click export to PDF and CSV for efficient downstream data management.</p>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head"><span class="proj-name">Payroll System</span><span class="proj-stack">PHP · MySQL</span></div>
+        <p class="proj-desc">Web app for managing employee salaries — calculates taxes, benefits and company policies, and exports full financial reports as PDF and CSV.</p>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head"><span class="proj-name">Japanese Dessert Shop</span><span class="proj-stack">Java · BlueJ · UML</span></div>
+        <p class="proj-desc">Program modelling a Japanese dessert shop with object-oriented principles and UML — including use-case diagrams and common design patterns.</p>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head"><span class="proj-name">Crossword Solver</span><span class="proj-stack">Java · Algorithms</span></div>
+        <p class="proj-desc">Java program that solves Ludobros crossword puzzles using a backtracking algorithm with gravity-based path management to find correct solutions automatically.</p>
+      </div>
+    </section>
+
+    <div class="two-col">
+      <section>
+        <div class="sec-head"><span class="tick"></span><h2>Profile</h2><span class="line"></span></div>
+        <div class="mini-fact"><span class="k">Age</span><span class="v">22</span></div>
+        <div class="mini-fact"><span class="k">Nationality</span><span class="v">Thai</span></div>
+        <div class="mini-fact"><span class="k">Languages</span><span class="v">Thai (Good) · English (Working)</span></div>
+      </section>
+      <section>
+        <div class="sec-head"><span class="tick"></span><h2>Links</h2><span class="line"></span></div>
+        <div class="mini-fact"><span class="k">Portfolio</span><span class="v">portfolio-nsamax.vercel.app</span></div>
+        <div class="mini-fact"><span class="k">GitHub</span><span class="v">github.com/vijuksama</span></div>
+        <div class="mini-fact"><span class="k">Email</span><span class="v"><a href="mailto:vijuksama@gmail.com">vijuksama@gmail.com</a></span></div>
+      </section>
+    </div>
+
+    <div class="r-footer">
+      <span>Vijuksama Hongthongdaeng</span>
+      <span>Résumé · 2026</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+  "nav": { "about": "About", "experience": "Experience", "skills": "Skill", "projects": "Project", "contact": "Contact" },
+  "hero": {
+    "role": "Full-Stack / Infra Engineer",
+    "tagline": "Digital transformation for manufacturing",
+    "sub": "Operating on-premise infrastructure and building factory ERP systems",
+    "cta_work": "View Work",
+    "cta_resume": "Resume ↗"
+  },
+  "about": {
+    "label": "ABOUT ME",
+    "body1": [
+      "I build the systems that keep factories running — from ",
+      { "text": "bare-metal servers", "mark": true },
+      " to the interfaces operators use on the floor. My work sits at the intersection of ",
+      { "text": "infrastructure reliability", "mark": true },
+      " and software that actually gets used."
+    ],
+    "body2": [
+      "Background in ",
+      { "text": "Computer Engineering", "mark": true },
+      ", currently focused on ERP systems for discrete manufacturing. I care about software that lasts, hardware that doesn't fail quietly, and ",
+      { "text": "documentation that future-you will thank you for", "mark": true },
+      "."
+    ],
+    "resume": "Résumé PDF",
+    "stats": [
+      { "val": "B.Eng.", "label": "Computer Engineering" },
+      { "val": "5 yrs", "label": "Industry experience" },
+      { "val": "On-site", "label": "Manufacturing focus" }
+    ]
+  },
+  "experience": {
+    "label": "EXPERIENCE",
+    "jobs": [
+      {
+        "tag": "CURRENT",
+        "company": "Nozomi Enterprise (Thailand)",
+        "role": "IT & Developer",
+        "year": "2025 — Present",
+        "bullets": [
+          "Designed and maintained on-premise server infrastructure for factory sites",
+          "Built ERP modules for production scheduling, inventory, and quality control",
+          "Reduced line-downtime incidents through real-time monitoring pipelines"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "label": "SKILLS",
+    "categories": [
+      {
+        "label": "FRONTEND / BACKEND",
+        "skills": [
+          { "name": "Next.js", "icon": "nextjs", "desc": "React framework with server-side rendering, file-based routing, and built-in optimizations for production." },
+          { "name": "Tailwind", "icon": "tailwind", "desc": "Utility-first CSS framework — style elements directly in HTML using small, composable class names." },
+          { "name": "PostgreSQL", "icon": "postgresql", "desc": "Powerful open-source relational database. Reliable, feature-rich, and handles complex queries well." },
+          { "name": "Docker", "icon": "docker", "desc": "Packages apps and their dependencies into containers so they run identically on any machine." }
+        ]
+      },
+      {
+        "label": "DEVOPS & TOOLS",
+        "skills": [
+          { "name": "Proxmox", "icon": "proxmox", "desc": "Open-source virtualization platform for managing VMs and containers on bare-metal servers." },
+          { "name": "Git", "icon": "git", "desc": "Version control system. Tracks every change to code, enables collaboration, and prevents losing work." },
+          { "name": "Figma", "icon": "figma", "desc": "Collaborative design tool for building UI mockups, prototypes, and design systems." }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "label": "PROJECTS",
+    "filters": ["all", "website", "mobile", "tool"]
+  },
+  "contact": {
+    "label": "GET IN TOUCH",
+    "intro": "Have a project or opportunity in mind? Let's talk.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "name_ph": "Your name",
+    "email_ph": "you@example.com",
+    "message_ph": "What's on your mind?",
+    "send": "Send Message",
+    "sent": "Sent ✓"
+  },
+  "footer": "Built with Next.js"
+}
