@@ -1,7 +1,7 @@
 {
   "nav": { "about": "เกี่ยวกับ", "experience": "ประสบการณ์", "skills": "ทักษะ", "projects": "ผลงาน", "contact": "ติดต่อ" },
   "hero": {
-    "role": "นักพัฒนา Full-Stack / โครงสร้างพื้นฐาน",
+    "role": "วิศวกร Infrastructure & Full-Stack",
     "tagline": "ขับเคลื่อนการเปลี่ยนแปลงดิจิทัลในอุตสาหกรรมการผลิต",
     "sub": "ดูแลโครงสร้างพื้นฐานเซิร์ฟเวอร์ภายในองค์กร และพัฒนาระบบ ERP สำหรับโรงงาน",
     "cta_work": "ดูผลงาน",
@@ -10,20 +10,24 @@
   "about": {
     "label": "เกี่ยวกับฉัน",
     "body1": [
-      "ฉันสร้างระบบที่ทำให้โรงงานดำเนินงานได้อย่างต่อเนื่อง — ตั้งแต่เซิร์ฟเวอร์ ",
-      { "text": "bare-metal", "mark": true },
-      " ไปจนถึงหน้าจอที่ผู้ปฏิบัติงานใช้งานบนพื้นงาน"
+      "วิศวกรที่เรียนรู้ด้วยตัวเองและเป็น ",
+      { "text": "ไอทีคนเดียว", "mark": true },
+      " ของโรงงานที่มีพนักงาน 230 คน — สร้างระบบทั้งหมดจาก ",
+      { "text": "คอมพิวเตอร์เก่าสองเครื่อง", "mark": true },
+      ": โครงสร้างพื้นฐานเซิร์ฟเวอร์ เครือข่าย ความปลอดภัย และซอฟต์แวร์ ERP ภายในองค์กร"
     ],
     "body2": [
-      "จบการศึกษาด้าน",
-      { "text": "วิศวกรรมคอมพิวเตอร์", "mark": true },
-      " ปัจจุบันเน้นพัฒนาระบบ IT และ ERP สำหรับอุตสาหกรรม"
+      "ใช้ open-source และ AI เพื่อส่งมอบ ",
+      { "text": "ระบบที่เชื่อถือได้ด้วยงบประมาณต่ำ", "mark": true },
+      " ปัจจุบันเน้น ERP สำหรับ ",
+      { "text": "อุตสาหกรรมการผลิต", "mark": true },
+      " — ตารางการผลิต คลังสินค้า และการควบคุมคุณภาพ"
     ],
     "resume": "ดาวน์โหลด CV",
     "stats": [
-      { "val": "วศ.บ.", "label": "วิศวกรรมคอมพิวเตอร์" },
-      { "val": "On-site", "label": "เน้นอุตสาหกรรมการผลิต" },
-      { "val": "2025", "label": "เริ่มทำงาน" }
+      { "val": "วท.บ.", "label": "เทคโนโลยีสารสนเทศ" },
+      { "val": "230", "label": "คนในโรงงาน" },
+      { "val": "On-site", "label": "เน้นอุตสาหกรรมการผลิต" }
     ]
   },
   "experience": {
@@ -32,12 +36,12 @@
       {
         "tag": "ปัจจุบัน",
         "company": "Nozomi Enterprise (Thailand)",
-        "role": "IT & Developer",
-        "year": "2025 — ปัจจุบัน",
+        "role": "ไอทีเดี่ยว · โครงสร้างพื้นฐาน, DevOps และพัฒนาซอฟต์แวร์",
+        "year": "พ.ย. 2568 — ปัจจุบัน",
         "bullets": [
-          "ออกแบบและดูแลโครงสร้างพื้นฐานเซิร์ฟเวอร์ภายในองค์กร",
-          "พัฒนาโมดูล ERP สำหรับการจัดตารางการผลิต คลังสินค้า และการควบคุมคุณภาพ",
-          "ลดเหตุการณ์หยุดทำงานผ่านระบบ monitoring แบบ real-time"
+          "สร้างโครงสร้างพื้นฐานเซิร์ฟเวอร์ภายในองค์กรจากศูนย์ด้วยคอมพิวเตอร์เก่า 2 เครื่อง — ระบบ Proxmox VE + PBS รัน 7+ บริการ (NAS, reverse proxy, DNS, VPN, monitoring) พร้อม backup อัตโนมัติและ uptime เกือบ 100%",
+          "ออกแบบเครือข่ายโรงงานใหม่สำหรับพนักงาน ~230 คน และอุปกรณ์กว่า 60 ชิ้น: dual-WAN load-balancing + failover, แผน IP แบบ /24 และ remote access ผ่าน WireGuard / Tailscale",
+          "ลดค่าใช้จ่าย IT ประจำปีประมาณ 45,000 บาท โดย self-host open-source แทน (OpenMediaVault, Wazuh + Defender) และ automate การดูแล 50 workstation ด้วย PowerShell + RMM"
         ]
       }
     ]
@@ -46,20 +50,29 @@
     "label": "ทักษะ",
     "categories": [
       {
-        "label": "FRONTEND / BACKEND",
+        "label": "INFRASTRUCTURE & DEVOPS",
         "skills": [
-          { "name": "Next.js", "icon": "nextjs", "desc": "Framework ของ React ที่มี server-side rendering, routing แบบ file-based และการ optimize สำหรับ production" },
-          { "name": "Tailwind", "icon": "tailwind", "desc": "CSS framework แบบ utility-first — จัดสไตล์โดยตรงใน HTML ด้วย class ขนาดเล็กที่ประกอบกันได้" },
-          { "name": "PostgreSQL", "icon": "postgresql", "desc": "ฐานข้อมูล relational open-source ที่มีประสิทธิภาพ น่าเชื่อถือและรองรับ query ที่ซับซ้อนได้ดี" },
-          { "name": "Docker", "icon": "docker", "desc": "บรรจุแอปและ dependencies ลงใน container ให้รันได้เหมือนกันทุกเครื่อง" }
+          { "name": "Proxmox", "icon": "proxmox", "desc": "แพลตฟอร์ม virtualization open-source สำหรับจัดการ cluster Proxmox VE + PBS — รัน 7+ บริการรวมถึง NAS, reverse proxy, DNS, VPN และ monitoring บน bare-metal" },
+          { "name": "Docker", "icon": "docker", "desc": "บรรจุทุกบริการที่ self-host ลงใน container เพื่อการ deploy ที่สม่ำเสมอและแยกออกจากกันบน Proxmox cluster" },
+          { "name": "Linux", "icon": "linux", "desc": "ระบบปฏิบัติการสำหรับทุกบริการภายในองค์กร — Ubuntu Server, systemd administration, CLI scripting และการจัดการ service" },
+          { "name": "Cloudflare", "icon": "cloudflare", "desc": "DNS, CDN และ Zero Trust tunnel — เปิดเผย self-hosted service อย่างปลอดภัยสู่อินเทอร์เน็ตโดยไม่ต้องเปิด inbound port" }
         ]
       },
       {
-        "label": "DEVOPS & TOOLS",
+        "label": "DEVELOPMENT",
         "skills": [
-          { "name": "Proxmox", "icon": "proxmox", "desc": "แพลตฟอร์ม virtualization open-source สำหรับจัดการ VM และ container บน bare-metal server" },
-          { "name": "Git", "icon": "git", "desc": "ระบบควบคุมเวอร์ชัน ติดตามการเปลี่ยนแปลงโค้ดทุกครั้ง รองรับการทำงานร่วมกัน" },
-          { "name": "Figma", "icon": "figma", "desc": "เครื่องมือออกแบบ UI แบบ collaborative สำหรับสร้าง mockup, prototype และ design system" }
+          { "name": "TypeScript", "icon": "typescript", "desc": "ภาษาหลักสำหรับทุกโปรเจกต์เว็บและ API — type-safe, ขยายได้ดี และกำจัด runtime error ทั้งคลาสหนึ่ง" },
+          { "name": "Next.js", "icon": "nextjs", "desc": "React framework พร้อม server-side rendering และ file-based routing — ใช้สำหรับหน้าจอผู้ปฏิบัติงาน ERP และ dashboard ภายใน" },
+          { "name": "React", "icon": "react", "desc": "UI library แบบ component-based สำหรับสร้าง interface ที่มี state สำหรับผู้ปฏิบัติงานและ management dashboard" },
+          { "name": "PostgreSQL", "icon": "postgresql", "desc": "ฐานข้อมูล relational หลักสำหรับข้อมูล ERP — บันทึกการผลิต, BOM, คลังสินค้า — เชื่อถือได้ภายใต้การใช้งานพร้อมกันในโรงงาน" },
+          { "name": "Python", "icon": "python", "desc": "scripting, automation และประมวลผลข้อมูล — ใช้คู่กับ TypeScript stack สำหรับ tooling และ integration ฝั่ง backend" }
+        ]
+      },
+      {
+        "label": "WORKFLOW & TOOLS",
+        "skills": [
+          { "name": "Git", "icon": "git", "desc": "ระบบควบคุมเวอร์ชันสำหรับทุกโปรเจกต์ — ติดตามทุกการเปลี่ยนแปลง, rollback ได้ปลอดภัย และประวัติโค้ดที่สะอาด" },
+          { "name": "Figma", "icon": "figma", "desc": "ออกแบบ UI และทำ wireframe ก่อน implement — ใช้ prototype หน้าจอผู้ปฏิบัติงาน ERP และ management interface" }
         ]
       }
     ]

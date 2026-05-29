@@ -1,6 +1,36 @@
 [
   {
+    "id": "00",
+    "title": "ระบบ ERP — โมดูล BOM",
+    "desc": "ระบบ ERP ภายในองค์กรที่แทนที่ Excel รายแผนกที่กระจัดกระจาย",
+    "longDesc": "ระบบ ERP ภายในองค์กรที่แทนที่ Excel รายแผนกที่กระจัดกระจาย โมดูล Bill-of-Materials รวมโครงสร้างผลิตภัณฑ์ วัตถุดิบ และต้นทุนคลังสินค้าไว้ในที่เดียวแบบ role-based และอัปเดตตลอดเวลา",
+    "tags": ["TypeScript", "PostgreSQL", "Docker"],
+    "type": "website",
+    "repo": null,
+    "live": null,
+    "images": [
+      { "label": "Thumbnail", "src": "https://cdn.dribbble.com/userupload/47105853/file/801492bbd3f1a398a18a5ebae2ba44ea.png?resize=1024x732&vertical=center" }
+    ],
+    "year": "2025",
+    "role": "นักพัฒนา"
+  },
+  {
     "id": "01",
+    "title": "ระบบจัดการสปานวด",
+    "desc": "เว็บแอปจัดการร้านนวดแผนไทย รองรับสิทธิ์ Admin และเลขา",
+    "longDesc": "เว็บแอปจัดการการดำเนินงานร้านนวดแผนไทย รองรับสิทธิ์ผู้ใช้สำหรับ Admin และเลขา มีระบบนัดหมาย โปรไฟล์พนักงาน จัดการบริการ และรายงานรายรับรายเดือน",
+    "tags": ["TypeScript", "HTML", "CSS"],
+    "type": "website",
+    "repo": "https://github.com/NsamaX/Massage-Administration-System",
+    "live": null,
+    "images": [
+      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/35276592/file/original-4f0cc5d78a77127f58f8c318659b2a50.jpg?resize=1024x768&vertical=center" }
+    ],
+    "year": "2025",
+    "role": "นักพัฒนา"
+  },
+  {
+    "id": "02",
     "title": "Nexus",
     "desc": "บอทเทรดคริปโตส่วนตัว รองรับโหมด Full-Auto และ Hybrid บน Binance",
     "longDesc": "เว็บอินเทอร์เฟซบอทเทรดคริปโตส่วนตัว รองรับโหมด Full-Auto และ Hybrid บน Binance มีระบบอัปเดตแบบ real-time ผ่าน WebSocket วิเคราะห์ข่าวด้วย AI และ REST API สำหรับ Suwisa",
@@ -15,7 +45,7 @@
     "role": "นักพัฒนา"
   },
   {
-    "id": "02",
+    "id": "03",
     "title": "Suwisa",
     "desc": "ผู้ช่วยส่วนตัวบน Discord มีหน่วยความจำสนทนา เข้าถึง Gmail และค้นหาเว็บได้",
     "longDesc": "ผู้ช่วยส่วนตัวบน Discord มีหน่วยความจำสนทนา เข้าถึง Gmail และค้นหาเว็บได้ เชื่อมต่อกับ Nexus เพื่อส่งการแจ้งเตือนและสอบถามข้อมูลพอร์ตโฟลิโอแบบ real-time ขับเคลื่อนด้วย Anthropic Claude",
@@ -25,21 +55,6 @@
     "live": null,
     "images": [
       { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/3831711/file/original-3bee1b26948595cb4fb7663906a68c8c.png?resize=1024x768&vertical=center" }
-    ],
-    "year": "2025",
-    "role": "นักพัฒนา"
-  },
-  {
-    "id": "03",
-    "title": "ระบบจัดการสปานวด",
-    "desc": "เว็บแอปจัดการร้านนวดแผนไทย รองรับสิทธิ์ Admin และเลขา",
-    "longDesc": "เว็บแอปจัดการการดำเนินงานร้านนวดแผนไทย รองรับสิทธิ์ผู้ใช้สำหรับ Admin และเลขา มีระบบนัดหมาย โปรไฟล์พนักงาน จัดการบริการ และรายงานรายรับรายเดือน",
-    "tags": ["TypeScript", "HTML", "CSS"],
-    "type": "website",
-    "repo": "https://github.com/NsamaX/Massage-Administration-System",
-    "live": null,
-    "images": [
-      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/35276592/file/original-4f0cc5d78a77127f58f8c318659b2a50.jpg?resize=1024x768&vertical=center" }
     ],
     "year": "2025",
     "role": "นักพัฒนา"

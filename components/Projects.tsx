@@ -160,7 +160,7 @@ export default function Projects({ lang }: ProjectsProps) {
                 <div className="project-img-wrap">
                   <TornTop />
                   <div className="project-img-inner">
-                    <img src={proj.images[0].src} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    {proj.images[0] && <img src={proj.images[0].src} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
                   </div>
                 </div>
                 <div className="project-body">

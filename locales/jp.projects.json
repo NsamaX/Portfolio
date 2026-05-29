@@ -1,6 +1,36 @@
 [
   {
+    "id": "00",
+    "title": "ERPシステム — BOMモジュール",
+    "desc": "部門ごとに分散したExcelシートを置き換える社内ERP。",
+    "longDesc": "部門ごとに分散したExcelシートを置き換える社内ERP。Bill-of-Materialsモジュールは製品構造・原材料・在庫コストをロールベースの常に最新の一元管理ソースに統合。",
+    "tags": ["TypeScript", "PostgreSQL", "Docker"],
+    "type": "website",
+    "repo": null,
+    "live": null,
+    "images": [
+      { "label": "Thumbnail", "src": "https://cdn.dribbble.com/userupload/47105853/file/801492bbd3f1a398a18a5ebae2ba44ea.png?resize=1024x732&vertical=center" }
+    ],
+    "year": "2025",
+    "role": "開発者"
+  },
+  {
     "id": "01",
+    "title": "マッサージ管理システム",
+    "desc": "AdminとSecretaryの役割ベースアクセスを備えたタイ式マッサージ店向けウェブ管理アプリ。",
+    "longDesc": "AdminとSecretaryの役割ベースアクセスを備えたタイ式マッサージ店運営管理ウェブアプリ。予約管理・スタッフプロフィール・サービス管理・月次売上レポートを搭載。",
+    "tags": ["TypeScript", "HTML", "CSS"],
+    "type": "website",
+    "repo": "https://github.com/NsamaX/Massage-Administration-System",
+    "live": null,
+    "images": [
+      { "label": "サムネイル", "src": "https://cdn.dribbble.com/userupload/35276592/file/original-4f0cc5d78a77127f58f8c318659b2a50.jpg?resize=1024x768&vertical=center" }
+    ],
+    "year": "2025",
+    "role": "開発者"
+  },
+  {
+    "id": "02",
     "title": "Nexus",
     "desc": "フルオートとハイブリッド実行モードを備えたBinance向け個人仮想通貨取引ボット。",
     "longDesc": "Binanceのフルオートおよびハイブリッド実行モードに対応した個人仮想通貨取引ボットのウェブインターフェース。WebSocketによるリアルタイム更新、AIによるニュース分析、Suwisa向けREST APIを搭載。",
@@ -15,7 +45,7 @@
     "role": "開発者"
   },
   {
-    "id": "02",
+    "id": "03",
     "title": "Suwisa",
     "desc": "会話メモリ・Gmailアクセス・ウェブ検索を備えたDiscord上の個人アシスタント。",
     "longDesc": "会話メモリ・Gmailアクセス・ウェブ検索を備えたDiscord上の個人アシスタント。Nexusと連携してリアルタイムアラートとポートフォリオ照会を提供し、Anthropic Claudeで動作。",
@@ -25,21 +55,6 @@
     "live": null,
     "images": [
       { "label": "サムネイル", "src": "https://cdn.dribbble.com/userupload/3831711/file/original-3bee1b26948595cb4fb7663906a68c8c.png?resize=1024x768&vertical=center" }
-    ],
-    "year": "2025",
-    "role": "開発者"
-  },
-  {
-    "id": "03",
-    "title": "マッサージ管理システム",
-    "desc": "AdminとSecretaryの役割ベースアクセスを備えたタイ式マッサージ店向けウェブ管理アプリ。",
-    "longDesc": "AdminとSecretaryの役割ベースアクセスを備えたタイ式マッサージ店運営管理ウェブアプリ。予約管理・スタッフプロフィール・サービス管理・月次売上レポートを搭載。",
-    "tags": ["TypeScript", "HTML", "CSS"],
-    "type": "website",
-    "repo": "https://github.com/NsamaX/Massage-Administration-System",
-    "live": null,
-    "images": [
-      { "label": "サムネイル", "src": "https://cdn.dribbble.com/userupload/35276592/file/original-4f0cc5d78a77127f58f8c318659b2a50.jpg?resize=1024x768&vertical=center" }
     ],
     "year": "2025",
     "role": "開発者"

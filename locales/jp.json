@@ -1,7 +1,7 @@
 {
   "nav": { "about": "自己紹介", "experience": "経歴", "skills": "スキル", "projects": "作品", "contact": "お問い合わせ" },
   "hero": {
-    "role": "フルスタック / インフラエンジニア",
+    "role": "インフラ & フルスタックエンジニア",
     "tagline": "製造業のデジタルトランスフォーメーション",
     "sub": "オンプレミスインフラの運用と工場向けERPシステムの開発",
     "cta_work": "作品を見る",
@@ -10,22 +10,23 @@
   "about": {
     "label": "自己紹介",
     "body1": [
-      "工場が止まらないためのシステムを作っています — ",
-      { "text": "ベアメタルサーバー", "mark": true },
-      " から現場オペレーターが使うインターフェースまで。私の仕事は ",
-      { "text": "インフラの安定性", "mark": true },
-      " と実際に使われるソフトウェアの交差点にあります。"
+      "独学エンジニアとして230人規模の工場の ",
+      { "text": "唯一のIT担当", "mark": true },
+      " を務め、",
+      { "text": "廃棄予定のPC2台", "mark": true },
+      " からサーバーインフラ、ネットワーク、セキュリティ、社内ERPシステムまですべてを構築しました。"
     ],
     "body2": [
-      { "text": "コンピュータ工学", "mark": true },
-      " を専攻し、現在は離散製造向けERPシステムに注力しています。長く使えるソフトウェア、静かに壊れないハードウェア、そして ",
-      { "text": "未来の自分が感謝するドキュメント", "mark": true },
-      " を大切にしています。"
+      "オープンソースとAIを活用し、",
+      { "text": "ほぼゼロのコストで信頼性の高いシステム", "mark": true },
+      " を実現。現在は ",
+      { "text": "離散製造向けERP", "mark": true },
+      " — 生産スケジュール・在庫・品質管理 — に注力しています。"
     ],
     "resume": "履歴書PDF",
     "stats": [
-      { "val": "工学士", "label": "コンピュータ工学" },
-      { "val": "5年", "label": "業界経験" },
+      { "val": "理学士", "label": "情報技術学科" },
+      { "val": "230", "label": "人規模の製造拠点" },
       { "val": "現場", "label": "製造業フォーカス" }
     ]
   },
@@ -35,12 +36,12 @@
       {
         "tag": "現在",
         "company": "Nozomi Enterprise (Thailand)",
-        "role": "IT & Developer",
-        "year": "2025 — 現在",
+        "role": "社内唯一のIT担当 · インフラ・DevOps・開発",
+        "year": "2025年11月 — 現在",
         "bullets": [
-          "工場サイト向けオンプレミスサーバーインフラの設計・保守",
-          "生産スケジュール・在庫・品質管理向けERPモジュールの開発",
-          "リアルタイム監視パイプラインによるライン停止インシデントの削減"
+          "廃棄予定のPC2台からオンプレミスインフラをゼロから構築 — Proxmox VE + PBSクラスターで7以上のサービス（NAS・リバースプロキシ・DNS・VPN・監視）を稼働、自動夜間バックアップと99%超のアップタイムを実現。",
+          "約230名のスタッフと60台以上のデバイスのためにネットワークを再設計：デュアルWAN負荷分散+フェイルオーバー、/24 IPプラン、WireGuard/Tailscaleによるリモートアクセス。",
+          "オープンソース自己ホスト（OpenMediaVault、Wazuh + Defender）でIT運用コストを年間約45,000バーツ削減、PowerShell + RMMで50台のワークステーション管理を自動化。"
         ]
       }
     ]
@@ -49,20 +50,29 @@
     "label": "スキル",
     "categories": [
       {
-        "label": "FRONTEND / BACKEND",
+        "label": "INFRASTRUCTURE & DEVOPS",
         "skills": [
-          { "name": "Next.js", "icon": "nextjs", "desc": "サーバーサイドレンダリング・ファイルベースルーティング・本番最適化を備えたReactフレームワーク。" },
-          { "name": "Tailwind", "icon": "tailwind", "desc": "ユーティリティファーストのCSSフレームワーク — 小さく組み合わせ可能なクラス名でHTMLに直接スタイルを適用。" },
-          { "name": "PostgreSQL", "icon": "postgresql", "desc": "高機能なオープンソースRDB。信頼性が高く複雑なクエリにも対応。" },
-          { "name": "Docker", "icon": "docker", "desc": "アプリと依存関係をコンテナにまとめ、どのマシンでも同一環境で実行可能にする。" }
+          { "name": "Proxmox", "icon": "proxmox", "desc": "Proxmox VE + PBSクラスターを管理するオープンソース仮想化基盤 — NAS・リバースプロキシ・DNS・VPN・監視を含む7以上のサービスをベアメタル上で稼働。" },
+          { "name": "Docker", "icon": "docker", "desc": "すべての自己ホストサービスをコンテナ化し、Proxmoxクラスター全体で一貫した分離デプロイを実現。" },
+          { "name": "Linux", "icon": "linux", "desc": "全オンプレミスサービスのサーバーOS — Ubuntu Server、systemd管理、CLIスクリプティング、サービス管理。" },
+          { "name": "Cloudflare", "icon": "cloudflare", "desc": "DNS・CDN・Zero Trustトンネル — インバウンドポートを開けずに自己ホストサービスを安全にインターネットへ公開。" }
         ]
       },
       {
-        "label": "DEVOPS & TOOLS",
+        "label": "DEVELOPMENT",
         "skills": [
-          { "name": "Proxmox", "icon": "proxmox", "desc": "ベアメタルサーバー上でVMとコンテナを管理するオープンソース仮想化プラットフォーム。" },
-          { "name": "Git", "icon": "git", "desc": "バージョン管理システム。コードの変更を追跡し、チーム開発を支援し、作業の消失を防ぐ。" },
-          { "name": "Figma", "icon": "figma", "desc": "UIモックアップ・プロトタイプ・デザインシステムを構築するコラボレーション設計ツール。" }
+          { "name": "TypeScript", "icon": "typescript", "desc": "すべてのWebおよびAPIプロジェクトの主要言語 — 型安全で大規模コードベースにも対応し、ランタイムエラーのクラス全体を排除。" },
+          { "name": "Next.js", "icon": "nextjs", "desc": "サーバーサイドレンダリングとファイルベースルーティングを備えたReactフレームワーク — ERP操作画面と社内ダッシュボードに使用。" },
+          { "name": "React", "icon": "react", "desc": "コンポーネントベースのUIライブラリ — 状態を持つオペレーター向けインターフェースと管理ダッシュボードの構築に使用。" },
+          { "name": "PostgreSQL", "icon": "postgresql", "desc": "ERPデータの主要リレーショナルDB — 生産記録・BOM・在庫 — 工場フロアでの同時使用にも安定して対応。" },
+          { "name": "Python", "icon": "python", "desc": "スクリプティング・自動化・データ処理 — TypeScriptスタックと並行してバックエンドツーリングと統合に使用。" }
+        ]
+      },
+      {
+        "label": "WORKFLOW & TOOLS",
+        "skills": [
+          { "name": "Git", "icon": "git", "desc": "全プロジェクトのバージョン管理 — あらゆる変更を追跡、安全なロールバック、個人・チーム作業のクリーンな履歴。" },
+          { "name": "Figma", "icon": "figma", "desc": "実装前のUI設計とワイヤーフレーム — ERP操作画面と管理インターフェースのプロトタイプ作成に使用。" }
         ]
       }
     ]
