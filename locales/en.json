@@ -88,7 +88,8 @@
   },
   "projects": {
     "label": "PROJECTS",
-    "filters": ["all", "website", "mobile", "tool"]
+    "filters": ["all", "website", "mobile", "tool"],
+    "viewRepo": "View Repository"
   },
   "contact": {
     "label": "GET IN TOUCH",

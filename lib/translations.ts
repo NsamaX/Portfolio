@@ -22,7 +22,7 @@ export interface Translations {
   about: { label: string; body1: TextSegment[]; body2: TextSegment[]; resume: string; stats: { val: string; label: string }[] };
   experience: { label: string; jobs: { tag: string; company: string; role: string; year: string; bullets: string[] }[] };
   skills: { label: string; categories: SkillCategory[] };
-  projects: { label: string; filters: string[]; filterMap?: Record<string, string> };
+  projects: { label: string; filters: string[]; filterMap?: Record<string, string>; viewRepo: string };
   contact: { label: string; intro: string; name: string; email: string; message: string; name_ph: string; email_ph: string; message_ph: string; send: string; sending: string; sent: string; error: string };
   footer: string;
 }
@@ -33,6 +33,8 @@ const translations: Record<Lang, Translations> = {
   jp: jp as Translations,
 };
 
-export const ENABLED_LANGS: Lang[] = ['en', 'jp'];
+// Single source of truth for which languages appear in the switcher.
+// Add or remove entries here to control what visitors can choose.
+export const ENABLED_LANGS: Lang[] = ['en', 'th', 'jp'];
 
 export default translations;

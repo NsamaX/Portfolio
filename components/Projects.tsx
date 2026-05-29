@@ -30,7 +30,7 @@ function ProjectDetail({ project, onClose, lang }: { project: ProjectItem; onClo
     setTimeout(onClose, 280);
   }
 
-  const repoLabel = lang === 'th' ? 'ดู Repository' : 'View Repository';
+  const repoLabel = translations[lang].projects.viewRepo;
 
   return (
     <div

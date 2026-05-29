@@ -89,7 +89,8 @@
   "projects": {
     "label": "ผลงาน",
     "filters": ["ทั้งหมด", "เว็บไซต์", "มือถือ", "เครื่องมือ"],
-    "filterMap": { "ทั้งหมด": "all", "เว็บไซต์": "website", "มือถือ": "mobile", "เครื่องมือ": "tool" }
+    "filterMap": { "ทั้งหมด": "all", "เว็บไซต์": "website", "มือถือ": "mobile", "เครื่องมือ": "tool" },
+    "viewRepo": "ดู Repository"
   },
   "contact": {
     "label": "ติดต่อ",

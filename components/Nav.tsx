@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Lang, ENABLED_LANGS } from '@/lib/translations';
+import translations, { Lang, ENABLED_LANGS } from '@/lib/translations';
 
 interface NavProps {
   darkMode: boolean;
@@ -10,12 +10,6 @@ interface NavProps {
   setLang: (fn: (prev: Lang) => Lang) => void;
 }
 
-const NAV_LABELS: Record<Lang, { about: string; experience: string; skills: string; projects: string; contact: string }> = {
-  en: { about: 'About', experience: 'Experience', skills: 'Skill', projects: 'Project', contact: 'Contact' },
-  th: { about: 'เกี่ยวกับ', experience: 'ประสบการณ์', skills: 'ทักษะ', projects: 'ผลงาน', contact: 'ติดต่อ' },
-  jp: { about: '自己紹介', experience: '経歴', skills: 'スキル', projects: '作品', contact: 'お問い合わせ' },
-};
-
 const SECTION_IDS = ['about', 'experience', 'skills', 'projects', 'contact'] as const;
 
 export default function Nav({ darkMode, setDarkMode, lang, setLang }: NavProps) {
@@ -23,7 +17,7 @@ export default function Nav({ darkMode, setDarkMode, lang, setLang }: NavProps) 
   const [activeSection, setActiveSection] = useState('');
   const [scrollPct, setScrollPct] = useState(0);
 
-  const t = NAV_LABELS[lang];
+  const t = translations[lang].nav;
   const links = [
     { id: 'about', label: t.about },
     { id: 'experience', label: t.experience },

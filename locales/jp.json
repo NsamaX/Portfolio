@@ -89,7 +89,8 @@
   "projects": {
     "label": "作品",
     "filters": ["すべて", "ウェブ", "モバイル", "ツール"],
-    "filterMap": { "すべて": "all", "ウェブ": "website", "モバイル": "mobile", "ツール": "tool" }
+    "filterMap": { "すべて": "all", "ウェブ": "website", "モバイル": "mobile", "ツール": "tool" },
+    "viewRepo": "リポジトリを見る"
   },
   "contact": {
     "label": "お問い合わせ",
