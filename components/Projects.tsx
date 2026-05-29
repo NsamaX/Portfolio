@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import translations, { Lang } from '@/lib/translations';
 import projectsData, { ProjectItem } from '@/lib/projects';
 
@@ -44,8 +45,15 @@ function ProjectDetail({ project, onClose, lang }: { project: ProjectItem; onClo
           </svg>
         </button>
 
-        <div className="pd-hero-img" style={{ position: 'relative' }}>
-          <img src={project.images[activeImg].src} alt={project.images[activeImg].label} style={{ width: '100%', height: 'auto', display: 'block' }} />
+        <div className="pd-hero-img">
+          <Image
+            src={project.images[activeImg].src}
+            alt={project.images[activeImg].label}
+            fill
+            sizes="(max-width: 880px) 100vw, 760px"
+            style={{ objectFit: 'cover' }}
+            priority
+          />
           <svg className="pd-torn-bottom" viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}>
             <path d="M0,0 L0,28 L1200,28 L1200,10 C1160,18 1110,6 1060,14 C1010,22 970,8 920,14 C870,20 830,6 780,12 C730,18 680,4 630,10 C580,16 530,4 480,10 C430,16 380,4 330,12 C280,20 230,6 180,12 C130,18 80,6 40,12 C20,15 8,8 0,10 Z" fill="var(--bg)"/>
           </svg>
@@ -59,7 +67,7 @@ function ProjectDetail({ project, onClose, lang }: { project: ProjectItem; onClo
               onClick={() => setActiveImg(i)}
               aria-label={img.label}
             >
-              <img src={img.src} alt={img.label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <Image src={img.src} alt={img.label} fill sizes="120px" style={{ objectFit: 'cover' }} />
             </button>
           ))}
         </div>
@@ -101,6 +109,8 @@ export default function Projects({ lang }: ProjectsProps) {
   const [filter, setFilter] = useState('all');
   const [selected, setSelected] = useState<ProjectItem | null>(null);
 
+  // Reset the filter and close any open project when the language switches.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setFilter('all'); setSelected(null); }, [lang]);
 
   useEffect(() => {
@@ -160,7 +170,15 @@ export default function Projects({ lang }: ProjectsProps) {
                 <div className="project-img-wrap">
                   <TornTop />
                   <div className="project-img-inner">
-                    {proj.images[0] && <img src={proj.images[0].src} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
+                    {proj.images[0] && (
+                      <Image
+                        src={proj.images[0].src}
+                        alt={proj.title}
+                        fill
+                        sizes="(max-width: 880px) 100vw, 360px"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="project-body">

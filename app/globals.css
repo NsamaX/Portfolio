@@ -778,12 +778,14 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   display: block;
 }
 .project-img-inner {
+  position: relative;
   height: 100%;
   background: var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   filter: sepia(0.25);
+  overflow: hidden;
 }
 .project-body { padding: 20px 24px 24px; }
 .project-tags {
@@ -959,6 +961,7 @@ footer {
 .pd-close:hover { color: var(--text); border-color: var(--text); }
 .pd-hero-img {
   width: 100%;
+  aspect-ratio: 16 / 10;
   position: relative;
   overflow: hidden;
 }

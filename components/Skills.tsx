@@ -26,6 +26,8 @@ export default function Skills({ lang }: SkillsProps) {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
+  // Close the open skill popover when the language switches.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setActive(null); }, [lang]);
 
   function handleSkillClick(e: React.MouseEvent, skill: SkillItem) {
