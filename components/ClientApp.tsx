@@ -13,11 +13,27 @@ import Footer from './Footer';
 
 export default function ClientApp() {
   const [darkMode, setDarkMode] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const [lang, setLang] = useState<Lang>('en');
 
+  // Hydrate theme from the persisted preference (or system default) once on
+  // mount — localStorage isn't available during render.
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
+    const stored = localStorage.getItem('theme');
+    const isDark = stored
+      ? stored === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(isDark);
+    setLoaded(true);
+  }, []);
+  /* eslint-enable react-hooks/set-state-in-effect */
+
+  useEffect(() => {
+    if (!loaded) return;
     document.documentElement.setAttribute('data-dark', darkMode ? 'true' : 'false');
-  }, [darkMode]);
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+  }, [darkMode, loaded]);
 
   return (
     <>
