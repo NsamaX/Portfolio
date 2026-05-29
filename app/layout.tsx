@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Vijuksama — Full-Stack / Infra Engineer',
+  title: 'Portfolio',
   description: 'Portfolio of Vijuksama — operating on-premise infrastructure and building factory ERP systems.',
   icons: { icon: '/icon.svg' },
 };
