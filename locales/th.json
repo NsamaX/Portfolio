@@ -43,6 +43,15 @@
           "ออกแบบเครือข่ายโรงงานใหม่สำหรับพนักงาน ~230 คน และอุปกรณ์กว่า 60 ชิ้น: dual-WAN load-balancing + failover, แผน IP แบบ /24 และ remote access ผ่าน WireGuard / Tailscale",
           "ลดค่าใช้จ่าย IT ประจำปีประมาณ 45,000 บาท โดย self-host open-source แทน (OpenMediaVault, Wazuh + Defender) และ automate การดูแล 50 workstation ด้วย PowerShell + RMM"
         ]
+      },
+      {
+        "tag": "การศึกษา",
+        "company": "มหาวิทยาลัยศิลปากร",
+        "role": "วท.บ. เทคโนโลยีสารสนเทศ · คณะวิทยาศาสตร์",
+        "year": "2564 – 2568",
+        "bullets": [
+          "วิทยานิพนธ์: NFC Deck Tracker — แอปพลิเคชัน Flutter สำหรับจัดการสำรับการ์ดเกมแบบ real-time ด้วย NFC พัฒนาบน Clean Architecture และ Firebase"
+        ]
       }
     ]
   },

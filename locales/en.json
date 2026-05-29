@@ -43,6 +43,15 @@
           "Redesigned the factory network for ~230 staff and 60+ devices: dual-WAN load-balancing + failover, a structured /24 IP plan, and WireGuard / Tailscale remote access.",
           "Cut recurring IT costs ~45,000฿/year by self-hosting open-source replacements (OpenMediaVault, Wazuh + Defender), and automated daily ops for 50 workstations with PowerShell + RMM into centralized dashboards."
         ]
+      },
+      {
+        "tag": "EDUCATION",
+        "company": "Silpakorn University",
+        "role": "B.Sc. Information Technology · Faculty of Science",
+        "year": "2021 – 2025",
+        "bullets": [
+          "Thesis: NFC Deck Tracker — a Flutter mobile app for real-time trading card game deck management using NFC tags, built on Clean Architecture with Firebase backend."
+        ]
       }
     ]
   },
