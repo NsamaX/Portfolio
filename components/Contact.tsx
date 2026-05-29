@@ -1,21 +1,46 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import translations, { Lang } from '@/lib/translations';
 
 interface ContactProps {
   lang: Lang;
 }
 
+type Status = 'idle' | 'sending' | 'sent' | 'error';
+
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
 export default function Contact({ lang }: ContactProps) {
   const t = translations[lang].contact;
-  const [sent, setSent] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<Status>('idle');
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
+    if (status === 'sending') return;
+
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY || !formRef.current) {
+      setStatus('error');
+      return;
+    }
+
+    setStatus('sending');
+    try {
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, { publicKey: PUBLIC_KEY });
+      formRef.current.reset();
+      setStatus('sent');
+      setTimeout(() => setStatus('idle'), 4000);
+    } catch {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   }
+
+  const btnLabel = status === 'sending' ? t.sending : status === 'sent' ? t.sent : t.send;
 
   return (
     <section id="contact" className="section contact-section">
@@ -29,22 +54,23 @@ export default function Contact({ lang }: ContactProps) {
           <div className="contact-form-wrap">
             <p className="contact-intro">{t.intro}</p>
 
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
               <div className="form-field">
                 <label className="form-label">{t.name}</label>
-                <input className="form-input" type="text" placeholder={t.name_ph} required />
+                <input className="form-input" type="text" name="from_name" placeholder={t.name_ph} required />
               </div>
               <div className="form-field">
                 <label className="form-label">{t.email}</label>
-                <input className="form-input" type="email" placeholder={t.email_ph} required />
+                <input className="form-input" type="email" name="reply_to" placeholder={t.email_ph} required />
               </div>
               <div className="form-field">
                 <label className="form-label">{t.message}</label>
-                <textarea className="form-input form-textarea" placeholder={t.message_ph} rows={4} required></textarea>
+                <textarea className="form-input form-textarea" name="message" placeholder={t.message_ph} rows={4} required></textarea>
               </div>
-              <button type="submit" className="send-btn">
-                {sent ? t.sent : t.send}
+              <button type="submit" className="send-btn" disabled={status === 'sending'}>
+                {btnLabel}
               </button>
+              {status === 'error' && <p className="form-error">{t.error}</p>}
             </form>
 
             <div className="social-row">

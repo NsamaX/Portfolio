@@ -23,7 +23,7 @@ export interface Translations {
   experience: { label: string; jobs: { tag: string; company: string; role: string; year: string; bullets: string[] }[] };
   skills: { label: string; categories: SkillCategory[] };
   projects: { label: string; filters: string[]; filterMap?: Record<string, string> };
-  contact: { label: string; intro: string; name: string; email: string; message: string; name_ph: string; email_ph: string; message_ph: string; send: string; sent: string };
+  contact: { label: string; intro: string; name: string; email: string; message: string; name_ph: string; email_ph: string; message_ph: string; send: string; sending: string; sent: string; error: string };
   footer: string;
 }
 

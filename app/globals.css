@@ -879,6 +879,12 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   width: 100%;
 }
 .send-btn:hover { opacity: 0.85; }
+.send-btn:disabled { opacity: 0.55; cursor: default; }
+.form-error {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--accent);
+}
 .social-row {
   display: flex;
   gap: 20px;

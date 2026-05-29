@@ -101,7 +101,9 @@
     "email_ph": "you@example.com",
     "message_ph": "ご用件をどうぞ",
     "send": "送信する",
-    "sent": "送信済み ✓"
+    "sending": "送信中…",
+    "sent": "送信済み ✓",
+    "error": "送信できませんでした — 直接メールしてください。"
   },
   "footer": "Next.js で構築"
 }
