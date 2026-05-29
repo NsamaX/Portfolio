@@ -18,6 +18,10 @@ export default function Contact({ lang }: ContactProps) {
   const t = translations[lang].contact;
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<Status>('idle');
+  const [fields, setFields] = useState({ from_name: '', reply_to: '', message: '' });
+
+  const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.reply_to);
+  const allFilled = fields.from_name.trim() !== '' && validEmail && fields.message.trim() !== '';
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -57,17 +61,17 @@ export default function Contact({ lang }: ContactProps) {
             <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
               <div className="form-field">
                 <label className="form-label">{t.name}</label>
-                <input className="form-input" type="text" name="from_name" placeholder={t.name_ph} required />
+                <input className="form-input" type="text" name="from_name" placeholder={t.name_ph} required onChange={e => setFields(f => ({ ...f, from_name: e.target.value }))} />
               </div>
               <div className="form-field">
                 <label className="form-label">{t.email}</label>
-                <input className="form-input" type="email" name="reply_to" placeholder={t.email_ph} required />
+                <input className="form-input" type="email" name="reply_to" placeholder={t.email_ph} required onChange={e => setFields(f => ({ ...f, reply_to: e.target.value }))} />
               </div>
               <div className="form-field">
                 <label className="form-label">{t.message}</label>
-                <textarea className="form-input form-textarea" name="message" placeholder={t.message_ph} rows={4} required></textarea>
+                <textarea className="form-input form-textarea" name="message" placeholder={t.message_ph} rows={4} required onChange={e => setFields(f => ({ ...f, message: e.target.value }))}></textarea>
               </div>
-              <button type="submit" className="send-btn" disabled={status === 'sending'}>
+              <button type="submit" className="send-btn" disabled={!allFilled || status === 'sending'}>
                 {btnLabel}
               </button>
               {status === 'error' && <p className="form-error">{t.error}</p>}
