@@ -30,7 +30,7 @@ export default function Hero({ lang }: HeroProps) {
 
           <div className="profile-circle-wrap">
             <Image
-              src="/profile.png"
+              src="/profile.jpg"
               alt="Vijuksama"
               width={320}
               height={320}

@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     siteName: 'Vijuksama',
     title,
     description,
-    images: [{ url: '/profile.png', width: 320, height: 320, alt: 'Vijuksama' }],
+    images: [{ url: '/profile.jpg', width: 320, height: 320, alt: 'Vijuksama' }],
   },
   twitter: {
     card: 'summary',
     title,
     description,
-    images: ['/profile.png'],
+    images: ['/profile.jpg'],
   },
   robots: {
     index: true,
@@ -60,7 +60,7 @@ const jsonLd = {
   jobTitle: 'Infrastructure & Full-Stack Engineer',
   description,
   url: siteUrl,
-  image: `${siteUrl}/profile.png`,
+  image: `${siteUrl}/profile.jpg`,
   sameAs: ['https://github.com/vijuksama', 'https://linkedin.com/in/vijuksama'],
   knowsAbout: ['Proxmox', 'Docker', 'Linux', 'Next.js', 'TypeScript', 'PostgreSQL', 'DevOps', 'ERP'],
 };

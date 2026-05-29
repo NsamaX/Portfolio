@@ -1,22 +1,20 @@
 [
   {
     "id": "00",
-    "title": "ระบบ ERP — โมดูล BOM",
+    "title": "Enterprise Resource Planning",
     "desc": "ระบบ ERP ภายในองค์กรที่แทนที่ Excel รายแผนกที่กระจัดกระจาย",
     "longDesc": "ระบบ ERP ภายในองค์กรที่แทนที่ Excel รายแผนกที่กระจัดกระจาย โมดูล Bill-of-Materials รวมโครงสร้างผลิตภัณฑ์ วัตถุดิบ และต้นทุนคลังสินค้าไว้ในที่เดียวแบบ role-based และอัปเดตตลอดเวลา",
     "tags": ["TypeScript", "PostgreSQL", "Docker"],
     "type": "website",
     "repo": null,
     "live": null,
-    "images": [
-      { "label": "Thumbnail", "src": "https://cdn.dribbble.com/userupload/47105853/file/801492bbd3f1a398a18a5ebae2ba44ea.png?resize=1024x732&vertical=center" }
-    ],
+    "images": [],
     "year": "2025",
     "role": "นักพัฒนา"
   },
   {
     "id": "01",
-    "title": "ระบบจัดการสปานวด",
+    "title": "Massage Administration System",
     "desc": "เว็บแอปจัดการร้านนวดแผนไทย รองรับสิทธิ์ Admin และเลขา",
     "longDesc": "เว็บแอปจัดการการดำเนินงานร้านนวดแผนไทย รองรับสิทธิ์ผู้ใช้สำหรับ Admin และเลขา มีระบบนัดหมาย โปรไฟล์พนักงาน จัดการบริการ และรายงานรายรับรายเดือน",
     "tags": ["TypeScript", "HTML", "CSS"],
@@ -24,7 +22,7 @@
     "repo": "https://github.com/NsamaX/Massage-Administration-System",
     "live": null,
     "images": [
-      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/35276592/file/original-4f0cc5d78a77127f58f8c318659b2a50.jpg?resize=1024x768&vertical=center" }
+      { "label": "ภาพหลัก", "src": "/projects/Massage Administration System.png" }
     ],
     "year": "2025",
     "role": "นักพัฒนา"
@@ -38,9 +36,7 @@
     "type": "website",
     "repo": null,
     "live": null,
-    "images": [
-      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/47879288/file/993ecf338d8ffd4ce95551a187ac6114.png?resize=600x752&vertical=center" }
-    ],
+    "images": [],
     "year": "2025",
     "role": "นักพัฒนา"
   },
@@ -53,9 +49,7 @@
     "type": "tool",
     "repo": null,
     "live": null,
-    "images": [
-      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/3831711/file/original-3bee1b26948595cb4fb7663906a68c8c.png?resize=1024x768&vertical=center" }
-    ],
+    "images": [],
     "year": "2025",
     "role": "นักพัฒนา"
   },
@@ -69,7 +63,7 @@
     "repo": "https://github.com/NsamaX/Crossword-Solver",
     "live": null,
     "images": [
-      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/44561299/file/82da03aa2ebda8899202b01b36008b01.jpg?resize=1024x732&vertical=center" }
+      { "label": "ภาพหลัก", "src": "/projects/Crossword Solver.png" }
     ],
     "year": "2024",
     "role": "นักพัฒนา"
@@ -84,7 +78,7 @@
     "repo": "https://github.com/NsamaX/NFC-Deck-Tracker",
     "live": null,
     "images": [
-      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/43494119/file/accbde84fa8cafd9a7088e4f36c27f62.png?resize=1024x732&vertical=center" }
+      { "label": "ภาพหลัก", "src": "/projects/NFC Deck Tracker.png" }
     ],
     "year": "2024",
     "role": "นักพัฒนา"
@@ -99,7 +93,7 @@
     "repo": "https://github.com/NsamaX/Astral-Oracle",
     "live": "https://astral-oracle.vercel.app",
     "images": [
-      { "label": "ภาพหลัก", "src": "https://cdn.dribbble.com/userupload/42769129/file/bfe68ecf4235aa0c39c82fc2c0a453fa.jpg?resize=1024x732&vertical=center" }
+      { "label": "ภาพหลัก", "src": "/projects/Astral Oracle.png" }
     ],
     "year": "2024",
     "role": "นักพัฒนา"
