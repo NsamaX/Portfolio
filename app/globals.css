@@ -104,11 +104,13 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 .nav-bar {
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: 64px;
+  height: calc(64px + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding-left: 40px;
+  padding-right: 40px;
   z-index: 1000;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
@@ -205,7 +207,8 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   position: fixed;
   top: 0;
   right: 0;
-  height: 64px;
+  height: calc(64px + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
   align-items: center;
   padding-right: 16px;
   z-index: 1200;
@@ -887,11 +890,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   font-size: 13px;
   color: var(--accent);
 }
-.social-row {
-  display: flex;
-  gap: 20px;
-  margin-top: 28px;
-}
 .social-icon {
   color: var(--muted);
   transition: color 0.2s;
@@ -927,6 +925,12 @@ footer {
   opacity: 1;
   transition: opacity 0.28s ease;
 }
+@media screen and (max-width: 768px) {
+  .pd-sheet {
+    height: calc(100dvh - env(safe-area-inset-top));
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
 @media screen and (min-width: 769px) {
   .pd-backdrop { align-items: center; padding-top: 64px; }
   .pd-sheet { max-height: calc(88vh - 64px); }
@@ -936,7 +940,7 @@ footer {
   background: var(--bg);
   width: 100%;
   max-width: 800px;
-  max-height: 88vh;
+  max-height: 88dvh;
   overflow-y: auto;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;

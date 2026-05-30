@@ -6,6 +6,12 @@ const title = 'Vijuksama — Infrastructure & Full-Stack Engineer';
 const description =
   'Self-taught Infrastructure & Full-Stack Engineer — operating on-premise Proxmox infrastructure and building factory ERP systems for discrete manufacturing.';
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {

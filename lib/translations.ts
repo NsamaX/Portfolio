@@ -35,6 +35,6 @@ const translations: Record<Lang, Translations> = {
 
 // Single source of truth for which languages appear in the switcher.
 // Add or remove entries here to control what visitors can choose.
-export const ENABLED_LANGS: Lang[] = ['en', 'th', 'jp'];
+export const ENABLED_LANGS: Lang[] = ['en', 'th'];
 
 export default translations;
