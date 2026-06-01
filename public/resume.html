@@ -8,20 +8,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-
   <style>
     :root {
-      --ink:      #1A1D21;     /* primary text    */
-      --ink-2:    #3D434B;     /* body text       */
-      --muted:    #6B7280;     /* meta / labels   */
-      --faint:    #9CA3AF;     /* dots / dividers */
-      --rule:     #E4E7EB;     /* hairlines       */
+      --ink:      #1A1D21;
+      --ink-2:    #3D434B;
+      --muted:    #6B7280;
+      --faint:    #9CA3AF;
+      --rule:     #E4E7EB;
       --paper:    #FFFFFF;
-      --accent:   #1F3A5F;     /* headings only — overridden by tweaks      */
-      --gap:      1;             /* density multiplier — overridden by tweaks */
+      --accent:   #374151;
       --font:     'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -84,7 +79,7 @@
     }
 
     /* ---------- Section scaffold ---------- */
-    .section { margin-top: calc(20px * var(--gap)); }
+    .section { margin-top: 24px; }
     .sec-head {
       font-size: 11.5px;
       font-weight: 700;
@@ -93,7 +88,7 @@
       color: var(--accent);
       padding-bottom: 5px;
       border-bottom: 1.5px solid var(--rule);
-      margin-bottom: calc(9px * var(--gap));
+      margin-bottom: 11px;
     }
 
     .body-text {
@@ -111,11 +106,11 @@
     .e-meta { font-size: 12.5px; color: var(--muted); white-space: nowrap; text-align: right; font-weight: 500; }
 
     .bullet-list {
-      margin-top: calc(7px * var(--gap));
+      margin-top: 8px;
       padding-left: 0;
       list-style: none;
       display: grid;
-      gap: calc(4px * var(--gap));
+      gap: 5px;
     }
     .bullet-list li {
       position: relative;
@@ -137,7 +132,7 @@
     .skill-grid {
       display: grid;
       grid-template-columns: 158px 1fr;
-      gap: calc(7px * var(--gap)) 18px;
+      gap: 8px 18px;
     }
     .skill-cat {
       font-size: 12px;
@@ -150,7 +145,7 @@
     .skill-list .dot { color: var(--faint); margin: 0 7px; }
 
     /* ---------- Projects ---------- */
-    .proj { margin-bottom: calc(9px * var(--gap)); page-break-inside: avoid; }
+    .proj { margin-bottom: 11px; page-break-inside: avoid; }
     .proj:last-child { margin-bottom: 0; }
     .proj-name { font-weight: 700; font-size: 12.8px; color: var(--ink); margin-bottom: 2px; }
     .proj-desc { font-size: 12.4px; line-height: 1.45; color: var(--ink-2); max-width: 84ch; text-wrap: pretty; }
@@ -162,11 +157,7 @@
       color: var(--muted);
     }
 
-    /* ---------- Tweaks mount ---------- */
-    #tweaks-root { position: fixed; top: 0; right: 0; z-index: 9999; }
-
-    /* ---------- Mobile: shrink the A4 sheet to fit screen width ---------- */
-    /* The shrink factor itself is set via JS (.page zoom) for Safari support. */
+    /* ---------- Mobile ---------- */
     @media (max-width: 800px) {
       html { -webkit-text-size-adjust: 100%; }
       body {
@@ -183,12 +174,11 @@
       html, body { background: #fff; }
       body { padding: 0; display: block; }
       .page { width: 210mm; min-height: 297mm; box-shadow: none; margin: 0; zoom: 1; }
-      #tweaks-root { display: none !important; }
     }
   </style>
 </head>
 <body>
-  <div class="page" id="resume" data-screen-label="Résumé">
+  <div class="page">
     <header>
       <h1 class="r-name">Vijuksama Hongthongdaeng</h1>
       <div class="r-title">Infrastructure &amp; Full-Stack Engineer</div>
@@ -229,7 +219,7 @@
         </div>
         <div class="skill-cat">Development</div>
         <div class="skill-list">
-          <span class="sk">React</span><span class="dot">·</span><span class="sk">Next.js</span><span class="dot">·</span><span class="sk">TypeScript</span><span class="dot">·</span><span class="sk">PostgreSQL</span><span class="dot">·</span>
+          <span class="sk">React</span><span class="dot">·</span><span class="sk">Next.js</span><span class="dot">·</span><span class="sk">TypeScript</span><span class="dot">·</span><span class="sk">PostgreSQL</span>
         </div>
         <div class="skill-cat">Tools</div>
         <div class="skill-list">
@@ -291,67 +281,5 @@
       </div>
     </section>
   </div>
-
-  <div id="tweaks-root"></div>
-
-  <script>
-    /* Fit the fixed-width A4 sheet to narrow screens (Safari has no zoom: calc()). */
-    (function () {
-      var page = document.getElementById('resume');
-      if (!page) return;
-      function fit() {
-        page.style.zoom = '';
-        if (document.documentElement.clientWidth <= 800) {
-          var pw = page.getBoundingClientRect().width;
-          if (pw) page.style.zoom = document.documentElement.clientWidth / pw;
-        }
-      }
-      fit();
-      window.addEventListener('resize', fit);
-      window.addEventListener('orientationchange', fit);
-    })();
-  </script>
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/babel" src="tweaks-panel.jsx"></script>
-  <script type="text/babel">
-    const { useEffect } = React;
-
-    const ACCENTS = {
-      'Ink Navy': '#1F3A5F',
-      'Graphite': '#374151',
-      'Teal':     '#0F6E63',
-      'Burgundy': '#7C2D3A',
-    };
-
-    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-      "accent": "#374151",
-      "density": "comfy"
-    }/*EDITMODE-END*/;
-
-    function App() {
-      const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
-
-      useEffect(() => {
-        const root = document.documentElement;
-        root.style.setProperty('--accent', t.accent);
-        root.style.setProperty('--gap', t.density === 'compact' ? '0.8' : t.density === 'comfy' ? '1.18' : '1');
-      }, [t.accent, t.density]);
-
-      return (
-        <TweaksPanel>
-          <TweakSection label="Accent (headings)" />
-          <TweakColor label="Color" value={t.accent}
-                      options={Object.values(ACCENTS)}
-                      onChange={(v) => setTweak('accent', v)} />
-          <TweakSection label="Layout" />
-          <TweakRadio label="Density" value={t.density}
-                      options={['compact', 'regular', 'comfy']}
-                      onChange={(v) => setTweak('density', v)} />
-        </TweaksPanel>
-      );
-    }
-
-    ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<App />);
-  </script>
 </body>
 </html>

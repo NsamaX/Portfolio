@@ -16,7 +16,7 @@ export default function Hero({ lang }: HeroProps) {
           <p className="hero-sub">{t.sub}</p>
           <div className="hero-ctas">
             <a href="#projects" className="cta-dashed">{t.cta_work}</a>
-            <a href="/resume.html" target="_blank" rel="noopener noreferrer" className="cta-dashed cta-outline">{t.cta_resume}</a>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="cta-dashed cta-outline">{t.cta_resume}</a>
           </div>
         </div>
 
