@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
-const title = 'Vijuksama — Infrastructure & Full-Stack Engineer';
+const title = 'Portfolio — Vijuksama';
 const description =
   'Self-taught Infrastructure & Full-Stack Engineer — operating on-premise Proxmox infrastructure and building factory ERP systems for discrete manufacturing.';
 

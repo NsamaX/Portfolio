@@ -124,7 +124,6 @@ export default function Nav({ darkMode, setDarkMode, lang, setLang }: NavProps) 
                 className={`panel-link${activeSection === link.id ? ' panel-link-active' : ''}`}
                 onClick={() => scrollTo(link.id)}
               >
-                <span className="panel-num mono-tag">{String(i + 1).padStart(2, '0')}</span>
                 {link.label}
               </button>
             </li>

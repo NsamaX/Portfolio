@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Résumé — Vijuksama Hongthongdaeng</title>
+  <title>Résumé — Vijuksama</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,14 +14,14 @@
 
   <style>
     :root {
-      --ink:      #1A1D21;     /* primary text */
-      --ink-2:    #3D434B;     /* body text     */
-      --muted:    #6B7280;     /* meta / labels  */
+      --ink:      #1A1D21;     /* primary text    */
+      --ink-2:    #3D434B;     /* body text       */
+      --muted:    #6B7280;     /* meta / labels   */
       --faint:    #9CA3AF;     /* dots / dividers */
-      --rule:     #E4E7EB;     /* hairlines      */
+      --rule:     #E4E7EB;     /* hairlines       */
       --paper:    #FFFFFF;
-      --accent:   #1F3A5F;     /* headings only — overridden by tweaks */
-      --gap:      1;           /* density multiplier — overridden by tweaks */
+      --accent:   #1F3A5F;     /* headings only — overridden by tweaks      */
+      --gap:      1;             /* density multiplier — overridden by tweaks */
       --font:     'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -103,11 +103,10 @@
       max-width: 74ch;
       text-wrap: pretty;
     }
-    .body-text strong { color: var(--ink); font-weight: 600; }
 
     /* ---------- Entry rows (experience / education) ---------- */
     .entry { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; }
-    .e-org { font-weight: 700; font-size: 14.5px; color: var(--ink); }
+    .e-org { font-weight: 700; font-size: 12.8px; color: var(--ink); }
     .e-role { font-size: 13px; color: var(--ink-2); margin-top: 2px; }
     .e-meta { font-size: 12.5px; color: var(--muted); white-space: nowrap; text-align: right; font-weight: 500; }
 
@@ -153,7 +152,7 @@
     /* ---------- Projects ---------- */
     .proj { margin-bottom: calc(9px * var(--gap)); page-break-inside: avoid; }
     .proj:last-child { margin-bottom: 0; }
-    .proj-name { font-weight: 700; font-size: 13.5px; color: var(--ink); margin-bottom: 2px; }
+    .proj-name { font-weight: 700; font-size: 12.8px; color: var(--ink); margin-bottom: 2px; }
     .proj-desc { font-size: 12.4px; line-height: 1.45; color: var(--ink-2); max-width: 84ch; text-wrap: pretty; }
     .proj-stack {
       margin-top: 4px;
@@ -166,12 +165,24 @@
     /* ---------- Tweaks mount ---------- */
     #tweaks-root { position: fixed; top: 0; right: 0; z-index: 9999; }
 
+    /* ---------- Mobile: shrink the A4 sheet to fit screen width ---------- */
+    /* The shrink factor itself is set via JS (.page zoom) for Safari support. */
+    @media (max-width: 800px) {
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        padding: 0;
+        display: block;
+        background: #fff;
+      }
+      .page { box-shadow: none; }
+    }
+
     /* ---------- Print ---------- */
     @media print {
       @page { size: A4; margin: 0; }
       html, body { background: #fff; }
       body { padding: 0; display: block; }
-      .page { width: 210mm; min-height: 297mm; box-shadow: none; margin: 0; }
+      .page { width: 210mm; min-height: 297mm; box-shadow: none; margin: 0; zoom: 1; }
       #tweaks-root { display: none !important; }
     }
   </style>
@@ -186,9 +197,9 @@
         <span class="sep"></span>
         <a href="tel:+66615766142">061 576 6142</a>
         <span class="sep"></span>
-        <a href="/cdn-cgi/l/email-protection#3147585b445a42505c5071565c50585d1f525e5c"><span class="__cf_email__" data-cfemail="9ee8f7f4ebf5edfff3ffdef9f3fff7f2b0fdf1f3">[email&#160;protected]</span></a>
+        <a href="mailto:vijuksama@gmail.com">vijuksama@gmail.com</a>
         <span class="sep"></span>
-        <a href="https://portfolio-nsamax.vercel.app" target="_blank" rel="noopener">portfolio-nsamax.vercel.app</a>
+        <a href="https://www.vijuksama.com" target="_blank" rel="noopener">www.vijuksama.com</a>
         <span class="sep"></span>
         <a href="https://github.com/NsamaX" target="_blank" rel="noopener">github.com/NsamaX</a>
       </div>
@@ -197,8 +208,38 @@
     <section class="section">
       <h2 class="sec-head">Summary</h2>
       <p class="body-text">
-        Self-taught engineer and the <strong>sole IT</strong> for a 230-person manufacturing site — I built the company's entire tech backbone from two repurposed desktops: server infrastructure, networking, security, and in-house ERP software, using open-source and AI to ship reliable systems on a near-zero budget.
+        Self-taught engineer and the sole IT for a 230-person manufacturing site — I built the company's entire tech backbone from two repurposed desktops: server infrastructure, networking, security, and in-house ERP software, using open-source and AI to ship reliable systems on a near-zero budget.
       </p>
+    </section>
+
+    <section class="section">
+      <h2 class="sec-head">Skills</h2>
+      <div class="skill-grid">
+        <div class="skill-cat">Infrastructure, DevOps</div>
+        <div class="skill-list">
+          <span class="sk">Proxmox VE/PBS</span><span class="dot">·</span><span class="sk">Docker</span><span class="dot">·</span><span class="sk">Linux</span><span class="dot">·</span><span class="sk">Nginx Proxy Manager</span><span class="dot">·</span><span class="sk">WireGuard</span><span class="dot">·</span><span class="sk">Tailscale</span><span class="dot">·</span><span class="sk">Cloudflare</span><span class="dot">·</span><span class="sk">n8n</span><span class="dot">·</span><span class="sk">OpenMediaVault</span>
+        </div>
+        <div class="skill-cat">Networking</div>
+        <div class="skill-list">
+          <span class="sk">Load Balancing</span><span class="dot">·</span><span class="sk">IP / Subnet Planning</span><span class="dot">·</span><span class="sk">AdGuard DNS</span>
+        </div>
+        <div class="skill-cat">Security</div>
+        <div class="skill-list">
+          <span class="sk">Wazuh</span><span class="dot">·</span><span class="sk">Defender</span>
+        </div>
+        <div class="skill-cat">Development</div>
+        <div class="skill-list">
+          <span class="sk">React</span><span class="dot">·</span><span class="sk">Next.js</span><span class="dot">·</span><span class="sk">TypeScript</span><span class="dot">·</span><span class="sk">PostgreSQL</span><span class="dot">·</span>
+        </div>
+        <div class="skill-cat">Tools</div>
+        <div class="skill-list">
+          <span class="sk">Figma</span><span class="dot">·</span><span class="sk">Git</span><span class="dot">·</span><span class="sk">PowerShell</span><span class="dot">·</span><span class="sk">AI-Driven Development</span>
+        </div>
+        <div class="skill-cat">Languages</div>
+        <div class="skill-list">
+          <span class="sk">Thai (Native)</span><span class="dot">·</span><span class="sk">English (Normal)</span>
+        </div>
+      </div>
     </section>
 
     <section class="section">
@@ -211,36 +252,10 @@
         <div class="e-meta">Nov 2025 — Present</div>
       </div>
       <ul class="bullet-list">
-        <li>Built the company's on-premise infrastructure from scratch on two repurposed desktops — a Proxmox VE + PBS cluster running 7+ virtualized services (NAS, reverse proxy, DNS, VPN, monitoring) with automated nightly backups and near-100% uptime.</li>
+        <li>Built the company's on-premise infrastructure from scratch on two repurposed desktops — a Proxmox VE + PBS cluster running 7+ virtualized services (NAS, reverse proxy, DNS, VPN, monitoring) with automated nightly backups and near-99% uptime.</li>
         <li>Redesigned the factory network for ~230 staff and 60+ devices: dual-WAN load-balancing + failover, a structured /24 IP plan, and WireGuard / Tailscale remote access.</li>
-        <li>Cut recurring IT costs ~45,000฿/year by self-hosting open-source replacements (OpenMediaVault, Wazuh + Defender), and automated daily ops for 50 workstations with PowerShell + RMM into centralized dashboards.</li>
+        <li>Cut recurring IT costs 45,200฿/year by self-hosting open-source replacements (OpenMediaVault, Wazuh + Defender), and automated daily ops for 50 workstations with PowerShell + RMM into centralized dashboards.</li>
       </ul>
-    </section>
-
-    <section class="section">
-      <h2 class="sec-head">Skills</h2>
-      <div class="skill-grid">
-        <div class="skill-cat">Infrastructure &amp; DevOps</div>
-        <div class="skill-list">
-          <span class="sk">Proxmox VE/PBS</span><span class="dot">·</span><span class="sk">Docker</span><span class="dot">·</span><span class="sk">Linux</span><span class="dot">·</span><span class="sk">Nginx Proxy Manager</span><span class="dot">·</span><span class="sk">WireGuard</span><span class="dot">·</span><span class="sk">Cloudflare</span><span class="dot">·</span><span class="sk">n8n</span>
-        </div>
-        <div class="skill-cat">Networking &amp; Security</div>
-        <div class="skill-list">
-          <span class="sk">DrayTek Dual-WAN</span><span class="dot">·</span><span class="sk">IP / Subnet Planning</span><span class="dot">·</span><span class="sk">AdGuard DNS</span><span class="dot">·</span><span class="sk">Wazuh</span><span class="dot">·</span><span class="sk">Defender</span><span class="dot">·</span><span class="sk">RMM</span>
-        </div>
-        <div class="skill-cat">Development</div>
-        <div class="skill-list">
-          <span class="sk">TypeScript</span><span class="dot">·</span><span class="sk">Next.js</span><span class="dot">·</span><span class="sk">React</span><span class="dot">·</span><span class="sk">PostgreSQL</span><span class="dot">·</span><span class="sk">Python</span><span class="dot">·</span><span class="sk">Flutter</span><span class="dot">·</span><span class="sk">Java</span>
-        </div>
-        <div class="skill-cat">Workflow &amp; AI</div>
-        <div class="skill-list">
-          <span class="sk">Git</span><span class="dot">·</span><span class="sk">Figma</span><span class="dot">·</span><span class="sk">PowerShell</span><span class="dot">·</span><span class="sk">Prompt Engineering / LLM</span>
-        </div>
-        <div class="skill-cat">Languages</div>
-        <div class="skill-list">
-          <span class="sk">Thai (Native)</span><span class="dot">·</span><span class="sk">English (professional reading, conversational)</span>
-        </div>
-      </div>
     </section>
 
     <section class="section">
@@ -278,6 +293,24 @@
   </div>
 
   <div id="tweaks-root"></div>
+
+  <script>
+    /* Fit the fixed-width A4 sheet to narrow screens (Safari has no zoom: calc()). */
+    (function () {
+      var page = document.getElementById('resume');
+      if (!page) return;
+      function fit() {
+        page.style.zoom = '';
+        if (document.documentElement.clientWidth <= 800) {
+          var pw = page.getBoundingClientRect().width;
+          if (pw) page.style.zoom = document.documentElement.clientWidth / pw;
+        }
+      }
+      fit();
+      window.addEventListener('resize', fit);
+      window.addEventListener('orientationchange', fit);
+    })();
+  </script>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/babel" src="tweaks-panel.jsx"></script>
   <script type="text/babel">

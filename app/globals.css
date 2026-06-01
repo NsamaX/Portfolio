@@ -61,13 +61,6 @@ ul { list-style: none; }
 button { background: none; border: none; cursor: pointer; font: inherit; color: inherit; }
 
 /* TYPOGRAPHY HELPERS */
-.mono-tag {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
 .mono-section-label {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -261,7 +254,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 }
 .panel-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .panel-link.panel-link-active { color: var(--accent); border-bottom-color: var(--accent); }
-.panel-num { font-size: 10px; color: var(--muted); }
 .panel-footer { margin-top: 32px; display: flex; flex-direction: row; gap: 16px; align-items: center; }
 .panel-icon-btn {
   display: flex;
@@ -927,8 +919,12 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .pd-sheet {
-    height: calc(100dvh - env(safe-area-inset-top));
+    height: 100%;
+    max-height: 100%;
     padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pd-close {
+    top: calc(16px + env(safe-area-inset-top));
   }
 }
 @media screen and (min-width: 769px) {
