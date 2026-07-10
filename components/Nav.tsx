@@ -10,7 +10,7 @@ interface NavProps {
   setLang: (fn: (prev: Lang) => Lang) => void;
 }
 
-const SECTION_IDS = ['about', 'experience', 'skills', 'projects', 'contact'] as const;
+const SECTION_IDS = ['about', 'experience', 'cases', 'skills', 'projects', 'contact'] as const;
 
 export default function Nav({ darkMode, setDarkMode, lang, setLang }: NavProps) {
   const [open, setOpen] = useState(false);
@@ -21,6 +21,7 @@ export default function Nav({ darkMode, setDarkMode, lang, setLang }: NavProps) 
   const links = [
     { id: 'about', label: t.about },
     { id: 'experience', label: t.experience },
+    { id: 'cases', label: t.cases },
     { id: 'skills', label: t.skills },
     { id: 'projects', label: t.projects },
     { id: 'contact', label: t.contact },

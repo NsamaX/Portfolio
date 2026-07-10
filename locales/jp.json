@@ -1,9 +1,16 @@
 {
-  "nav": { "about": "自己紹介", "experience": "経歴", "skills": "スキル", "projects": "作品", "contact": "お問い合わせ" },
+  "nav": {
+    "about": "自己紹介",
+    "experience": "経歴",
+    "cases": "事例",
+    "skills": "スキル",
+    "projects": "作品",
+    "contact": "お問い合わせ"
+  },
   "hero": {
-    "role": "インフラ & フルスタックエンジニア",
+    "role": "インフラ・AI・フルスタックエンジニア",
     "tagline": "製造業のデジタルトランスフォーメーション",
-    "sub": "オンプレミスインフラの運用と工場向けERPシステムの開発",
+    "sub": "オンプレミスインフラの運用、工場向けERPの開発、AIエージェントの実務活用",
     "cta_work": "作品を見る",
     "cta_resume": "履歴書 ↗"
   },
@@ -11,23 +18,44 @@
     "label": "自己紹介",
     "body1": [
       "独学エンジニアとして230人規模の工場の ",
-      { "text": "唯一のIT担当", "mark": true },
+      {
+        "text": "唯一のIT担当",
+        "mark": true
+      },
       " を務め、",
-      { "text": "廃棄予定のPC2台", "mark": true },
+      {
+        "text": "廃棄予定のPC2台",
+        "mark": true
+      },
       " からサーバーインフラ、ネットワーク、セキュリティ、社内ERPシステムまですべてを構築しました。"
     ],
     "body2": [
-      "オープンソースとAIを活用し、",
-      { "text": "ほぼゼロのコストで信頼性の高いシステム", "mark": true },
-      " を実現。現在は ",
-      { "text": "離散製造向けERP", "mark": true },
-      " — 生産スケジュール・在庫・品質管理 — に注力しています。"
+      "さらにその上でAIを活用 — ",
+      {
+        "text": "Claude駆動のドキュメントエージェント",
+        "mark": true
+      },
+      "、AIメール分類、AI駆動開発パイプライン — ",
+      {
+        "text": "ほぼゼロのコストでエンタープライズ級のシステム",
+        "mark": true
+      },
+      " を提供しています。"
     ],
     "resume": "履歴書PDF",
     "stats": [
-      { "val": "理学士", "label": "情報技術学科" },
-      { "val": "230", "label": "人規模の製造拠点" },
-      { "val": "現場", "label": "製造業フォーカス" }
+      {
+        "val": "理学士",
+        "label": "情報技術学科"
+      },
+      {
+        "val": "230",
+        "label": "人規模の製造拠点"
+      },
+      {
+        "val": "現場",
+        "label": "製造業フォーカス"
+      }
     ]
   },
   "experience": {
@@ -39,9 +67,11 @@
         "role": "社内唯一のIT担当 · インフラ・DevOps・開発",
         "year": "2025年11月 — 現在",
         "bullets": [
-          "廃棄予定のPC2台からオンプレミスインフラをゼロから構築 — Proxmox VE + PBSクラスターで7以上のサービス（NAS・リバースプロキシ・DNS・VPN・監視）を稼働、自動夜間バックアップと99%超のアップタイムを実現。",
+          "廃棄予定のPC2台からオンプレミスインフラをゼロから構築 — Proxmox VE + PBSクラスターで7以上のサービス（NAS・リバースプロキシ・DNS・VPN・監視）を稼働、自動夜間バックアップと約99%のアップタイムを実現。",
           "約230名のスタッフと60台以上のデバイスのためにネットワークを再設計：デュアルWAN負荷分散+フェイルオーバー、/24 IPプラン、WireGuard/Tailscaleによるリモートアクセス。",
-          "オープンソース自己ホスト（OpenMediaVault、Wazuh + Defender）でIT運用コストを年間約45,000バーツ削減、PowerShell + RMMで50台のワークステーション管理を自動化。"
+          "自動車業界のAISCフレームワーク（24分野・150以上の文書、ISO/IEC 27001を内部ベースラインとして活用）に基づき工場の情報セキュリティ体制を確立し、IATF 16949 / ISO 9001の品質手順書を作成、全社向けサイバーセキュリティ研修を実施。",
+          "n8nでIT運用を自動化：バックアップとインフラ健全性の監視、AIによるメール分類、ワンクリック承認後にQMS文書へ記録される月次コンプライアンスレポート。",
+          "オープンソース自己ホスト（OpenMediaVault、Wazuh + Defender）でIT運用コストを年間45,200バーツ削減、PowerShell + RMMで50台のワークステーション管理を自動化。"
         ]
       },
       {
@@ -55,41 +85,137 @@
       }
     ]
   },
+  "caseStudies": {
+    "label": "事例",
+    "note": "図はサニタイズ済みの再描画版 — 実際のアドレス・認証情報・内部識別子は含みません。",
+    "studies": [
+      {
+        "kicker": "ARCHITECTURE",
+        "title": "オンプレミス仮想化クラスター",
+        "body": "サーバーも予算もなく、IT担当は一人。廃棄予定のPC2台をProxmox VE + PBSクラスターに変え、NAS・リバースプロキシ・DNSフィルタリング・VPN・自動化・ERPとRotjanaをホストするアプリサーバーなど7以上のサービスを稼働 — 毎晩の自動バックアップと約99%のアップタイムを実現。",
+        "diagram": "/diagrams/cluster.svg",
+        "alt": "オンプレミス仮想化クラスターの構成図"
+      },
+      {
+        "kicker": "NETWORK DESIGN",
+        "title": "工場ネットワークの再設計",
+        "body": "フラットなネットワークと1本の回線で230人を支えており、一度の障害ですべてが止まっていた。再設計により、自動フェイルオーバー付きデュアルWAN負荷分散、オフィス・生産・サーバーを分離する/24プラン、リモートアクセス用のWireGuard / Tailscaleトンネルを導入。",
+        "diagram": "/diagrams/network.svg",
+        "alt": "再設計された工場ネットワークの構成図"
+      },
+      {
+        "kicker": "SECURITY × AI",
+        "title": "セキュリティ & AI自動化プログラム",
+        "body": "コンプライアンスと監視を一人で手作業ではこなせない。自動車業界AISC基準の24分野セキュリティフレームワーク（ISO/IEC 27001を内部ベースラインに）、全端末へのWazuh + Defender導入、そしてバックアップとインフラを監視しClaudeでメールを分類、月次コンプライアンスレポートをQMS台帳へ記録するn8nワークフロー — 書き込みはすべて人間が承認。",
+        "diagram": "/diagrams/security.svg",
+        "alt": "セキュリティとAI自動化パイプラインの構成図"
+      }
+    ]
+  },
   "skills": {
     "label": "スキル",
     "categories": [
       {
         "label": "INFRASTRUCTURE & DEVOPS",
         "skills": [
-          { "name": "Proxmox", "icon": "proxmox", "desc": "Proxmox VE + PBSクラスターを管理するオープンソース仮想化基盤 — NAS・リバースプロキシ・DNS・VPN・監視を含む7以上のサービスをベアメタル上で稼働。" },
-          { "name": "Docker", "icon": "docker", "desc": "すべての自己ホストサービスをコンテナ化し、Proxmoxクラスター全体で一貫した分離デプロイを実現。" },
-          { "name": "Linux", "icon": "linux", "desc": "全オンプレミスサービスのサーバーOS — Ubuntu Server、systemd管理、CLIスクリプティング、サービス管理。" },
-          { "name": "Cloudflare", "icon": "cloudflare", "desc": "DNS・CDN・Zero Trustトンネル — インバウンドポートを開けずに自己ホストサービスを安全にインターネットへ公開。" }
+          {
+            "name": "Proxmox",
+            "icon": "proxmox",
+            "desc": "Proxmox VE + PBSクラスターを管理するオープンソース仮想化基盤 — NAS・リバースプロキシ・DNS・VPN・監視を含む7以上のサービスをベアメタル上で稼働。"
+          },
+          {
+            "name": "Docker",
+            "icon": "docker",
+            "desc": "すべての自己ホストサービスをコンテナ化し、Proxmoxクラスター全体で一貫した分離デプロイを実現。"
+          },
+          {
+            "name": "Linux",
+            "icon": "linux",
+            "desc": "全オンプレミスサービスのサーバーOS — Ubuntu Server、systemd管理、CLIスクリプティング、サービス管理。"
+          },
+          {
+            "name": "Cloudflare",
+            "icon": "cloudflare",
+            "desc": "DNS・CDN・Zero Trustトンネル — インバウンドポートを開けずに自己ホストサービスを安全にインターネットへ公開。"
+          }
+        ]
+      },
+      {
+        "label": "AI ENGINEERING",
+        "skills": [
+          {
+            "name": "Claude API",
+            "icon": "claude",
+            "desc": "Agenticツール使用とvision — 普通のタイ語でQMS文書を安全に読み書きするDiscordエージェント「Rotjana」と、自動化ワークフローのAIメール分類を支える。"
+          },
+          {
+            "name": "n8n",
+            "icon": "n8n",
+            "desc": "自己ホスト型ワークフロー自動化 — バックアップ監視、インフラ健全性チェック、人間の承認を挟む月次コンプライアンスレポート。"
+          }
         ]
       },
       {
         "label": "DEVELOPMENT",
         "skills": [
-          { "name": "TypeScript", "icon": "typescript", "desc": "すべてのWebおよびAPIプロジェクトの主要言語 — 型安全で大規模コードベースにも対応し、ランタイムエラーのクラス全体を排除。" },
-          { "name": "Next.js", "icon": "nextjs", "desc": "サーバーサイドレンダリングとファイルベースルーティングを備えたReactフレームワーク — ERP操作画面と社内ダッシュボードに使用。" },
-          { "name": "React", "icon": "react", "desc": "コンポーネントベースのUIライブラリ — 状態を持つオペレーター向けインターフェースと管理ダッシュボードの構築に使用。" },
-          { "name": "PostgreSQL", "icon": "postgresql", "desc": "ERPデータの主要リレーショナルDB — 生産記録・BOM・在庫 — 工場フロアでの同時使用にも安定して対応。" },
-          { "name": "Python", "icon": "python", "desc": "スクリプティング・自動化・データ処理 — TypeScriptスタックと並行してバックエンドツーリングと統合に使用。" }
+          {
+            "name": "TypeScript",
+            "icon": "typescript",
+            "desc": "すべてのWebおよびAPIプロジェクトの主要言語 — 型安全で大規模コードベースにも対応し、ランタイムエラーのクラス全体を排除。"
+          },
+          {
+            "name": "Next.js",
+            "icon": "nextjs",
+            "desc": "サーバーサイドレンダリングとファイルベースルーティングを備えたReactフレームワーク — ERP操作画面と社内ダッシュボードに使用。"
+          },
+          {
+            "name": "React",
+            "icon": "react",
+            "desc": "コンポーネントベースのUIライブラリ — 状態を持つオペレーター向けインターフェースと管理ダッシュボードの構築に使用。"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "postgresql",
+            "desc": "ERPデータの主要リレーショナルDB — 生産記録・BOM・在庫 — 工場フロアでの同時使用にも安定して対応。"
+          },
+          {
+            "name": "Python",
+            "icon": "python",
+            "desc": "スクリプティング・自動化・データ処理 — TypeScriptスタックと並行してバックエンドツーリングと統合に使用。"
+          }
         ]
       },
       {
         "label": "WORKFLOW & TOOLS",
         "skills": [
-          { "name": "Git", "icon": "git", "desc": "全プロジェクトのバージョン管理 — あらゆる変更を追跡、安全なロールバック、個人・チーム作業のクリーンな履歴。" },
-          { "name": "Figma", "icon": "figma", "desc": "実装前のUI設計とワイヤーフレーム — ERP操作画面と管理インターフェースのプロトタイプ作成に使用。" }
+          {
+            "name": "Git",
+            "icon": "git",
+            "desc": "全プロジェクトのバージョン管理 — あらゆる変更を追跡、安全なロールバック、個人・チーム作業のクリーンな履歴。"
+          },
+          {
+            "name": "Figma",
+            "icon": "figma",
+            "desc": "実装前のUI設計とワイヤーフレーム — ERP操作画面と管理インターフェースのプロトタイプ作成に使用。"
+          }
         ]
       }
     ]
   },
   "projects": {
     "label": "作品",
-    "filters": ["すべて", "ウェブ", "モバイル", "ツール"],
-    "filterMap": { "すべて": "all", "ウェブ": "website", "モバイル": "mobile", "ツール": "tool" },
+    "filters": [
+      "すべて",
+      "ウェブ",
+      "モバイル",
+      "ツール"
+    ],
+    "filterMap": {
+      "すべて": "all",
+      "ウェブ": "website",
+      "モバイル": "mobile",
+      "ツール": "tool"
+    },
     "viewRepo": "リポジトリを見る"
   },
   "contact": {

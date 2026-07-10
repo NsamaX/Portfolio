@@ -1,9 +1,22 @@
 [
   {
     "id": "00",
+    "title": "Rotjana — AI Document Agent",
+    "desc": "Agent บน Discord ขับเคลื่อนด้วย Claude ให้ทีมไอทีอ่านและแก้ไขเอกสาร QMS ด้วยภาษาไทยธรรมดา",
+    "longDesc": "Agent บน Discord ขับเคลื่อนด้วย Claude สำหรับฐานความรู้แผนกไอที — ทีมไอทีอ่านและแก้ไขทะเบียน Excel ของระบบ QMS ด้วยภาษาไทยธรรมดา ผ่าน agentic loop ที่เขียนเองพร้อม tool แบบ auto-load ทุกการเขียนต้องผ่านขั้นตอน preview และกดยืนยัน พร้อมจำกัดสิทธิ์รายคอลัมน์ ล็อกไฟล์ และ backup อัตโนมัติ อ่านไฟล์แนบได้ (PDF, DOCX, XLSX และรูปภาพผ่าน Claude vision) และมีหน้าเว็บ NFC tap-to-lookup สำหรับทะเบียนอุปกรณ์",
+    "tags": ["Node.js", "Claude API", "Docker"],
+    "type": "tool",
+    "repo": null,
+    "live": null,
+    "images": [],
+    "year": "2026",
+    "role": "นักพัฒนา"
+  },
+  {
+    "id": "01",
     "title": "Enterprise Resource Planning",
-    "desc": "ระบบ ERP ภายในองค์กรที่แทนที่ Excel รายแผนกที่กระจัดกระจาย",
-    "longDesc": "ระบบ ERP ภายในองค์กรที่แทนที่ Excel รายแผนกที่กระจัดกระจาย โมดูล Bill-of-Materials รวมโครงสร้างผลิตภัณฑ์ วัตถุดิบ และต้นทุนคลังสินค้าไว้ในที่เดียวแบบ role-based และอัปเดตตลอดเวลา",
+    "desc": "ระบบ ERP โรงงานภายในองค์กร ครอบคลุม BOM วัตถุดิบ ใบสั่งซื้อ และการพยากรณ์ MRP",
+    "longDesc": "ระบบ ERP ภายในองค์กรที่แทนที่ Excel รายแผนกที่กระจัดกระจาย — Bill of Materials, คลังวัตถุดิบ, การวางแผนใบสั่งซื้อ และการพยากรณ์ MRP พร้อมนำเข้า CSV และจับคู่อัตโนมัติ พัฒนาคนเดียวเป็น modular monolith 8 โมดูลที่บังคับขอบเขต public API ระหว่างโมดูล ผ่าน AI-driven pipeline ที่ออกแบบเอง (plan → design → scaffold → test → docs) และ deploy ภายในองค์กรด้วย Docker + Portainer",
     "tags": ["TypeScript", "PostgreSQL", "Docker"],
     "type": "website",
     "repo": null,
@@ -13,13 +26,13 @@
     "role": "นักพัฒนา"
   },
   {
-    "id": "01",
+    "id": "02",
     "title": "Massage Administration System",
-    "desc": "เว็บแอปจัดการร้านนวดแผนไทย รองรับสิทธิ์ Admin และเลขา",
-    "longDesc": "เว็บแอปจัดการการดำเนินงานร้านนวดแผนไทย รองรับสิทธิ์ผู้ใช้สำหรับ Admin และเลขา มีระบบนัดหมาย โปรไฟล์พนักงาน จัดการบริการ และรายงานรายรับรายเดือน",
-    "tags": ["TypeScript", "HTML", "CSS"],
+    "desc": "ระบบเว็บจัดการร้านนวดแผนไทย — นัดหมาย ค่าแรงพนักงาน และรายงานรายรับ",
+    "longDesc": "ระบบเว็บจัดการร้านนวดแผนไทย สร้างเป็น modular monolith พร้อมสิทธิ์ผู้ใช้สำหรับ Admin และเลขา จัดการนัดหมาย โปรไฟล์พนักงาน และบริการ — พร้อมการคำนวณค่าแรงที่ปัดเวลาจองขึ้นเป็นช่วง 30 นาทีบวกชั่วโมงทิป ราคาบริการแยกตามระยะเวลา และรายงานรายรับรายเดือน",
+    "tags": ["TypeScript", "MariaDB", "Docker"],
     "type": "website",
-    "repo": "https://github.com/NsamaX/Massage-Administration-System",
+    "repo": null,
     "live": null,
     "images": [
       { "label": "ภาพหลัก", "src": "/projects/Massage Administration System.png" }
@@ -28,33 +41,7 @@
     "role": "นักพัฒนา"
   },
   {
-    "id": "02",
-    "title": "Nexus",
-    "desc": "บอทเทรดคริปโตส่วนตัว รองรับโหมด Full-Auto และ Hybrid บน Binance",
-    "longDesc": "เว็บอินเทอร์เฟซบอทเทรดคริปโตส่วนตัว รองรับโหมด Full-Auto และ Hybrid บน Binance มีระบบอัปเดตแบบ real-time ผ่าน WebSocket วิเคราะห์ข่าวด้วย AI และ REST API สำหรับ Suwisa",
-    "tags": ["TypeScript", "Python", "CSS"],
-    "type": "website",
-    "repo": null,
-    "live": null,
-    "images": [],
-    "year": "2025",
-    "role": "นักพัฒนา"
-  },
-  {
     "id": "03",
-    "title": "Suwisa",
-    "desc": "ผู้ช่วยส่วนตัวบน Discord มีหน่วยความจำสนทนา เข้าถึง Gmail และค้นหาเว็บได้",
-    "longDesc": "ผู้ช่วยส่วนตัวบน Discord มีหน่วยความจำสนทนา เข้าถึง Gmail และค้นหาเว็บได้ เชื่อมต่อกับ Nexus เพื่อส่งการแจ้งเตือนและสอบถามข้อมูลพอร์ตโฟลิโอแบบ real-time ขับเคลื่อนด้วย Anthropic Claude",
-    "tags": ["TypeScript"],
-    "type": "tool",
-    "repo": null,
-    "live": null,
-    "images": [],
-    "year": "2025",
-    "role": "นักพัฒนา"
-  },
-  {
-    "id": "04",
     "title": "Crossword Solver",
     "desc": "อัลกอริทึมแก้เกมอักษรไขว้ 8 เส้นทาง ด้วย backtracking",
     "longDesc": "อัลกอริทึมคำนวณคำตอบเกมอักษรไขว้ที่มี 8 เส้นทางเชื่อมต่อกัน โดยเลื่อนตารางลงเมื่อใช้ตัวอักษร แล้วใช้ backtracking เพื่อหาเส้นทางที่ถูกต้อง",
@@ -69,7 +56,7 @@
     "role": "นักพัฒนา"
   },
   {
-    "id": "05",
+    "id": "04",
     "title": "NFC Deck Tracker",
     "desc": "แอปมือถือจัดการและติดตามสำรับ TCG แบบ real-time ด้วย NFC",
     "longDesc": "แอปมือถือสำหรับจัดการและติดตามสำรับการ์ด TCG แบบ real-time ด้วย NFC พัฒนาด้วย Flutter ตามแนวคิด Clean Architecture เป็นวิทยานิพนธ์ปริญญาตรีที่มหาวิทยาลัยศิลปากร",
@@ -84,7 +71,7 @@
     "role": "นักพัฒนา"
   },
   {
-    "id": "06",
+    "id": "05",
     "title": "Astral Oracle",
     "desc": "เว็บแอปอ่านไพ่ทาโรต์พร้อมคำทำนายส่วนตัวด้วย Groq AI",
     "longDesc": "เว็บแอปอ่านไพ่ทาโรต์พร้อมคำทำนายส่วนตัวขับเคลื่อนด้วย Groq AI มีอินเทอร์เฟซโต้ตอบสำหรับจั่วและตีความไพ่",

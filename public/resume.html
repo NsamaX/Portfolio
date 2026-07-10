@@ -4,20 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Résumé — Vijuksama</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --ink:      #1A1D21;
-      --ink-2:    #3D434B;
-      --muted:    #6B7280;
-      --faint:    #9CA3AF;
-      --rule:     #E4E7EB;
-      --paper:    #FFFFFF;
-      --accent:   #374151;
-      --font:     'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --ink:   #1A1A1A;
+      --ink-2: #2B2B2B;
+      --muted: #444444;
+      --bar:   #D9D9D9;
+      --paper: #FFFFFF;
+      --font:  Arial, Helvetica, 'Segoe UI', sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -39,7 +34,7 @@
       min-height: 297mm;
       background: var(--paper);
       color: var(--ink);
-      padding: 13mm 18mm 12mm;
+      padding: 11mm 13mm 10mm;
       position: relative;
       box-shadow: 0 1px 2px rgba(16,24,40,.04), 0 12px 40px rgba(16,24,40,.12);
       align-self: flex-start;
@@ -47,115 +42,92 @@
 
     /* ---------- Header ---------- */
     .r-name {
-      font-weight: 800;
-      font-size: 30px;
-      line-height: 1.04;
-      letter-spacing: -0.018em;
+      font-weight: 700;
+      font-size: 31px;
+      line-height: 1.08;
       color: var(--ink);
     }
     .r-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--muted);
-      margin-top: 7px;
-      letter-spacing: 0.005em;
+      font-size: 14.5px;
+      font-weight: 400;
+      color: var(--ink-2);
+      margin-top: 6px;
     }
     .r-contact {
-      margin-top: 9px;
-      font-size: 12px;
-      color: var(--muted);
+      margin-top: 8px;
+      font-size: 12.5px;
+      color: var(--ink-2);
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 4px 0;
+      gap: 3px 0;
     }
-    .r-contact a { color: var(--muted); text-decoration: none; }
-    .r-contact a:hover { color: var(--accent); }
-    .r-contact .sep {
-      width: 3px; height: 3px; border-radius: 50%;
-      background: var(--faint);
-      margin: 0 10px;
-      flex: 0 0 auto;
-    }
+    .r-contact a { color: var(--ink-2); text-decoration: none; }
+    .r-contact a:hover { text-decoration: underline; }
+    .r-contact .sep { margin: 0 9px; color: var(--muted); flex: 0 0 auto; }
 
     /* ---------- Section scaffold ---------- */
-    .section { margin-top: 24px; }
+    .section { margin-top: 12px; }
     .sec-head {
-      font-size: 11.5px;
+      font-size: 15px;
       font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent);
-      padding-bottom: 5px;
-      border-bottom: 1.5px solid var(--rule);
-      margin-bottom: 11px;
+      color: var(--ink);
+      background: var(--bar);
+      padding: 3px 8px;
+      margin-bottom: 8px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
     .body-text {
-      font-size: 12.8px;
-      line-height: 1.5;
-      color: var(--ink-2);
-      max-width: 74ch;
-      text-wrap: pretty;
-    }
-
-    /* ---------- Entry rows (experience / education) ---------- */
-    .entry { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; }
-    .e-org { font-weight: 700; font-size: 12.8px; color: var(--ink); }
-    .e-role { font-size: 13px; color: var(--ink-2); margin-top: 2px; }
-    .e-meta { font-size: 12.5px; color: var(--muted); white-space: nowrap; text-align: right; font-weight: 500; }
-
-    .bullet-list {
-      margin-top: 8px;
-      padding-left: 0;
-      list-style: none;
-      display: grid;
-      gap: 5px;
-    }
-    .bullet-list li {
-      position: relative;
-      padding-left: 16px;
       font-size: 12.6px;
       line-height: 1.45;
       color: var(--ink-2);
+      text-align: justify;
     }
-    .bullet-list li::before {
-      content: "";
-      position: absolute;
-      left: 1px; top: 8px;
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: var(--accent);
+
+    /* ---------- Entry rows (experience / education) ---------- */
+    .e-role { font-weight: 700; font-size: 12.8px; color: var(--ink); }
+    .entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 18px;
+      margin-top: 2px;
+    }
+    .e-org { font-size: 12.6px; color: var(--ink-2); }
+    .e-meta { font-size: 12.6px; color: var(--ink-2); white-space: nowrap; text-align: right; }
+
+    .bullet-list {
+      margin-top: 6px;
+      padding-left: 22px;
+      display: grid;
+      gap: 4px;
+    }
+    .bullet-list li {
+      font-size: 12.6px;
+      line-height: 1.4;
+      color: var(--ink-2);
+      text-align: justify;
+      padding-left: 3px;
     }
 
     /* ---------- Skills ---------- */
-    .skill-grid {
-      display: grid;
-      grid-template-columns: 158px 1fr;
-      gap: 8px 18px;
+    .skill-line {
+      font-size: 12.6px;
+      line-height: 1.45;
+      color: var(--ink-2);
+      margin-bottom: 4px;
     }
-    .skill-cat {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--muted);
-      padding-top: 1px;
-    }
-    .skill-list { font-size: 12.4px; line-height: 1.4; color: var(--ink); }
-    .skill-list .sk { color: var(--ink-2); }
-    .skill-list .dot { color: var(--faint); margin: 0 7px; }
+    .skill-line:last-child { margin-bottom: 0; }
+    .skill-line b { color: var(--ink); }
 
     /* ---------- Projects ---------- */
-    .proj { margin-bottom: 11px; page-break-inside: avoid; }
+    .proj { margin-bottom: 8px; page-break-inside: avoid; }
     .proj:last-child { margin-bottom: 0; }
     .proj-name { font-weight: 700; font-size: 12.8px; color: var(--ink); margin-bottom: 2px; }
-    .proj-desc { font-size: 12.4px; line-height: 1.45; color: var(--ink-2); max-width: 84ch; text-wrap: pretty; }
-    .proj-stack {
-      margin-top: 4px;
-      font-size: 11.5px;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: var(--muted);
-    }
+    .proj-desc { font-size: 12.6px; line-height: 1.4; color: var(--ink-2); text-align: justify; }
+    .proj-stack { margin-top: 3px; font-size: 12px; color: var(--muted); }
 
     /* ---------- Mobile ---------- */
     @media (max-width: 800px) {
@@ -173,7 +145,8 @@
       @page { size: A4; margin: 0; }
       html, body { background: #fff; }
       body { padding: 0; display: block; }
-      .page { width: 210mm; min-height: 297mm; box-shadow: none; margin: 0; zoom: 1; }
+      .page { width: 218mm; min-height: 0; box-shadow: none; margin: 0; zoom: 0.96; padding: 9mm 13mm 8mm; }
+      .section { margin-top: 11px; }
     }
   </style>
 </head>
@@ -181,16 +154,16 @@
   <div class="page">
     <header>
       <h1 class="r-name">Vijuksama Hongthongdaeng</h1>
-      <div class="r-title">Infrastructure &amp; Full-Stack Engineer</div>
+      <div class="r-title">Infrastructure, AI &amp; Full-Stack Engineer</div>
       <div class="r-contact">
         <span>Samut Prakan, Thailand</span>
-        <span class="sep"></span>
+        <span class="sep">|</span>
         <a href="tel:+66615766142">061 576 6142</a>
-        <span class="sep"></span>
+        <span class="sep">|</span>
         <a href="mailto:vijuksama@gmail.com">vijuksama@gmail.com</a>
-        <span class="sep"></span>
+        <span class="sep">|</span>
         <a href="https://www.vijuksama.com" target="_blank" rel="noopener">www.vijuksama.com</a>
-        <span class="sep"></span>
+        <span class="sep">|</span>
         <a href="https://github.com/NsamaX" target="_blank" rel="noopener">github.com/NsamaX</a>
       </div>
     </header>
@@ -198,52 +171,33 @@
     <section class="section">
       <h2 class="sec-head">Summary</h2>
       <p class="body-text">
-        Self-taught engineer and the sole IT for a 230-person manufacturing site — I built the company's entire tech backbone from two repurposed desktops: server infrastructure, networking, security, and in-house ERP software, using open-source and AI to ship reliable systems on a near-zero budget.
+        Self-taught engineer and the sole IT for a 230-person automotive-parts factory — I built the company's entire tech backbone from two repurposed desktops (virtualization, networking, security, an in-house ERP), then put AI to work on top of it, from a Claude-powered document agent to AI email triage — enterprise-grade systems on a near-zero budget.
       </p>
     </section>
 
     <section class="section">
       <h2 class="sec-head">Skills</h2>
-      <div class="skill-grid">
-        <div class="skill-cat">Infrastructure, DevOps</div>
-        <div class="skill-list">
-          <span class="sk">Proxmox VE/PBS</span><span class="dot">·</span><span class="sk">Docker</span><span class="dot">·</span><span class="sk">Linux</span><span class="dot">·</span><span class="sk">Nginx Proxy Manager</span><span class="dot">·</span><span class="sk">WireGuard</span><span class="dot">·</span><span class="sk">Tailscale</span><span class="dot">·</span><span class="sk">Cloudflare</span><span class="dot">·</span><span class="sk">n8n</span><span class="dot">·</span><span class="sk">OpenMediaVault</span>
-        </div>
-        <div class="skill-cat">Networking</div>
-        <div class="skill-list">
-          <span class="sk">Load Balancing</span><span class="dot">·</span><span class="sk">IP / Subnet Planning</span><span class="dot">·</span><span class="sk">AdGuard DNS</span>
-        </div>
-        <div class="skill-cat">Security</div>
-        <div class="skill-list">
-          <span class="sk">Wazuh</span><span class="dot">·</span><span class="sk">Defender</span>
-        </div>
-        <div class="skill-cat">Development</div>
-        <div class="skill-list">
-          <span class="sk">React</span><span class="dot">·</span><span class="sk">Next.js</span><span class="dot">·</span><span class="sk">TypeScript</span><span class="dot">·</span><span class="sk">PostgreSQL</span>
-        </div>
-        <div class="skill-cat">Tools</div>
-        <div class="skill-list">
-          <span class="sk">Figma</span><span class="dot">·</span><span class="sk">Git</span><span class="dot">·</span><span class="sk">PowerShell</span><span class="dot">·</span><span class="sk">AI-Driven Development</span>
-        </div>
-        <div class="skill-cat">Languages</div>
-        <div class="skill-list">
-          <span class="sk">Thai (Native)</span><span class="dot">·</span><span class="sk">English (Normal)</span>
-        </div>
-      </div>
+      <p class="skill-line"><b>Infrastructure &amp; DevOps:</b> Proxmox VE/PBS, Docker, Portainer, Linux, Nginx Proxy Manager, WireGuard, Tailscale, Cloudflare, OpenMediaVault</p>
+      <p class="skill-line"><b>AI Engineering:</b> Claude API (agentic tool use, vision), agent &amp; prompt design, n8n, Claude Code</p>
+      <p class="skill-line"><b>Development:</b> Next.js, React, TypeScript, Node.js, PostgreSQL, Drizzle ORM</p>
+      <p class="skill-line"><b>Networking &amp; Security:</b> Dual-WAN load balancing, IP / subnet planning, AdGuard DNS, Wazuh, Microsoft Defender</p>
+      <p class="skill-line"><b>Standards &amp; Governance:</b> IATF 16949 / ISO 9001 QMS documentation, AISC security framework, ISO/IEC 27001 baseline</p>
+      <p class="skill-line"><b>Tools:</b> Figma, Git, PowerShell / Bash</p>
+      <p class="skill-line"><b>Languages:</b> Thai (Native), English (Working proficiency)</p>
     </section>
 
     <section class="section">
-      <h2 class="sec-head">Experience</h2>
+      <h2 class="sec-head">Work Experience</h2>
+      <div class="e-role">Sole IT · Infrastructure, DevOps &amp; Development</div>
       <div class="entry">
-        <div>
-          <div class="e-org">Nozomi Enterprise (Thailand)</div>
-          <div class="e-role">Sole IT · Infrastructure, DevOps &amp; Development</div>
-        </div>
+        <div class="e-org">Nozomi Enterprise (Thailand)</div>
         <div class="e-meta">Nov 2025 — Present</div>
       </div>
       <ul class="bullet-list">
         <li>Built the company's on-premise infrastructure from scratch on two repurposed desktops — a Proxmox VE + PBS cluster running 7+ virtualized services (NAS, reverse proxy, DNS, VPN, monitoring) with automated nightly backups and near-99% uptime.</li>
         <li>Redesigned the factory network for ~230 staff and 60+ devices: dual-WAN load-balancing + failover, a structured /24 IP plan, and WireGuard / Tailscale remote access.</li>
+        <li>Established the factory's information security program under the automotive AISC framework — 24 domains, 150+ documents, ISO/IEC 27001 as internal baseline — authored IATF 16949 / ISO 9001 quality procedures, and delivered company-wide cybersecurity awareness training.</li>
+        <li>Automated IT operations with n8n: backup and infrastructure health monitoring, AI-powered email triage, and monthly compliance reports filed into QMS documents after one-click human approval.</li>
         <li>Cut recurring IT costs 45,200฿/year by self-hosting open-source replacements (OpenMediaVault, Wazuh + Defender), and automated daily ops for 50 workstations with PowerShell + RMM into centralized dashboards.</li>
       </ul>
     </section>
@@ -252,33 +206,31 @@
       <h2 class="sec-head">Selected Projects</h2>
 
       <div class="proj">
-        <div class="proj-name">ERP System — BOM Module</div>
-        <p class="proj-desc">In-house ERP replacing fragmented per-department Excel sheets. The Bill-of-Materials module unifies product structure, raw materials, and inventory cost into one role-based, always up-to-date source of truth.</p>
-        <div class="proj-stack">Next.js · PostgreSQL · Docker</div>
+        <div class="proj-name">Rotjana — AI Document Agent</div>
+        <p class="proj-desc">Claude-powered Discord agent that lets the IT team read and update QMS Excel registers in plain Thai — custom agentic loop, confirm-before-write with column-level permissions, multimodal attachment reading, and NFC asset-tag lookup.</p>
+        <div class="proj-stack">Node.js · Claude API · discord.js · Express · Docker</div>
       </div>
 
       <div class="proj">
-        <div class="proj-name">Massage Administration System</div>
-        <p class="proj-desc">Web app for managing parlor operations with role-based access — appointment scheduling, staff profiles, service management, and monthly revenue reports.</p>
-        <div class="proj-stack">Next.js · PostgreSQL</div>
+        <div class="proj-name">ERP System</div>
+        <p class="proj-desc">In-house ERP replacing fragmented per-department Excel sheets — BOM, raw materials, purchase orders, and MRP forecasting. Built solo as an 8-module modular monolith with enforced public-API boundaries, using a custom AI-driven development pipeline (plan → design → scaffold → test → docs).</p>
+        <div class="proj-stack">Next.js · TypeScript · PostgreSQL · Drizzle ORM · Docker</div>
       </div>
 
       <div class="proj">
-        <div class="proj-name">Nexus</div>
-        <p class="proj-desc">Personal crypto trading bot for Binance with full-auto and hybrid modes — real-time WebSocket updates, AI-powered news analysis, and a REST API.</p>
-        <div class="proj-stack">TypeScript · Python</div>
+        <div class="proj-name">AI-Ready IT Knowledge Vault</div>
+        <p class="proj-desc">The IT department's entire knowledge base — security framework, SOPs, and QMS registers — engineered for AI consumption: YAML frontmatter contracts define each document's schema, its link to live Excel data, and what the Rotjana agent is allowed to read or write.</p>
+        <div class="proj-stack">Markdown · Obsidian · Claude</div>
       </div>
     </section>
 
     <section class="section">
       <h2 class="sec-head">Education</h2>
       <div class="entry">
-        <div>
-          <div class="e-org">B.Sc. Information Technology</div>
-          <div class="e-role">Silpakorn University, Faculty of Science — thesis: NFC TCG Deck Tracker (Flutter)</div>
-        </div>
+        <div class="e-role">B.Sc. Information Technology</div>
         <div class="e-meta">2021 — 2025</div>
       </div>
+      <div class="e-org">Silpakorn University, Faculty of Science — thesis: NFC TCG Deck Tracker (Flutter)</div>
     </section>
   </div>
 </body>

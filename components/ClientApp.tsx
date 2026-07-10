@@ -6,6 +6,7 @@ import Nav from './Nav';
 import Hero from './Hero';
 import About from './About';
 import Experience from './Experience';
+import CaseStudies from './CaseStudies';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
@@ -42,6 +43,7 @@ export default function ClientApp() {
         <Hero lang={lang} />
         <About lang={lang} />
         <Experience lang={lang} />
+        <CaseStudies lang={lang} />
         <Skills lang={lang} />
         <Projects lang={lang} />
         <Contact lang={lang} />

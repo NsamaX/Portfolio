@@ -1,9 +1,22 @@
 [
   {
     "id": "00",
+    "title": "Rotjana — AI Document Agent",
+    "desc": "Claude-powered Discord agent that lets the IT team read and update QMS documents in plain Thai.",
+    "longDesc": "Claude-powered Discord agent for the factory's IT knowledge vault — the IT team reads and updates QMS Excel registers in plain Thai through a custom agentic loop with auto-loaded tools. Every write goes through a preview-and-confirm step with column-level permissions, file locking, and automatic backups. It also reads attachments (PDF, DOCX, XLSX, images via Claude vision) and serves NFC tap-to-lookup pages for the hardware asset registry.",
+    "tags": ["Node.js", "Claude API", "Docker"],
+    "type": "tool",
+    "repo": null,
+    "live": null,
+    "images": [],
+    "year": "2026",
+    "role": "Developer"
+  },
+  {
+    "id": "01",
     "title": "Enterprise Resource Planning",
-    "desc": "In-house ERP replacing fragmented per-department Excel sheets.",
-    "longDesc": "In-house ERP replacing fragmented per-department Excel sheets. The Bill-of-Materials module unifies product structure, raw materials, and inventory cost into one role-based, always up-to-date source of truth.",
+    "desc": "In-house factory ERP covering BOM, raw materials, purchase orders, and MRP forecasting.",
+    "longDesc": "In-house ERP replacing fragmented per-department Excel sheets — Bill of Materials, raw material inventory, purchase-order planning, and MRP forecasting with CSV import and auto-matching. Built solo as a modular monolith of 8 modules with enforced public-API boundaries, developed through a custom AI-driven pipeline (plan → design → scaffold → test → docs) and deployed on-premise with Docker + Portainer.",
     "tags": ["TypeScript", "PostgreSQL", "Docker"],
     "type": "website",
     "repo": null,
@@ -13,13 +26,13 @@
     "role": "Developer"
   },
   {
-    "id": "01",
+    "id": "02",
     "title": "Massage Administration System",
-    "desc": "Web app for managing Thai massage parlor operations with role-based access for Admin and Secretary.",
-    "longDesc": "Web app for managing Thai massage parlor operations with role-based access for Admin and Secretary. Features appointment scheduling, staff profiles, service management, and monthly revenue reports.",
-    "tags": ["TypeScript", "HTML", "CSS"],
+    "desc": "Web admin system for Thai massage parlors — appointments, staff wages, and revenue reports.",
+    "longDesc": "Web-based administration system for Thai massage parlors, built as a modular monolith with role-based access for Admin and Secretary. Handles appointment scheduling, staff profiles, and service management — with wage calculation that rounds booked time up to 30-minute intervals plus tip hours, per-duration service pricing, and monthly revenue reports.",
+    "tags": ["TypeScript", "MariaDB", "Docker"],
     "type": "website",
-    "repo": "https://github.com/NsamaX/Massage-Administration-System",
+    "repo": null,
     "live": null,
     "images": [
       { "label": "Thumbnail", "src": "/projects/Massage Administration System.png" }
@@ -28,33 +41,7 @@
     "role": "Developer"
   },
   {
-    "id": "02",
-    "title": "Nexus",
-    "desc": "Personal crypto trading bot with full-auto and hybrid execution modes for Binance.",
-    "longDesc": "Personal crypto trading bot web interface with full-auto and hybrid execution modes for Binance. Features real-time WebSocket updates, AI-powered news analysis, and a REST API for Suwisa.",
-    "tags": ["TypeScript", "Python", "CSS"],
-    "type": "website",
-    "repo": null,
-    "live": null,
-    "images": [],
-    "year": "2025",
-    "role": "Developer"
-  },
-  {
     "id": "03",
-    "title": "Suwisa",
-    "desc": "Personal assistant on Discord with conversation memory, Gmail access, and web search.",
-    "longDesc": "Personal assistant on Discord with conversation memory, Gmail access, and web search. Integrates with Nexus to deliver real-time alerts and portfolio queries, powered by Anthropic Claude.",
-    "tags": ["TypeScript"],
-    "type": "tool",
-    "repo": null,
-    "live": null,
-    "images": [],
-    "year": "2025",
-    "role": "Developer"
-  },
-  {
-    "id": "04",
     "title": "Crossword Solver",
     "desc": "Algorithm that solves a crossword game with 8 interconnected paths using backtracking.",
     "longDesc": "Algorithm that calculates the answer to a crossword game with 8 interconnected paths and moves down the grid as letters are used. Uses backtracking to find the correct path.",
@@ -69,7 +56,7 @@
     "role": "Developer"
   },
   {
-    "id": "05",
+    "id": "04",
     "title": "NFC Deck Tracker",
     "desc": "Mobile app for managing and tracking TCG decks in real time with NFC.",
     "longDesc": "Mobile app for managing and tracking TCG decks in real time with NFC. Built with Flutter under the concept of Clean Architecture as a Bachelor's Thesis at Silpakorn University.",
@@ -84,7 +71,7 @@
     "role": "Developer"
   },
   {
-    "id": "06",
+    "id": "05",
     "title": "Astral Oracle",
     "desc": "Web app for tarot card readings with personalized predictions powered by Groq AI.",
     "longDesc": "Web app for tarot card readings with personalized predictions powered by Groq AI. It features an interactive interface for drawing and interpreting tarot cards.",

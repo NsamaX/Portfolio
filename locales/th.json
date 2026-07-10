@@ -1,9 +1,16 @@
 {
-  "nav": { "about": "เกี่ยวกับ", "experience": "ประสบการณ์", "skills": "ทักษะ", "projects": "ผลงาน", "contact": "ติดต่อ" },
+  "nav": {
+    "about": "เกี่ยวกับ",
+    "experience": "ประสบการณ์",
+    "cases": "กรณีศึกษา",
+    "skills": "ทักษะ",
+    "projects": "ผลงาน",
+    "contact": "ติดต่อ"
+  },
   "hero": {
-    "role": "วิศวกร Infrastructure & Full-Stack",
+    "role": "วิศวกร Infrastructure, AI & Full-Stack",
     "tagline": "ขับเคลื่อนการเปลี่ยนแปลงดิจิทัลในอุตสาหกรรมการผลิต",
-    "sub": "ดูแลโครงสร้างพื้นฐานเซิร์ฟเวอร์ภายในองค์กร และพัฒนาระบบ ERP สำหรับโรงงาน",
+    "sub": "ดูแลโครงสร้างพื้นฐานภายในองค์กร พัฒนาระบบ ERP โรงงาน และสร้าง AI agent ให้ทำงานจริง",
     "cta_work": "ดูผลงาน",
     "cta_resume": "เรซูเม่ ↗"
   },
@@ -11,23 +18,43 @@
     "label": "เกี่ยวกับฉัน",
     "body1": [
       "วิศวกรที่เรียนรู้ด้วยตัวเองและเป็น ",
-      { "text": "ไอทีคนเดียว", "mark": true },
+      {
+        "text": "ไอทีคนเดียว",
+        "mark": true
+      },
       " ของโรงงานที่มีพนักงาน 230 คน — สร้างระบบทั้งหมดจาก ",
-      { "text": "คอมพิวเตอร์เก่าสองเครื่อง", "mark": true },
+      {
+        "text": "คอมพิวเตอร์เก่าสองเครื่อง",
+        "mark": true
+      },
       ": โครงสร้างพื้นฐานเซิร์ฟเวอร์ เครือข่าย ความปลอดภัย และซอฟต์แวร์ ERP ภายในองค์กร"
     ],
     "body2": [
-      "ใช้ open-source และ AI เพื่อส่งมอบ ",
-      { "text": "ระบบที่เชื่อถือได้ด้วยงบประมาณต่ำ", "mark": true },
-      " ปัจจุบันเน้น ERP สำหรับ ",
-      { "text": "อุตสาหกรรมการผลิต", "mark": true },
-      " — ตารางการผลิต คลังสินค้า และการควบคุมคุณภาพ"
+      "จากนั้นต่อยอดด้วย AI — ",
+      {
+        "text": "agent จัดการเอกสารขับเคลื่อนด้วย Claude",
+        "mark": true
+      },
+      " คัดกรองอีเมลด้วย AI และ pipeline พัฒนาซอฟต์แวร์ด้วย AI — ส่งมอบ ",
+      {
+        "text": "ระบบระดับองค์กรด้วยงบประมาณเกือบศูนย์",
+        "mark": true
+      }
     ],
     "resume": "ดาวน์โหลด CV",
     "stats": [
-      { "val": "วท.บ.", "label": "เทคโนโลยีสารสนเทศ" },
-      { "val": "230", "label": "คนในโรงงาน" },
-      { "val": "On-site", "label": "เน้นอุตสาหกรรมการผลิต" }
+      {
+        "val": "วท.บ.",
+        "label": "เทคโนโลยีสารสนเทศ"
+      },
+      {
+        "val": "230",
+        "label": "คนในโรงงาน"
+      },
+      {
+        "val": "On-site",
+        "label": "เน้นอุตสาหกรรมการผลิต"
+      }
     ]
   },
   "experience": {
@@ -39,9 +66,11 @@
         "role": "ไอทีเดี่ยว · โครงสร้างพื้นฐาน, DevOps และพัฒนาซอฟต์แวร์",
         "year": "พ.ย. 2568 — ปัจจุบัน",
         "bullets": [
-          "สร้างโครงสร้างพื้นฐานเซิร์ฟเวอร์ภายในองค์กรจากศูนย์ด้วยคอมพิวเตอร์เก่า 2 เครื่อง — ระบบ Proxmox VE + PBS รัน 7+ บริการ (NAS, reverse proxy, DNS, VPN, monitoring) พร้อม backup อัตโนมัติและ uptime เกือบ 100%",
+          "สร้างโครงสร้างพื้นฐานเซิร์ฟเวอร์ภายในองค์กรจากศูนย์ด้วยคอมพิวเตอร์เก่า 2 เครื่อง — ระบบ Proxmox VE + PBS รัน 7+ บริการ (NAS, reverse proxy, DNS, VPN, monitoring) พร้อม backup อัตโนมัติและ uptime เกือบ 99%",
           "ออกแบบเครือข่ายโรงงานใหม่สำหรับพนักงาน ~230 คน และอุปกรณ์กว่า 60 ชิ้น: dual-WAN load-balancing + failover, แผน IP แบบ /24 และ remote access ผ่าน WireGuard / Tailscale",
-          "ลดค่าใช้จ่าย IT ประจำปีประมาณ 45,000 บาท โดย self-host open-source แทน (OpenMediaVault, Wazuh + Defender) และ automate การดูแล 50 workstation ด้วย PowerShell + RMM"
+          "วางระบบความมั่นคงปลอดภัยสารสนเทศของโรงงานตามกรอบ AISC ของอุตสาหกรรมยานยนต์ (24 หมวด เอกสารกว่า 150 ฉบับ) โดยใช้ ISO/IEC 27001 เป็น baseline ภายใน เขียนเอกสารคุณภาพตาม IATF 16949 / ISO 9001 และจัดอบรม cybersecurity awareness ทั่วทั้งองค์กร",
+          "Automate งานไอทีด้วย n8n: ตรวจสอบ backup และสุขภาพ infrastructure, คัดกรองอีเมลด้วย AI และรายงาน compliance รายเดือนที่บันทึกลงเอกสาร QMS หลังคนกดยืนยันครั้งเดียว",
+          "ลดค่าใช้จ่าย IT ประจำปี 45,200 บาท โดย self-host open-source แทน (OpenMediaVault, Wazuh + Defender) และ automate การดูแล 50 workstation ด้วย PowerShell + RMM"
         ]
       },
       {
@@ -55,41 +84,137 @@
       }
     ]
   },
+  "caseStudies": {
+    "label": "กรณีศึกษา",
+    "note": "ไดอะแกรมวาดใหม่แบบ sanitized — ไม่มีที่อยู่จริง ข้อมูลลับ หรือรายละเอียดภายในองค์กร",
+    "studies": [
+      {
+        "kicker": "ARCHITECTURE",
+        "title": "คลัสเตอร์เซิร์ฟเวอร์ภายในองค์กร",
+        "body": "บริษัทไม่มีเซิร์ฟเวอร์ ไม่มีงบ และมีไอทีคนเดียว — คอมพิวเตอร์เก่าสองเครื่องกลายเป็น cluster Proxmox VE + PBS ที่รัน 7+ บริการ: NAS, reverse proxy, DNS filtering, VPN, automation และ app server ที่โฮสต์ ERP กับรจนา พร้อม backup อัตโนมัติทุกคืนและ uptime เกือบ 99%",
+        "diagram": "/diagrams/cluster.svg",
+        "alt": "ไดอะแกรมคลัสเตอร์เซิร์ฟเวอร์ภายในองค์กร"
+      },
+      {
+        "kicker": "NETWORK DESIGN",
+        "title": "ออกแบบเครือข่ายโรงงานใหม่",
+        "body": "เครือข่ายแบบแบนราบบนเน็ตเส้นเดียวรองรับคน 230 คน — ล่มครั้งเดียวหยุดทั้งโรงงาน จึงออกแบบใหม่เป็น dual-WAN load balancing พร้อม failover อัตโนมัติ แผน IP /24 แยกโซนออฟฟิศ ฝ่ายผลิต และเซิร์ฟเวอร์ พร้อมอุโมงค์ WireGuard / Tailscale สำหรับ remote access",
+        "diagram": "/diagrams/network.svg",
+        "alt": "ไดอะแกรมเครือข่ายโรงงานที่ออกแบบใหม่"
+      },
+      {
+        "kicker": "SECURITY × AI",
+        "title": "โปรแกรม Security และ AI Automation",
+        "body": "งาน compliance กับ monitoring ทำด้วยมือคนเดียวไม่ไหว — จึงวางกรอบ security 24 หมวดตามมาตรฐาน AISC ของอุตสาหกรรมยานยนต์ (ใช้ ISO/IEC 27001 เป็น baseline ภายใน) ติดตั้ง Wazuh + Defender ทุกเครื่อง และสร้าง n8n workflow ที่เฝ้า backup กับ infrastructure คัดกรองอีเมลด้วย Claude และบันทึกรายงาน compliance รายเดือนลงทะเบียน QMS — โดยมีคนกดยืนยันทุกการเขียน",
+        "diagram": "/diagrams/security.svg",
+        "alt": "ไดอะแกรมระบบ security และ AI automation"
+      }
+    ]
+  },
   "skills": {
     "label": "ทักษะ",
     "categories": [
       {
         "label": "INFRASTRUCTURE & DEVOPS",
         "skills": [
-          { "name": "Proxmox", "icon": "proxmox", "desc": "แพลตฟอร์ม virtualization open-source สำหรับจัดการ cluster Proxmox VE + PBS — รัน 7+ บริการรวมถึง NAS, reverse proxy, DNS, VPN และ monitoring บน bare-metal" },
-          { "name": "Docker", "icon": "docker", "desc": "บรรจุทุกบริการที่ self-host ลงใน container เพื่อการ deploy ที่สม่ำเสมอและแยกออกจากกันบน Proxmox cluster" },
-          { "name": "Linux", "icon": "linux", "desc": "ระบบปฏิบัติการสำหรับทุกบริการภายในองค์กร — Ubuntu Server, systemd administration, CLI scripting และการจัดการ service" },
-          { "name": "Cloudflare", "icon": "cloudflare", "desc": "DNS, CDN และ Zero Trust tunnel — เปิดเผย self-hosted service อย่างปลอดภัยสู่อินเทอร์เน็ตโดยไม่ต้องเปิด inbound port" }
+          {
+            "name": "Proxmox",
+            "icon": "proxmox",
+            "desc": "แพลตฟอร์ม virtualization open-source สำหรับจัดการ cluster Proxmox VE + PBS — รัน 7+ บริการรวมถึง NAS, reverse proxy, DNS, VPN และ monitoring บน bare-metal"
+          },
+          {
+            "name": "Docker",
+            "icon": "docker",
+            "desc": "บรรจุทุกบริการที่ self-host ลงใน container เพื่อการ deploy ที่สม่ำเสมอและแยกออกจากกันบน Proxmox cluster"
+          },
+          {
+            "name": "Linux",
+            "icon": "linux",
+            "desc": "ระบบปฏิบัติการสำหรับทุกบริการภายในองค์กร — Ubuntu Server, systemd administration, CLI scripting และการจัดการ service"
+          },
+          {
+            "name": "Cloudflare",
+            "icon": "cloudflare",
+            "desc": "DNS, CDN และ Zero Trust tunnel — เปิดเผย self-hosted service อย่างปลอดภัยสู่อินเทอร์เน็ตโดยไม่ต้องเปิด inbound port"
+          }
+        ]
+      },
+      {
+        "label": "AI ENGINEERING",
+        "skills": [
+          {
+            "name": "Claude API",
+            "icon": "claude",
+            "desc": "Agentic tool use และ vision — ขับเคลื่อนรจนา agent บน Discord ที่อ่านและแก้ไขเอกสาร QMS ด้วยภาษาไทยอย่างปลอดภัย รวมถึงคัดกรองอีเมลด้วย AI ใน workflow อัตโนมัติ"
+          },
+          {
+            "name": "n8n",
+            "icon": "n8n",
+            "desc": "Workflow automation แบบ self-host — ตรวจสอบ backup, สุขภาพ infrastructure และรายงาน compliance รายเดือนพร้อมการยืนยันโดยคน"
+          }
         ]
       },
       {
         "label": "DEVELOPMENT",
         "skills": [
-          { "name": "TypeScript", "icon": "typescript", "desc": "ภาษาหลักสำหรับทุกโปรเจกต์เว็บและ API — type-safe, ขยายได้ดี และกำจัด runtime error ทั้งคลาสหนึ่ง" },
-          { "name": "Next.js", "icon": "nextjs", "desc": "React framework พร้อม server-side rendering และ file-based routing — ใช้สำหรับหน้าจอผู้ปฏิบัติงาน ERP และ dashboard ภายใน" },
-          { "name": "React", "icon": "react", "desc": "UI library แบบ component-based สำหรับสร้าง interface ที่มี state สำหรับผู้ปฏิบัติงานและ management dashboard" },
-          { "name": "PostgreSQL", "icon": "postgresql", "desc": "ฐานข้อมูล relational หลักสำหรับข้อมูล ERP — บันทึกการผลิต, BOM, คลังสินค้า — เชื่อถือได้ภายใต้การใช้งานพร้อมกันในโรงงาน" },
-          { "name": "Python", "icon": "python", "desc": "scripting, automation และประมวลผลข้อมูล — ใช้คู่กับ TypeScript stack สำหรับ tooling และ integration ฝั่ง backend" }
+          {
+            "name": "TypeScript",
+            "icon": "typescript",
+            "desc": "ภาษาหลักสำหรับทุกโปรเจกต์เว็บและ API — type-safe, ขยายได้ดี และกำจัด runtime error ทั้งคลาสหนึ่ง"
+          },
+          {
+            "name": "Next.js",
+            "icon": "nextjs",
+            "desc": "React framework พร้อม server-side rendering และ file-based routing — ใช้สำหรับหน้าจอผู้ปฏิบัติงาน ERP และ dashboard ภายใน"
+          },
+          {
+            "name": "React",
+            "icon": "react",
+            "desc": "UI library แบบ component-based สำหรับสร้าง interface ที่มี state สำหรับผู้ปฏิบัติงานและ management dashboard"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "postgresql",
+            "desc": "ฐานข้อมูล relational หลักสำหรับข้อมูล ERP — บันทึกการผลิต, BOM, คลังสินค้า — เชื่อถือได้ภายใต้การใช้งานพร้อมกันในโรงงาน"
+          },
+          {
+            "name": "Python",
+            "icon": "python",
+            "desc": "scripting, automation และประมวลผลข้อมูล — ใช้คู่กับ TypeScript stack สำหรับ tooling และ integration ฝั่ง backend"
+          }
         ]
       },
       {
         "label": "WORKFLOW & TOOLS",
         "skills": [
-          { "name": "Git", "icon": "git", "desc": "ระบบควบคุมเวอร์ชันสำหรับทุกโปรเจกต์ — ติดตามทุกการเปลี่ยนแปลง, rollback ได้ปลอดภัย และประวัติโค้ดที่สะอาด" },
-          { "name": "Figma", "icon": "figma", "desc": "ออกแบบ UI และทำ wireframe ก่อน implement — ใช้ prototype หน้าจอผู้ปฏิบัติงาน ERP และ management interface" }
+          {
+            "name": "Git",
+            "icon": "git",
+            "desc": "ระบบควบคุมเวอร์ชันสำหรับทุกโปรเจกต์ — ติดตามทุกการเปลี่ยนแปลง, rollback ได้ปลอดภัย และประวัติโค้ดที่สะอาด"
+          },
+          {
+            "name": "Figma",
+            "icon": "figma",
+            "desc": "ออกแบบ UI และทำ wireframe ก่อน implement — ใช้ prototype หน้าจอผู้ปฏิบัติงาน ERP และ management interface"
+          }
         ]
       }
     ]
   },
   "projects": {
     "label": "ผลงาน",
-    "filters": ["ทั้งหมด", "เว็บไซต์", "มือถือ", "เครื่องมือ"],
-    "filterMap": { "ทั้งหมด": "all", "เว็บไซต์": "website", "มือถือ": "mobile", "เครื่องมือ": "tool" },
+    "filters": [
+      "ทั้งหมด",
+      "เว็บไซต์",
+      "มือถือ",
+      "เครื่องมือ"
+    ],
+    "filterMap": {
+      "ทั้งหมด": "all",
+      "เว็บไซต์": "website",
+      "มือถือ": "mobile",
+      "เครื่องมือ": "tool"
+    },
     "viewRepo": "ดู Repository"
   },
   "contact": {

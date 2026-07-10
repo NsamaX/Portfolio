@@ -1,9 +1,22 @@
 [
   {
     "id": "00",
+    "title": "Rotjana — AI Document Agent",
+    "desc": "ITチームが普通のタイ語でQMS文書を読み書きできるClaude駆動のDiscordエージェント。",
+    "longDesc": "工場のITナレッジベース向けClaude駆動Discordエージェント — ITチームは普通のタイ語で、自動ロードされるツールを備えた独自のagenticループを通じてQMSのExcel台帳を読み書きできる。すべての書き込みはプレビューと確認ボタンを経由し、列単位の権限・ファイルロック・自動バックアップで保護。添付ファイル（PDF・DOCX・XLSX、Claude visionによる画像）の読み取りや、機器台帳のNFCタップ照会ページも提供。",
+    "tags": ["Node.js", "Claude API", "Docker"],
+    "type": "tool",
+    "repo": null,
+    "live": null,
+    "images": [],
+    "year": "2026",
+    "role": "開発者"
+  },
+  {
+    "id": "01",
     "title": "Enterprise Resource Planning",
-    "desc": "部門ごとに分散したExcelシートを置き換える社内ERP。",
-    "longDesc": "部門ごとに分散したExcelシートを置き換える社内ERP。Bill-of-Materialsモジュールは製品構造・原材料・在庫コストをロールベースの常に最新の一元管理ソースに統合。",
+    "desc": "BOM・原材料・発注・MRP予測をカバーする社内工場ERP。",
+    "longDesc": "部門ごとに分散したExcelシートを置き換える社内ERP — Bill of Materials、原材料在庫、発注計画、CSVインポートと自動マッチングによるMRP予測。8モジュールのモジュラーモノリスとしてpublic API境界を強制し、独自のAI駆動パイプライン（plan → design → scaffold → test → docs）で単独開発、Docker + Portainerでオンプレミスにデプロイ。",
     "tags": ["TypeScript", "PostgreSQL", "Docker"],
     "type": "website",
     "repo": null,
@@ -13,13 +26,13 @@
     "role": "開発者"
   },
   {
-    "id": "01",
+    "id": "02",
     "title": "Massage Administration System",
-    "desc": "AdminとSecretaryの役割ベースアクセスを備えたタイ式マッサージ店向けウェブ管理アプリ。",
-    "longDesc": "AdminとSecretaryの役割ベースアクセスを備えたタイ式マッサージ店運営管理ウェブアプリ。予約管理・スタッフプロフィール・サービス管理・月次売上レポートを搭載。",
-    "tags": ["TypeScript", "HTML", "CSS"],
+    "desc": "タイ式マッサージ店向けウェブ管理システム — 予約・スタッフ賃金・売上レポート。",
+    "longDesc": "タイ式マッサージ店向けのウェブ管理システム。AdminとSecretaryの役割ベースアクセスを備えたモジュラーモノリスとして構築。予約管理・スタッフプロフィール・サービス管理に加え、予約時間を30分単位に切り上げてチップ時間を加算する賃金計算、時間別のサービス料金、月次売上レポートを搭載。",
+    "tags": ["TypeScript", "MariaDB", "Docker"],
     "type": "website",
-    "repo": "https://github.com/NsamaX/Massage-Administration-System",
+    "repo": null,
     "live": null,
     "images": [
       { "label": "サムネイル", "src": "/projects/Massage Administration System.png" }
@@ -28,33 +41,7 @@
     "role": "開発者"
   },
   {
-    "id": "02",
-    "title": "Nexus",
-    "desc": "フルオートとハイブリッド実行モードを備えたBinance向け個人仮想通貨取引ボット。",
-    "longDesc": "Binanceのフルオートおよびハイブリッド実行モードに対応した個人仮想通貨取引ボットのウェブインターフェース。WebSocketによるリアルタイム更新、AIによるニュース分析、Suwisa向けREST APIを搭載。",
-    "tags": ["TypeScript", "Python", "CSS"],
-    "type": "website",
-    "repo": null,
-    "live": null,
-    "images": [],
-    "year": "2025",
-    "role": "開発者"
-  },
-  {
     "id": "03",
-    "title": "Suwisa",
-    "desc": "会話メモリ・Gmailアクセス・ウェブ検索を備えたDiscord上の個人アシスタント。",
-    "longDesc": "会話メモリ・Gmailアクセス・ウェブ検索を備えたDiscord上の個人アシスタント。Nexusと連携してリアルタイムアラートとポートフォリオ照会を提供し、Anthropic Claudeで動作。",
-    "tags": ["TypeScript"],
-    "type": "tool",
-    "repo": null,
-    "live": null,
-    "images": [],
-    "year": "2025",
-    "role": "開発者"
-  },
-  {
-    "id": "04",
     "title": "Crossword Solver",
     "desc": "バックトラッキングで8つの経路を持つクロスワードゲームを解くアルゴリズム。",
     "longDesc": "8つの経路が交差するクロスワードゲームの解答を計算するアルゴリズム。文字が使われるたびにグリッドを下方向に移動させ、バックトラッキングで正しい経路を探索する。",
@@ -69,7 +56,7 @@
     "role": "開発者"
   },
   {
-    "id": "05",
+    "id": "04",
     "title": "NFC Deck Tracker",
     "desc": "NFCでTCGデッキをリアルタイム管理・追跡するモバイルアプリ。",
     "longDesc": "NFCでTCGデッキをリアルタイム管理・追跡するモバイルアプリ。シルパコーン大学の学士論文としてClean Architectureコンセプトに基づきFlutterで開発。",
@@ -84,7 +71,7 @@
     "role": "開発者"
   },
   {
-    "id": "06",
+    "id": "05",
     "title": "Astral Oracle",
     "desc": "Groq AIによる個人予言付きタロットカード占いウェブアプリ。",
     "longDesc": "Groq AIによる個人予言付きタロットカード占いウェブアプリ。カードを引いて解釈するインタラクティブなインターフェースを搭載。",

@@ -1,9 +1,16 @@
 {
-  "nav": { "about": "About", "experience": "Experience", "skills": "Skill", "projects": "Project", "contact": "Contact" },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "cases": "Case Study",
+    "skills": "Skill",
+    "projects": "Project",
+    "contact": "Contact"
+  },
   "hero": {
-    "role": "Infrastructure & Full-Stack Engineer",
+    "role": "Infrastructure, AI & Full-Stack Engineer",
     "tagline": "Digital transformation for manufacturing",
-    "sub": "Operating on-premise infrastructure and building factory ERP systems",
+    "sub": "Operating on-premise infrastructure, building factory ERP systems, and putting AI agents to work",
     "cta_work": "View Work",
     "cta_resume": "Resume ↗"
   },
@@ -11,23 +18,44 @@
     "label": "ABOUT ME",
     "body1": [
       "Self-taught engineer and the ",
-      { "text": "sole IT", "mark": true },
+      {
+        "text": "sole IT",
+        "mark": true
+      },
       " for a 230-person manufacturing site — I built the company's entire tech stack from ",
-      { "text": "two repurposed desktops", "mark": true },
+      {
+        "text": "two repurposed desktops",
+        "mark": true
+      },
       ": server infrastructure, networking, security, and in-house ERP software."
     ],
     "body2": [
-      "Using open-source tools and AI to ship ",
-      { "text": "reliable systems on a near-zero budget", "mark": true },
-      ". Currently focused on ERP for ",
-      { "text": "discrete manufacturing", "mark": true },
-      " — production scheduling, inventory, and quality control."
+      "Then I put AI to work on top of it — a ",
+      {
+        "text": "Claude-powered document agent",
+        "mark": true
+      },
+      ", AI email triage, and an AI-driven development pipeline — shipping ",
+      {
+        "text": "enterprise-grade systems on a near-zero budget",
+        "mark": true
+      },
+      "."
     ],
     "resume": "Résumé PDF",
     "stats": [
-      { "val": "B.Sc.", "label": "Information Technology" },
-      { "val": "230", "label": "Person manufacturing site" },
-      { "val": "On-site", "label": "Manufacturing focus" }
+      {
+        "val": "B.Sc.",
+        "label": "Information Technology"
+      },
+      {
+        "val": "230",
+        "label": "Person manufacturing site"
+      },
+      {
+        "val": "On-site",
+        "label": "Manufacturing focus"
+      }
     ]
   },
   "experience": {
@@ -39,9 +67,11 @@
         "role": "Sole IT · Infrastructure, DevOps & Development",
         "year": "Nov 2025 — Present",
         "bullets": [
-          "Built the company's on-premise infrastructure from scratch on two repurposed desktops — a Proxmox VE + PBS cluster running 7+ virtualized services (NAS, reverse proxy, DNS, VPN, monitoring) with automated nightly backups and near-100% uptime.",
+          "Built the company's on-premise infrastructure from scratch on two repurposed desktops — a Proxmox VE + PBS cluster running 7+ virtualized services (NAS, reverse proxy, DNS, VPN, monitoring) with automated nightly backups and near-99% uptime.",
           "Redesigned the factory network for ~230 staff and 60+ devices: dual-WAN load-balancing + failover, a structured /24 IP plan, and WireGuard / Tailscale remote access.",
-          "Cut recurring IT costs ~45,000฿/year by self-hosting open-source replacements (OpenMediaVault, Wazuh + Defender), and automated daily ops for 50 workstations with PowerShell + RMM into centralized dashboards."
+          "Established the factory's information security program under the automotive AISC framework (24 domains, 150+ documents) with ISO/IEC 27001 as an internal baseline, authored IATF 16949 / ISO 9001 quality procedures, and delivered company-wide cybersecurity awareness training.",
+          "Automated IT operations with n8n: backup and infrastructure health monitoring, AI-powered email triage, and monthly compliance reports filed into QMS documents after one-click human approval.",
+          "Cut recurring IT costs 45,200฿/year by self-hosting open-source replacements (OpenMediaVault, Wazuh + Defender), and automated daily ops for 50 workstations with PowerShell + RMM into centralized dashboards."
         ]
       },
       {
@@ -55,40 +85,131 @@
       }
     ]
   },
+  "caseStudies": {
+    "label": "CASE STUDIES",
+    "note": "Diagrams are redrawn and sanitized — no real addresses, credentials, or internal identifiers.",
+    "studies": [
+      {
+        "kicker": "ARCHITECTURE",
+        "title": "On-Premise Virtualization Cluster",
+        "body": "The company had no servers, no budget, and one IT person. Two repurposed desktops became a Proxmox VE + PBS cluster running 7+ virtualized services — NAS, reverse proxy, DNS filtering, VPN, automation, and the app server hosting the ERP and Rotjana — with automated nightly backups and near-99% uptime.",
+        "diagram": "/diagrams/cluster.svg",
+        "alt": "Diagram of the on-premise virtualization cluster"
+      },
+      {
+        "kicker": "NETWORK DESIGN",
+        "title": "Factory Network Redesign",
+        "body": "A flat network on a single line served 230 people — one outage stopped everything. The redesign brought dual-WAN load balancing with automatic failover, a structured /24 plan separating office, production, and server zones, and WireGuard / Tailscale tunnels for remote access.",
+        "diagram": "/diagrams/network.svg",
+        "alt": "Diagram of the redesigned factory network"
+      },
+      {
+        "kicker": "SECURITY × AI",
+        "title": "Security & AI Automation Program",
+        "body": "Compliance and monitoring don't scale to a one-person team by hand. A 24-domain security framework under the automotive AISC standard (ISO/IEC 27001 as internal baseline), Wazuh + Defender on every endpoint, and n8n workflows that watch backups and infrastructure, triage email with Claude, and file monthly compliance reports into QMS registers — a human approves every write.",
+        "diagram": "/diagrams/security.svg",
+        "alt": "Diagram of the security and AI automation pipeline"
+      }
+    ]
+  },
   "skills": {
     "label": "SKILLS",
     "categories": [
       {
         "label": "INFRASTRUCTURE & DEVOPS",
         "skills": [
-          { "name": "Proxmox", "icon": "proxmox", "desc": "Open-source virtualization platform managing a Proxmox VE + PBS cluster — 7+ services including NAS, reverse proxy, DNS, VPN, and monitoring on bare-metal hardware." },
-          { "name": "Docker", "icon": "docker", "desc": "Containerizes all self-hosted services for consistent, isolated deployments across the Proxmox cluster and development environments." },
-          { "name": "Linux", "icon": "linux", "desc": "Server OS for every on-premise service — Ubuntu Server, systemd administration, CLI scripting, and service management." },
-          { "name": "Cloudflare", "icon": "cloudflare", "desc": "DNS, CDN, and Zero Trust tunnels — exposes self-hosted services securely to the internet without opening inbound ports." }
+          {
+            "name": "Proxmox",
+            "icon": "proxmox",
+            "desc": "Open-source virtualization platform managing a Proxmox VE + PBS cluster — 7+ services including NAS, reverse proxy, DNS, VPN, and monitoring on bare-metal hardware."
+          },
+          {
+            "name": "Docker",
+            "icon": "docker",
+            "desc": "Containerizes all self-hosted services for consistent, isolated deployments across the Proxmox cluster and development environments."
+          },
+          {
+            "name": "Linux",
+            "icon": "linux",
+            "desc": "Server OS for every on-premise service — Ubuntu Server, systemd administration, CLI scripting, and service management."
+          },
+          {
+            "name": "Cloudflare",
+            "icon": "cloudflare",
+            "desc": "DNS, CDN, and Zero Trust tunnels — exposes self-hosted services securely to the internet without opening inbound ports."
+          }
+        ]
+      },
+      {
+        "label": "AI ENGINEERING",
+        "skills": [
+          {
+            "name": "Claude API",
+            "icon": "claude",
+            "desc": "Agentic tool use and vision — powers Rotjana, a Discord agent that reads and safely updates QMS documents in plain Thai, plus AI email triage in automation workflows."
+          },
+          {
+            "name": "n8n",
+            "icon": "n8n",
+            "desc": "Self-hosted workflow automation — backup monitoring, infrastructure health checks, and monthly compliance reports with human-in-the-loop approval."
+          }
         ]
       },
       {
         "label": "DEVELOPMENT",
         "skills": [
-          { "name": "TypeScript", "icon": "typescript", "desc": "Primary language for all web and API projects — type-safe, scales cleanly to larger codebases, and eliminates a whole class of runtime errors." },
-          { "name": "Next.js", "icon": "nextjs", "desc": "React framework with server-side rendering and file-based routing — used for ERP operator interfaces and internal dashboards." },
-          { "name": "React", "icon": "react", "desc": "Component-based UI library for building stateful operator-facing interfaces and management dashboards." },
-          { "name": "PostgreSQL", "icon": "postgresql", "desc": "Primary relational database for ERP data — production records, BOM, inventory — reliable under concurrent factory floor usage." },
-          { "name": "Python", "icon": "python", "desc": "Scripting, automation, and data processing — used alongside the TypeScript stack for backend tooling and integrations." }
+          {
+            "name": "TypeScript",
+            "icon": "typescript",
+            "desc": "Primary language for all web and API projects — type-safe, scales cleanly to larger codebases, and eliminates a whole class of runtime errors."
+          },
+          {
+            "name": "Next.js",
+            "icon": "nextjs",
+            "desc": "React framework with server-side rendering and file-based routing — used for ERP operator interfaces and internal dashboards."
+          },
+          {
+            "name": "React",
+            "icon": "react",
+            "desc": "Component-based UI library for building stateful operator-facing interfaces and management dashboards."
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "postgresql",
+            "desc": "Primary relational database for ERP data — production records, BOM, inventory — reliable under concurrent factory floor usage."
+          },
+          {
+            "name": "Python",
+            "icon": "python",
+            "desc": "Scripting, automation, and data processing — used alongside the TypeScript stack for backend tooling and integrations."
+          }
         ]
       },
       {
         "label": "WORKFLOW & TOOLS",
         "skills": [
-          { "name": "Git", "icon": "git", "desc": "Version control for all projects — every change tracked, safe rollbacks, and a clean history for solo and collaborative work." },
-          { "name": "Figma", "icon": "figma", "desc": "UI design and wireframing before implementation — used to prototype ERP operator screens and management interfaces." }
+          {
+            "name": "Git",
+            "icon": "git",
+            "desc": "Version control for all projects — every change tracked, safe rollbacks, and a clean history for solo and collaborative work."
+          },
+          {
+            "name": "Figma",
+            "icon": "figma",
+            "desc": "UI design and wireframing before implementation — used to prototype ERP operator screens and management interfaces."
+          }
         ]
       }
     ]
   },
   "projects": {
     "label": "PROJECTS",
-    "filters": ["all", "website", "mobile", "tool"],
+    "filters": [
+      "all",
+      "website",
+      "mobile",
+      "tool"
+    ],
     "viewRepo": "View Repository"
   },
   "contact": {
