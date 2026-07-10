@@ -4,7 +4,7 @@ import './globals.css';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
 const title = 'Portfolio — Vijuksama';
 const description =
-  'Self-taught Infrastructure & Full-Stack Engineer — operating on-premise Proxmox infrastructure and building factory ERP systems for discrete manufacturing.';
+  'Self-taught Infrastructure, AI & Full-Stack Engineer — on-premise Proxmox infrastructure, factory ERP systems, and AI agents doing real work.';
 
 export const viewport = {
   width: 'device-width',
@@ -12,31 +12,11 @@ export const viewport = {
   viewportFit: 'cover',
 };
 
+// Personal portfolio — no SEO. Only what link previews need when sharing the URL.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: title,
-    template: '%s · Vijuksama',
-  },
+  title,
   description,
-  applicationName: 'Vijuksama Portfolio',
-  authors: [{ name: 'Vijuksama', url: siteUrl }],
-  creator: 'Vijuksama',
-  keywords: [
-    'Vijuksama',
-    'Infrastructure Engineer',
-    'Full-Stack Engineer',
-    'DevOps',
-    'Proxmox',
-    'Self-hosted',
-    'Factory ERP',
-    'Next.js',
-    'TypeScript',
-    'PostgreSQL',
-  ],
-  alternates: {
-    canonical: '/',
-  },
   icons: { icon: '/icon.svg' },
   openGraph: {
     type: 'website',
@@ -52,23 +32,6 @@ export const metadata: Metadata = {
     description,
     images: ['/profile.jpg'],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
-  },
-};
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Vijuksama',
-  jobTitle: 'Infrastructure & Full-Stack Engineer',
-  description,
-  url: siteUrl,
-  image: `${siteUrl}/profile.jpg`,
-  sameAs: ['https://github.com/vijuksama', 'https://linkedin.com/in/vijuksama'],
-  knowsAbout: ['Proxmox', 'Docker', 'Linux', 'Next.js', 'TypeScript', 'PostgreSQL', 'DevOps', 'ERP'],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -85,10 +48,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body>{children}</body>
