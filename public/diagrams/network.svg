@@ -1,42 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Segoe UI, Helvetica, Arial, sans-serif">
-<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2A2521"/></marker><marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C96442"/></marker></defs>
-<rect width="800" height="520" fill="#F5EFE4"/>
-<path d="M205,80 L205,130" fill="none" stroke="#2A2521" stroke-width="1.4"  marker-end="url(#arr)"/>
-<path d="M415,80 L415,130" fill="none" stroke="#2A2521" stroke-width="1.4"  marker-end="url(#arr)"/>
-<path d="M305,190 L305,240" fill="none" stroke="#2A2521" stroke-width="1.4"  marker-end="url(#arr)"/>
-<path d="M305,294 L305,320 L145,320 L145,350" fill="none" stroke="#2A2521" stroke-width="1.4"  marker-end="url(#arr)"/>
-<path d="M305,294 L305,320 L335,320 L335,350" fill="none" stroke="#2A2521" stroke-width="1.4"  marker-end="url(#arr)"/>
-<path d="M305,294 L305,320 L525,320 L525,350" fill="none" stroke="#2A2521" stroke-width="1.4"  marker-end="url(#arr)"/>
-<path d="M405,267 L695,267 L695,350" fill="none" stroke="#2A2521" stroke-width="1.4"  marker-end="url(#arr)"/>
-<path d="M685,190 L685,230 L525,230 L525,350" fill="none" stroke="#C96442" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrA)"/>
-<text x="605" y="220" font-size="10" fill="#8C7B6B" text-anchor="middle" paint-order="stroke" stroke="#F5EFE4" stroke-width="4" font-family="Segoe UI, Helvetica, Arial, sans-serif">encrypted tunnel</text>
-<rect x="130" y="30" width="150" height="50" rx="6" fill="#FDFAF3" stroke="#2A2521" stroke-width="1.4" />
-<text x="205" y="52" font-size="12.5" fill="#2A2521" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">ISP A</text>
-<text x="205" y="68" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">WAN 1</text>
-<rect x="340" y="30" width="150" height="50" rx="6" fill="#FDFAF3" stroke="#2A2521" stroke-width="1.4" />
-<text x="415" y="52" font-size="12.5" fill="#2A2521" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">ISP B</text>
-<text x="415" y="68" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">WAN 2</text>
-<rect x="155" y="130" width="300" height="60" rx="6" fill="#FDFAF3" stroke="#C96442" stroke-width="1.4" />
-<text x="305" y="157" font-size="12.5" fill="#C96442" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Load-Balancing Router</text>
-<text x="305" y="173" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">dual-WAN · automatic failover</text>
-<rect x="205" y="240" width="200" height="54" rx="6" fill="#FDFAF3" stroke="#2A2521" stroke-width="1.4" />
-<text x="305" y="264" font-size="12.5" fill="#2A2521" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Core Switch</text>
-<text x="305" y="280" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">structured /24 IP plan</text>
-<rect x="60" y="350" width="170" height="80" rx="6" fill="#FDFAF3" stroke="#2A2521" stroke-width="1.4" />
-<text x="145" y="387" font-size="12.5" fill="#2A2521" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Office zone</text>
-<text x="145" y="403" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">/24 · PCs, printers</text>
-<rect x="250" y="350" width="170" height="80" rx="6" fill="#FDFAF3" stroke="#2A2521" stroke-width="1.4" />
-<text x="335" y="387" font-size="12.5" fill="#2A2521" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Production zone</text>
-<text x="335" y="403" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">/24 · shop-floor devices</text>
-<rect x="440" y="350" width="170" height="80" rx="6" fill="#FDFAF3" stroke="#2A2521" stroke-width="1.4" />
-<text x="525" y="387" font-size="12.5" fill="#2A2521" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Server zone</text>
-<text x="525" y="403" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">/24 · Proxmox cluster</text>
-<rect x="630" y="350" width="130" height="80" rx="6" fill="#FDFAF3" stroke="#2A2521" stroke-width="1.4" />
-<text x="695" y="387" font-size="12.5" fill="#2A2521" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Wi-Fi APs</text>
-<text x="695" y="403" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">staff · guest</text>
-<rect x="600" y="130" width="170" height="60" rx="6" fill="#FDFAF3" stroke="#2A2521" stroke-width="1.4" stroke-dasharray="5 4"/>
-<text x="685" y="157" font-size="12.5" fill="#2A2521" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Remote access</text>
-<text x="685" y="173" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">WireGuard · Tailscale</text>
-<text x="305" y="470" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">~230 staff · 60+ devices across zones</text>
-<text x="400" y="508" font-size="10" fill="#8C7B6B" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Sanitized — real addressing and identifiers omitted</text>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#232621"/></marker><marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#35664F"/></marker></defs>
+<rect width="800" height="520" fill="#F0EFE4"/>
+<path d="M205,80 L205,130" fill="none" stroke="#232621" stroke-width="1.4"  marker-end="url(#arr)"/>
+<path d="M415,80 L415,130" fill="none" stroke="#232621" stroke-width="1.4"  marker-end="url(#arr)"/>
+<path d="M305,190 L305,240" fill="none" stroke="#232621" stroke-width="1.4"  marker-end="url(#arr)"/>
+<path d="M305,294 L305,320 L145,320 L145,350" fill="none" stroke="#232621" stroke-width="1.4"  marker-end="url(#arr)"/>
+<path d="M305,294 L305,320 L335,320 L335,350" fill="none" stroke="#232621" stroke-width="1.4"  marker-end="url(#arr)"/>
+<path d="M305,294 L305,320 L525,320 L525,350" fill="none" stroke="#232621" stroke-width="1.4"  marker-end="url(#arr)"/>
+<path d="M405,267 L695,267 L695,350" fill="none" stroke="#232621" stroke-width="1.4"  marker-end="url(#arr)"/>
+<path d="M685,190 L685,230 L525,230 L525,350" fill="none" stroke="#35664F" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrA)"/>
+<text x="605" y="220" font-size="10" fill="#75786C" text-anchor="middle" paint-order="stroke" stroke="#F0EFE4" stroke-width="4" font-family="Segoe UI, Helvetica, Arial, sans-serif">encrypted tunnel</text>
+<rect x="130" y="30" width="150" height="50" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4" />
+<text x="205" y="52" font-size="12.5" fill="#232621" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">ISP A</text>
+<text x="205" y="68" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">WAN 1</text>
+<rect x="340" y="30" width="150" height="50" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4" />
+<text x="415" y="52" font-size="12.5" fill="#232621" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">ISP B</text>
+<text x="415" y="68" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">WAN 2</text>
+<rect x="155" y="130" width="300" height="60" rx="6" fill="#FBFAF3" stroke="#35664F" stroke-width="1.4" />
+<text x="305" y="157" font-size="12.5" fill="#35664F" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Load-Balancing Router</text>
+<text x="305" y="173" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">dual-WAN · automatic failover</text>
+<rect x="205" y="240" width="200" height="54" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4" />
+<text x="305" y="264" font-size="12.5" fill="#232621" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Core Switch</text>
+<text x="305" y="280" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">structured /24 IP plan</text>
+<rect x="60" y="350" width="170" height="80" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4" />
+<text x="145" y="387" font-size="12.5" fill="#232621" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Office zone</text>
+<text x="145" y="403" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">/24 · PCs, printers</text>
+<rect x="250" y="350" width="170" height="80" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4" />
+<text x="335" y="387" font-size="12.5" fill="#232621" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Production zone</text>
+<text x="335" y="403" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">/24 · shop-floor devices</text>
+<rect x="440" y="350" width="170" height="80" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4" />
+<text x="525" y="387" font-size="12.5" fill="#232621" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Server zone</text>
+<text x="525" y="403" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">/24 · Proxmox cluster</text>
+<rect x="630" y="350" width="130" height="80" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4" />
+<text x="695" y="387" font-size="12.5" fill="#232621" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Wi-Fi APs</text>
+<text x="695" y="403" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">staff · guest</text>
+<rect x="600" y="130" width="170" height="60" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="685" y="157" font-size="12.5" fill="#232621" font-weight="700" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Remote access</text>
+<text x="685" y="173" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">WireGuard · Tailscale</text>
+<text x="305" y="470" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">~230 staff · 60+ devices across zones</text>
+<text x="400" y="508" font-size="10" fill="#75786C" font-weight="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Sanitized — real addressing and identifiers omitted</text>
 </svg>
