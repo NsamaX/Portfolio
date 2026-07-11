@@ -44,16 +44,16 @@
     "resume": "ดาวน์โหลด CV",
     "stats": [
       {
-        "val": "วท.บ.",
-        "label": "เทคโนโลยีสารสนเทศ"
+        "val": "7+",
+        "label": "เซอร์วิสที่โฮสต์เอง"
       },
       {
         "val": "230",
         "label": "คนในโรงงาน"
       },
       {
-        "val": "On-site",
-        "label": "เน้นอุตสาหกรรมการผลิต"
+        "val": "45,200฿",
+        "label": "ลดค่าใช้จ่าย IT ต่อปี"
       }
     ]
   },
@@ -158,9 +158,9 @@
         "label": "DEVELOPMENT",
         "skills": [
           {
-            "name": "TypeScript",
-            "icon": "typescript",
-            "desc": "ภาษาหลักสำหรับทุกโปรเจกต์เว็บและ API — type-safe, ขยายได้ดี และกำจัด runtime error ทั้งคลาสหนึ่ง"
+            "name": "Node.js",
+            "icon": "nodejs",
+            "desc": "JavaScript runtime ฝั่ง backend — เป็นแกนของ Rotjana AI agent (Express · discord.js) และ API เบื้องหลัง ERP กับเครื่องมือภายใน"
           },
           {
             "name": "Next.js",
@@ -168,19 +168,14 @@
             "desc": "React framework พร้อม server-side rendering และ file-based routing — ใช้สำหรับหน้าจอผู้ปฏิบัติงาน ERP และ dashboard ภายใน"
           },
           {
-            "name": "React",
-            "icon": "react",
-            "desc": "UI library แบบ component-based สำหรับสร้าง interface ที่มี state สำหรับผู้ปฏิบัติงานและ management dashboard"
+            "name": "TypeScript",
+            "icon": "typescript",
+            "desc": "ภาษาหลักสำหรับทุกโปรเจกต์เว็บและ API — type-safe, ขยายได้ดี และกำจัด runtime error ทั้งคลาสหนึ่ง"
           },
           {
             "name": "PostgreSQL",
             "icon": "postgresql",
             "desc": "ฐานข้อมูล relational หลักสำหรับข้อมูล ERP — บันทึกการผลิต, BOM, คลังสินค้า — เชื่อถือได้ภายใต้การใช้งานพร้อมกันในโรงงาน"
-          },
-          {
-            "name": "Python",
-            "icon": "python",
-            "desc": "scripting, automation และประมวลผลข้อมูล — ใช้คู่กับ TypeScript stack สำหรับ tooling และ integration ฝั่ง backend"
           }
         ]
       },

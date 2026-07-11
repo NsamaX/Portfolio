@@ -45,16 +45,16 @@
     "resume": "Résumé PDF",
     "stats": [
       {
-        "val": "B.Sc.",
-        "label": "Information Technology"
+        "val": "7+",
+        "label": "Self-hosted services"
       },
       {
         "val": "230",
         "label": "Person manufacturing site"
       },
       {
-        "val": "On-site",
-        "label": "Manufacturing focus"
+        "val": "45,200฿",
+        "label": "Annual IT cost cut"
       }
     ]
   },
@@ -159,9 +159,9 @@
         "label": "DEVELOPMENT",
         "skills": [
           {
-            "name": "TypeScript",
-            "icon": "typescript",
-            "desc": "Primary language for all web and API projects — type-safe, scales cleanly to larger codebases, and eliminates a whole class of runtime errors."
+            "name": "Node.js",
+            "icon": "nodejs",
+            "desc": "JavaScript runtime behind the backend — powers the Rotjana AI agent (Express · discord.js) and the API layers of the ERP and internal tools."
           },
           {
             "name": "Next.js",
@@ -169,19 +169,14 @@
             "desc": "React framework with server-side rendering and file-based routing — used for ERP operator interfaces and internal dashboards."
           },
           {
-            "name": "React",
-            "icon": "react",
-            "desc": "Component-based UI library for building stateful operator-facing interfaces and management dashboards."
+            "name": "TypeScript",
+            "icon": "typescript",
+            "desc": "Primary language for all web and API projects — type-safe, scales cleanly to larger codebases, and eliminates a whole class of runtime errors."
           },
           {
             "name": "PostgreSQL",
             "icon": "postgresql",
             "desc": "Primary relational database for ERP data — production records, BOM, inventory — reliable under concurrent factory floor usage."
-          },
-          {
-            "name": "Python",
-            "icon": "python",
-            "desc": "Scripting, automation, and data processing — used alongside the TypeScript stack for backend tooling and integrations."
           }
         ]
       },

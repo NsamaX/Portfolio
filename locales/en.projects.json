@@ -8,7 +8,9 @@
     "type": "tool",
     "repo": null,
     "live": null,
-    "images": [],
+    "images": [
+      { "label": "Thumbnail", "src": "/projects/Rotjana — AI Document Agent.png" }
+    ],
     "year": "2026",
     "role": "Developer"
   },
@@ -21,7 +23,9 @@
     "type": "website",
     "repo": null,
     "live": null,
-    "images": [],
+    "images": [
+      { "label": "Thumbnail", "src": "/projects/Enterprise Resource Planning.png" }
+    ],
     "year": "2025",
     "role": "Developer"
   },

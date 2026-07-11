@@ -1,8 +1,7 @@
 import en from '../locales/en.json';
 import th from '../locales/th.json';
-import jp from '../locales/jp.json';
 
-export type Lang = 'en' | 'th' | 'jp';
+export type Lang = 'en' | 'th';
 export type TextSegment = string | { text: string; mark: true };
 
 export interface SkillItem {
@@ -39,7 +38,6 @@ export interface Translations {
 const translations: Record<Lang, Translations> = {
   en: en as Translations,
   th: th as Translations,
-  jp: jp as Translations,
 };
 
 // Single source of truth for which languages appear in the switcher.

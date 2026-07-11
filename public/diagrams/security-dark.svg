@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#EBEDE6"/></marker><marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#35664F"/></marker></defs>
+<rect x="290" y="70" width="200" height="360" rx="6" fill="none" stroke="#A9A899" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="300" y="88" font-size="11" fill="#75786C" font-style="italic" font-weight="700" text-anchor="start">n8n AUTOMATION</text>
+<path d="M270,130 L310,130" fill="none" stroke="#EBEDE6" stroke-width="1.4" marker-end="url(#arr)"/>
+<path d="M270,210 L310,210" fill="none" stroke="#EBEDE6" stroke-width="1.4" marker-end="url(#arr)"/>
+<path d="M270,290 L310,290" fill="none" stroke="#EBEDE6" stroke-width="1.4" marker-end="url(#arr)"/>
+<path d="M490,130 L530,130" fill="none" stroke="#EBEDE6" stroke-width="1.4" marker-end="url(#arr)"/>
+<path d="M490,371 L510,371 L510,290 L530,290" fill="none" stroke="#EBEDE6" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="512" y="336" font-size="10" fill="#75786C" text-anchor="start">propose-write</text>
+<path d="M610,310 L610,350" fill="none" stroke="#35664F" stroke-width="1.4" marker-end="url(#arrA)"/>
+<path d="M610,390 L610,430" fill="none" stroke="#EBEDE6" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="618" y="414" font-size="10" fill="#75786C" text-anchor="start">locked write + backup</text>
+<rect x="110" y="110" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4"/>
+<text x="190" y="128" font-size="12" fill="#232621" font-weight="700" text-anchor="middle">50 workstations</text>
+<text x="190" y="142" font-size="10" fill="#75786C" text-anchor="middle">Wazuh + Defender agents</text>
+<rect x="110" y="190" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4"/>
+<text x="190" y="208" font-size="12" fill="#232621" font-weight="700" text-anchor="middle">Servers &amp; backups</text>
+<text x="190" y="222" font-size="10" fill="#75786C" text-anchor="middle">PVE · PBS · NAS</text>
+<rect x="110" y="270" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4"/>
+<text x="190" y="288" font-size="12" fill="#232621" font-weight="700" text-anchor="middle">Mailbox (IMAP)</text>
+<text x="190" y="302" font-size="10" fill="#75786C" text-anchor="middle">incoming email</text>
+<rect x="310" y="110" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4"/>
+<text x="390" y="128" font-size="12" fill="#232621" font-weight="700" text-anchor="middle">Infra health checks</text>
+<text x="390" y="142" font-size="10" fill="#75786C" text-anchor="middle">CPU · RAM · storage</text>
+<rect x="310" y="190" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4"/>
+<text x="390" y="208" font-size="12" fill="#232621" font-weight="700" text-anchor="middle">Backup monitoring</text>
+<text x="390" y="222" font-size="10" fill="#75786C" text-anchor="middle">snapshots · disk space</text>
+<rect x="310" y="270" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#35664F" stroke-width="1.4"/>
+<text x="390" y="288" font-size="12" fill="#35664F" font-weight="700" text-anchor="middle">AI email triage</text>
+<text x="390" y="302" font-size="10" fill="#75786C" text-anchor="middle">Claude classifies IT work</text>
+<rect x="310" y="350" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4"/>
+<text x="390" y="368" font-size="12" fill="#232621" font-weight="700" text-anchor="middle">Compliance reports</text>
+<text x="390" y="382" font-size="10" fill="#75786C" text-anchor="middle">monthly · per department</text>
+<rect x="530" y="110" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4"/>
+<text x="610" y="128" font-size="12" fill="#232621" font-weight="700" text-anchor="middle">Discord alerts</text>
+<text x="610" y="142" font-size="10" fill="#75786C" text-anchor="middle">IT ops channel</text>
+<rect x="530" y="270" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#35664F" stroke-width="1.4"/>
+<text x="610" y="288" font-size="12" fill="#35664F" font-weight="700" text-anchor="middle">Rotjana agent</text>
+<text x="610" y="302" font-size="10" fill="#75786C" text-anchor="middle">proposes QMS updates</text>
+<rect x="530" y="350" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4"/>
+<text x="610" y="368" font-size="12" fill="#232621" font-weight="700" text-anchor="middle">Human approval</text>
+<text x="610" y="382" font-size="10" fill="#75786C" text-anchor="middle">one-click confirm</text>
+<rect x="530" y="430" width="160" height="40" rx="6" fill="#FBFAF3" stroke="#232621" stroke-width="1.4"/>
+<text x="610" y="448" font-size="12" fill="#232621" font-weight="700" text-anchor="middle">QMS registers</text>
+<text x="610" y="462" font-size="10" fill="#75786C" text-anchor="middle">controlled Excel documents</text>
+<text x="390" y="504" font-size="10" fill="#75786C" text-anchor="middle">Foundation: automotive AISC framework — 24 domains · 150+ documents · ISO/IEC 27001 internal baseline</text>
+</svg>

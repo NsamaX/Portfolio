@@ -19,7 +19,16 @@ export default function CaseStudies({ lang }: CaseStudiesProps) {
             <div className={`case-row${i % 2 === 1 ? ' case-row-flip' : ''}`} key={i}>
               <div className="case-diagram">
                 <Image
+                  className="diagram-light"
                   src={s.diagram}
+                  alt={s.alt}
+                  width={800}
+                  height={560}
+                  style={{ width: '100%', height: 'auto' }}
+                />
+                <Image
+                  className="diagram-dark"
+                  src={s.diagram.replace('.svg', '-dark.svg')}
                   alt={s.alt}
                   width={800}
                   height={560}
