@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     title,
     description: 'Making the complex simple. An archive of work from a factory IT department of one.',
-    images: ['/profile.jpg'],
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Collage portrait of Vijuksama Hongthongdaeng' }],
   },
 };
 
