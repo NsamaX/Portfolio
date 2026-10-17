@@ -1,55 +1,40 @@
 import type { Metadata } from 'next';
+import { Caveat, Hanken_Grotesk, IBM_Plex_Mono, Instrument_Serif } from 'next/font/google';
 import './globals.css';
 
+const serif = Instrument_Serif({ subsets: ['latin'], weight: '400', style: ['normal', 'italic'], variable: '--font-serif' });
+const sans = Hanken_Grotesk({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-sans' });
+const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: '400', variable: '--font-mono' });
+const hand = Caveat({ subsets: ['latin'], weight: '500', variable: '--font-hand' });
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
-const title = 'Portfolio — Vijuksama';
-const description =
-  'Self-taught Infrastructure, AI & Full-Stack Engineer — on-premise Proxmox infrastructure, factory ERP systems, and AI agents doing real work.';
+const title = 'Vijuksama Hongthongdaeng — IT Coordinator';
 
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  viewportFit: 'cover',
 };
 
-// Personal portfolio — no SEO. Only what link previews need when sharing the URL.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
-  description,
+  description: 'Vijuksama Hongthongdaeng, factory IT: support, servers and practical in-house software. Making the complex simple.',
+  authors: [{ name: 'Vijuksama Hongthongdaeng' }],
+  robots: { index: false, follow: true },
   icons: { icon: '/icon.svg' },
+  alternates: { types: { 'text/plain': '/llms.txt' } },
   openGraph: {
     type: 'website',
     url: siteUrl,
-    siteName: 'Vijuksama',
     title,
-    description,
-    images: [{ url: '/profile.jpg', width: 320, height: 320, alt: 'Vijuksama' }],
-  },
-  twitter: {
-    card: 'summary',
-    title,
-    description,
+    description: 'Making the complex simple. An archive of work from a factory IT department of one.',
     images: ['/profile.jpg'],
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-dark',d?'true':'false');}catch(e){}})();`,
-          }}
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${serif.variable} ${sans.variable} ${mono.variable} ${hand.variable}`}>
       <body>{children}</body>
     </html>
   );

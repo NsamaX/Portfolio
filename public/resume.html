@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="omelette-owns-print" content="1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Résumé — Vijuksama</title>
+  <title>Vijuksama Hongthongdaeng — IT Coordinator — Resume</title>
+  <meta name="description" content="Resume of Vijuksama Hongthongdaeng, factory IT: support, servers and practical in-house software. Linux, Proxmox, Docker, Next.js, TypeScript, PostgreSQL.">
 
   <style>
     :root {
@@ -34,7 +36,7 @@
       min-height: 297mm;
       background: var(--paper);
       color: var(--ink);
-      padding: 11mm 13mm 10mm;
+      padding: 16mm 18mm 14mm;
       position: relative;
       box-shadow: 0 1px 2px rgba(16,24,40,.04), 0 12px 40px rgba(16,24,40,.12);
       align-self: flex-start;
@@ -43,18 +45,19 @@
     /* ---------- Header ---------- */
     .r-name {
       font-weight: 700;
-      font-size: 31px;
-      line-height: 1.08;
+      font-size: 32px;
+      line-height: 1.1;
+      letter-spacing: -.01em;
       color: var(--ink);
     }
     .r-title {
       font-size: 14.5px;
       font-weight: 400;
       color: var(--ink-2);
-      margin-top: 6px;
+      margin-top: 8px;
     }
     .r-contact {
-      margin-top: 8px;
+      margin-top: 12px;
       font-size: 12.5px;
       color: var(--ink-2);
       display: flex;
@@ -67,23 +70,23 @@
     .r-contact .sep { margin: 0 9px; color: var(--muted); flex: 0 0 auto; }
 
     /* ---------- Section scaffold ---------- */
-    .section { margin-top: 12px; }
+    .section { margin-top: 22px; }
     .sec-head {
       font-size: 15px;
       font-weight: 700;
       color: var(--ink);
       background: var(--bar);
-      padding: 3px 8px;
-      margin-bottom: 8px;
+      padding: 4px 9px;
+      margin-bottom: 11px;
+      letter-spacing: .02em;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
 
     .body-text {
-      font-size: 12.6px;
-      line-height: 1.45;
+      font-size: 12.8px;
+      line-height: 1.6;
       color: var(--ink-2);
-      text-align: justify;
     }
 
     /* ---------- Entry rows (experience / education) ---------- */
@@ -99,35 +102,35 @@
     .e-meta { font-size: 12.6px; color: var(--ink-2); white-space: nowrap; text-align: right; }
 
     .bullet-list {
-      margin-top: 6px;
-      padding-left: 22px;
+      margin-top: 9px;
+      padding-left: 20px;
       display: grid;
-      gap: 4px;
+      gap: 7px;
     }
     .bullet-list li {
       font-size: 12.6px;
-      line-height: 1.4;
+      line-height: 1.55;
       color: var(--ink-2);
-      text-align: justify;
       padding-left: 3px;
     }
 
     /* ---------- Skills ---------- */
     .skill-line {
       font-size: 12.6px;
-      line-height: 1.45;
+      line-height: 1.6;
       color: var(--ink-2);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .skill-line:last-child { margin-bottom: 0; }
     .skill-line b { color: var(--ink); }
 
     /* ---------- Projects ---------- */
-    .proj { margin-bottom: 8px; page-break-inside: avoid; }
+    .proj { margin-bottom: 14px; page-break-inside: avoid; }
     .proj:last-child { margin-bottom: 0; }
-    .proj-name { font-weight: 700; font-size: 12.8px; color: var(--ink); margin-bottom: 2px; }
-    .proj-desc { font-size: 12.6px; line-height: 1.4; color: var(--ink-2); text-align: justify; }
-    .proj-stack { margin-top: 3px; font-size: 12px; color: var(--muted); }
+    .proj-name { font-weight: 700; font-size: 12.8px; color: var(--ink); margin-bottom: 4px; }
+    .proj-desc { font-size: 12.8px; line-height: 1.55; color: var(--ink-2); }
+    .tool-stack { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .proj-stack { margin-top: 5px; font-size: 12px; color: var(--muted); }
 
     /* ---------- Mobile ---------- */
     @media (max-width: 800px) {
@@ -145,93 +148,81 @@
       @page { size: A4; margin: 0; }
       html, body { background: #fff; }
       body { padding: 0; display: block; }
-      .page { width: 218mm; min-height: 0; box-shadow: none; margin: 0; zoom: 0.96; padding: 9mm 13mm 8mm; }
-      .section { margin-top: 11px; }
+      .page { width: 218mm; min-height: 0; box-shadow: none; margin: 0; zoom: 0.96; padding: 12mm 16mm 10mm; }
+      .section { margin-top: 16px; }
+      .bullet-list { gap: 6px; }
     }
   </style>
 </head>
 <body>
-  <div class="page">
+  <main class="page">
     <header>
       <h1 class="r-name">Vijuksama Hongthongdaeng</h1>
-      <div class="r-title">Infrastructure, AI &amp; Full-Stack Engineer</div>
-      <div class="r-contact">
-        <span>Samut Prakan, Thailand</span>
-        <span class="sep">|</span>
-        <a href="tel:+66615766142">061 576 6142</a>
+      <p class="r-title">IT Coordinator</p>
+      <p class="r-contact">
+        <span>Live in Samut Prakan, Thailand</span>
         <span class="sep">|</span>
         <a href="mailto:vijuksama@gmail.com">vijuksama@gmail.com</a>
         <span class="sep">|</span>
         <a href="https://www.vijuksama.com" target="_blank" rel="noopener">www.vijuksama.com</a>
         <span class="sep">|</span>
         <a href="https://github.com/NsamaX" target="_blank" rel="noopener">github.com/NsamaX</a>
-      </div>
+      </p>
     </header>
 
     <section class="section">
       <h2 class="sec-head">Summary</h2>
-      <p class="body-text">
-        Self-taught engineer and the sole IT for a 230-person automotive-parts factory — I built the company's entire tech backbone from two repurposed desktops (virtualization, networking, security, an in-house ERP), then put AI to work on top of it, from a Claude-powered document agent to AI email triage — enterprise-grade systems on a near-zero budget.
-      </p>
+      <p class="body-text">IT Coordinator who designs, builds and runs a factory's systems end to end, from on-premise servers to in-house software. Sole IT for a 230-person automotive parts factory: moved it from separate Excel files and paid services to a self-hosted platform and a central ERP, cutting IT costs by 45,200฿/year. Making the complex simple.</p>
     </section>
 
     <section class="section">
       <h2 class="sec-head">Skills</h2>
-      <p class="skill-line"><b>Infrastructure &amp; DevOps:</b> Proxmox VE/PBS, Docker, Portainer, Linux, Nginx Proxy Manager, WireGuard, Tailscale, Cloudflare, OpenMediaVault</p>
-      <p class="skill-line"><b>AI Engineering:</b> Claude API (agentic tool use, vision), agent &amp; prompt design, n8n, Claude Code</p>
-      <p class="skill-line"><b>Development:</b> Next.js, React, TypeScript, Node.js, PostgreSQL, Drizzle ORM</p>
-      <p class="skill-line"><b>Networking &amp; Security:</b> Dual-WAN load balancing, IP / subnet planning, AdGuard DNS, Wazuh, Microsoft Defender</p>
-      <p class="skill-line"><b>Standards &amp; Governance:</b> IATF 16949 / ISO 9001 QMS documentation, AISC security framework, ISO/IEC 27001 baseline</p>
-      <p class="skill-line"><b>Tools:</b> Figma, Git, PowerShell / Bash</p>
+      <p class="skill-line"><b>Systems &amp; Infrastructure:</b> Linux, Proxmox (clustering, replication), virtualization, backup &amp; recovery, networking, VPN</p>
+      <p class="skill-line"><b>DevOps &amp; Automation:</b> Docker, Nginx, Git, Vercel, monitoring (Uptime Kuma, Wazuh), workflow automation (n8n), Claude</p>
+      <p class="skill-line"><b>Software Engineering:</b> Next.js, React, TypeScript, Node.js, PostgreSQL, C#, Python</p>
       <p class="skill-line"><b>Languages:</b> Thai (Native), English (Working proficiency)</p>
     </section>
 
     <section class="section">
       <h2 class="sec-head">Work Experience</h2>
-      <div class="e-role">Sole IT · Infrastructure, DevOps &amp; Development</div>
+      <h3 class="e-role">IT Coordinator</h3>
       <div class="entry">
         <div class="e-org">Nozomi Enterprise (Thailand)</div>
         <div class="e-meta">Nov 2025 — Present</div>
       </div>
       <ul class="bullet-list">
-        <li>Built the company's on-premise infrastructure from scratch on two repurposed desktops — a Proxmox VE + PBS cluster running 7+ virtualized services (NAS, reverse proxy, DNS, VPN, monitoring) with automated nightly backups and near-99% uptime.</li>
-        <li>Redesigned the factory network for ~230 staff and 60+ devices: dual-WAN load-balancing + failover, a structured /24 IP plan, and WireGuard / Tailscale remote access.</li>
-        <li>Established the factory's information security program under the automotive AISC framework — 24 domains, 150+ documents, ISO/IEC 27001 as internal baseline — authored IATF 16949 / ISO 9001 quality procedures, and delivered company-wide cybersecurity awareness training.</li>
-        <li>Automated IT operations with n8n: backup and infrastructure health monitoring, AI-powered email triage, and monthly compliance reports filed into QMS documents after one-click human approval.</li>
-        <li>Cut recurring IT costs 45,200฿/year by self-hosting open-source replacements (OpenMediaVault, Wazuh + Defender), and automated daily ops for 50 workstations with PowerShell + RMM into centralized dashboards.</li>
+        <li>Replaced per-department Excel files with a central ERP built single-handedly: 14 modules with role-based access and an audit trail; 4 are in daily production use.</li>
+        <li>Built the bilingual (English / Japanese) company website for clients in Thailand and Japan; all text lives outside the code, so contacts, certifications and product photos are updated in one place.</li>
+        <li>Turned two repurposed desktops into the company's first servers and grew them into a three-machine setup: core systems copied to a standby server every 15 minutes, nightly backups verified weekly, and a written recovery procedure.</li>
+        <li>Built four-layer monitoring (25 service checks, an external heartbeat for site-wide outages, security events, failed backup jobs) plus a daily disk and backup health check, so issues surface before users report them.</li>
+        <li>Delivered remote access over an encrypted VPN with per-person access, backed by two internet lines with load balancing and failover.</li>
+        <li>Cut IT costs by 45,200฿/year by moving files from a paid cloud service to the in-house file server and replacing paid antivirus with Windows Defender; 35 computers now report to a self-hosted security dashboard (Wazuh).</li>
+        <li>Built a Discord bot and n8n workflows that draft quality-register entries and write them only after one-click human approval, with NFC asset lookup and AI triage of IT email.</li>
+        <li>Moved nearly all IT quality documents (IATF 16949 / ISO 9001) to digital files; passed the first audit with no action requests.</li>
       </ul>
     </section>
 
     <section class="section">
       <h2 class="sec-head">Selected Projects</h2>
-
-      <div class="proj">
-        <div class="proj-name">Rotjana — AI Document Agent</div>
-        <p class="proj-desc">Claude-powered Discord agent that lets the IT team read and update QMS Excel registers in plain Thai — custom agentic loop, confirm-before-write with column-level permissions, multimodal attachment reading, and NFC asset-tag lookup.</p>
-        <div class="proj-stack">Node.js · Claude API · discord.js · Express · Docker</div>
-      </div>
-
-      <div class="proj">
-        <div class="proj-name">ERP System</div>
-        <p class="proj-desc">In-house ERP replacing fragmented per-department Excel sheets — BOM, raw materials, purchase orders, and MRP forecasting. Built solo as an 8-module modular monolith with enforced public-API boundaries, using a custom AI-driven development pipeline (plan → design → scaffold → test → docs).</p>
-        <div class="proj-stack">Next.js · TypeScript · PostgreSQL · Drizzle ORM · Docker</div>
-      </div>
-
-      <div class="proj">
-        <div class="proj-name">AI-Ready IT Knowledge Vault</div>
-        <p class="proj-desc">The IT department's entire knowledge base — security framework, SOPs, and QMS registers — engineered for AI consumption: YAML frontmatter contracts define each document's schema, its link to live Excel data, and what the Rotjana agent is allowed to read or write.</p>
-        <div class="proj-stack">Markdown · Obsidian · Claude</div>
-      </div>
+      <ul class="bullet-list">
+        <li><b>Suwisa</b>: A Discord assistant that reads Thai receipts and transfer slips locally, no AI API. <span class="tool-stack">Python · Docker</span></li>
+        <li><b>Manora</b>: A Discord music bot: paste a link or type a song name. <span class="tool-stack">Discord</span></li>
+        <li><b>Play-Time</b>: A small Windows app that tracks daily time spent in chosen programs. <span class="tool-stack">C# · WinForms</span></li>
+        <li><b>Crossword Solver</b>: Solves a crossword game from a screenshot using image reading and backtracking. <span class="tool-stack">Java</span></li>
+      </ul>
     </section>
 
     <section class="section">
       <h2 class="sec-head">Education</h2>
       <div class="entry">
-        <div class="e-role">B.Sc. Information Technology</div>
+        <h3 class="e-role">B.Sc. Information Technology</h3>
         <div class="e-meta">2021 — 2025</div>
       </div>
-      <div class="e-org">Silpakorn University, Faculty of Science — thesis: NFC TCG Deck Tracker (Flutter)</div>
+      <p class="e-org">Silpakorn University — graduation project: an NFC card-tracking app</p>
     </section>
-  </div>
+  </main>
+<script>
+if (location.hash === '#print') window.addEventListener('load', () => setTimeout(() => window.print(), 300));
+</script>
 </body>
 </html>
