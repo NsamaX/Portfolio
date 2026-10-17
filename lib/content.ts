@@ -85,6 +85,6 @@ export const STATS = [
   { value: '15 min', label: 'max data loss if a server fails' },
 ];
 
-export const PORTRAIT = '/profile.jpg';
+export const PORTRAIT = '/profile-collage.jpg';
 
 export const TILTS = [-1.2, 0.9, -0.6, 1.1, -0.9, 0.7];
