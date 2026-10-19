@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 export function Scribble({ color }: { color: string }) {
   return (
@@ -28,9 +28,9 @@ export function Mark({ color, children }: { color: string; children: ReactNode }
   );
 }
 
-export function Placeholder({ label, alt, style }: { label: string; alt?: string; style?: CSSProperties }) {
+export function Placeholder({ label, alt }: { label: string; alt?: string }) {
   return (
-    <div className="placeholder" role={alt ? 'img' : undefined} aria-label={alt} style={style}>
+    <div className="placeholder" role={alt ? 'img' : undefined} aria-label={alt}>
       <span>{label}</span>
     </div>
   );
