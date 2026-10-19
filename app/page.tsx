@@ -1,8 +1,9 @@
 import type { CSSProperties } from 'react';
+import Image from 'next/image';
 import Work from '@/components/Work';
 import Reveal from '@/components/Reveal';
 import { Handles, Mark, Placeholder, Scribble, Stripes } from '@/components/Decor';
-import { PORTRAIT, PROJECTS, SKILLS, STATS, TOOLS } from '@/lib/content';
+import { PORTRAIT, PROJECTS, SKILLS, STATS } from '@/lib/content';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -33,21 +34,6 @@ const jsonLd = {
           abstract: p.summary,
           description: `Problem: ${p.problem} Solution: ${p.solution} Result: ${p.result}`,
           keywords: p.tags.join(', '),
-        },
-      })),
-    },
-    {
-      '@type': 'ItemList',
-      name: 'Small Tools',
-      itemListElement: TOOLS.map((t, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        item: {
-          '@type': 'SoftwareSourceCode',
-          name: t.name,
-          description: `${t.name} — ${t.description}`,
-          codeRepository: t.url,
-          programmingLanguage: t.tags.join(', '),
         },
       })),
     },
@@ -116,8 +102,7 @@ export default function Home() {
                 <span className="tape" />
                 <div className="portrait-frame">
                   {PORTRAIT ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={PORTRAIT} alt="" />
+                    <Image src={PORTRAIT} alt="" width={1200} height={1500} sizes="(max-width: 639px) 140px, 230px" preload />
                   ) : (
                     <Placeholder label="portrait · images/me.png" />
                   )}
@@ -219,7 +204,7 @@ export default function Home() {
           </div>
           <div data-reveal="1" className="contact-right">
             <a href="mailto:vijuksama@gmail.com" className="email">vijuksama@gmail.com<Scribble color="#BF3E1E" /></a>
-            <a href="/resume.html#print" target="_blank" rel="noopener" className="resume-btn">
+            <a href="/resume.pdf" download="Vijuksama-Hongthongdaeng-Resume.pdf" className="resume-btn">
               DOWNLOAD RESUME (PDF)
               <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="1.5" x2="7" y2="10" /><polyline points="3,6.5 7,10.5 11,6.5" /><line x1="2" y1="13" x2="12" y2="13" /></svg>
             </a>

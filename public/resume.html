@@ -50,12 +50,6 @@
       letter-spacing: -.01em;
       color: var(--ink);
     }
-    .r-title {
-      font-size: 14.5px;
-      font-weight: 400;
-      color: var(--ink-2);
-      margin-top: 8px;
-    }
     .r-contact {
       margin-top: 12px;
       font-size: 12.5px;
@@ -158,9 +152,8 @@
   <main class="page">
     <header>
       <h1 class="r-name">Vijuksama Hongthongdaeng</h1>
-      <p class="r-title">IT Coordinator</p>
       <p class="r-contact">
-        <span>Live in Samut Prakan, Thailand</span>
+        <span>Based in Samut Prakan, Thailand</span>
         <span class="sep">|</span>
         <a href="mailto:vijuksama@gmail.com">vijuksama@gmail.com</a>
         <span class="sep">|</span>
@@ -172,13 +165,14 @@
 
     <section class="section">
       <h2 class="sec-head">Summary</h2>
-      <p class="body-text">IT Coordinator who designs, builds and runs a factory's systems end to end, from on-premise servers to in-house software. Sole IT for a 230-person automotive parts factory: moved it from separate Excel files and paid services to a self-hosted platform and a central ERP, cutting IT costs by 45,200฿/year. Making the complex simple.</p>
+      <p class="body-text">Designs, builds and runs a factory's systems end to end, from on-premise servers to in-house software. Sole IT for a 230-person automotive parts factory: moved it from separate Excel files and paid services to a self-hosted platform and a central ERP, cutting IT costs by THB 45,200/year. Making the complex simple.</p>
     </section>
 
     <section class="section">
       <h2 class="sec-head">Skills</h2>
       <p class="skill-line"><b>Systems &amp; Infrastructure:</b> Linux, Proxmox (clustering, replication), virtualization, backup &amp; recovery, networking, VPN</p>
-      <p class="skill-line"><b>DevOps &amp; Automation:</b> Docker, Nginx, Git, Vercel, monitoring (Uptime Kuma, Wazuh), workflow automation (n8n), Claude</p>
+      <p class="skill-line"><b>DevOps &amp; Automation:</b> Docker, Nginx, Git, Vercel, monitoring (Uptime Kuma, Wazuh), workflow automation (n8n)</p>
+      <p class="skill-line"><b>AI-Assisted Engineering:</b> Claude Code steered by architecture docs, decision records, project rules, pre-commit gates and specialist subagents (code review, database, UI, testing)</p>
       <p class="skill-line"><b>Software Engineering:</b> Next.js, React, TypeScript, Node.js, PostgreSQL, C#, Python</p>
       <p class="skill-line"><b>Languages:</b> Thai (Native), English (Working proficiency)</p>
     </section>
@@ -191,12 +185,12 @@
         <div class="e-meta">Nov 2025 — Present</div>
       </div>
       <ul class="bullet-list">
-        <li>Replaced per-department Excel files with a central ERP built single-handedly: 14 modules with role-based access and an audit trail; 4 are in daily production use.</li>
+        <li>Replaced per-department Excel files with a central ERP built single-handedly: 14 modules (seven for department workflows, plus role-based access, an audit trail and shared settings); bill of materials, marketing, purchasing and production use it daily, with store and delivery being built. Developed with AI agents under engineering controls: written architecture and decisions, module contracts, and checks that block a commit when they fail.</li>
         <li>Built the bilingual (English / Japanese) company website for clients in Thailand and Japan; all text lives outside the code, so contacts, certifications and product photos are updated in one place.</li>
         <li>Turned two repurposed desktops into the company's first servers and grew them into a three-machine setup: core systems copied to a standby server every 15 minutes, nightly backups verified weekly, and a written recovery procedure.</li>
         <li>Built four-layer monitoring (25 service checks, an external heartbeat for site-wide outages, security events, failed backup jobs) plus a daily disk and backup health check, so issues surface before users report them.</li>
         <li>Delivered remote access over an encrypted VPN with per-person access, backed by two internet lines with load balancing and failover.</li>
-        <li>Cut IT costs by 45,200฿/year by moving files from a paid cloud service to the in-house file server and replacing paid antivirus with Windows Defender; 35 computers now report to a self-hosted security dashboard (Wazuh).</li>
+        <li>Cut IT costs by THB 45,200/year by moving files from a paid cloud service to the in-house file server and replacing paid antivirus with Windows Defender; 35 computers now report to a self-hosted security dashboard (Wazuh).</li>
         <li>Built a Discord bot and n8n workflows that draft quality-register entries and write them only after one-click human approval, with NFC asset lookup and AI triage of IT email.</li>
         <li>Moved nearly all IT quality documents (IATF 16949 / ISO 9001) to digital files; passed the first audit with no action requests.</li>
       </ul>
@@ -205,10 +199,10 @@
     <section class="section">
       <h2 class="sec-head">Selected Projects</h2>
       <ul class="bullet-list">
-        <li><b>Suwisa</b>: A Discord assistant that reads Thai receipts and transfer slips locally, no AI API. <span class="tool-stack">Python · Docker</span></li>
-        <li><b>Manora</b>: A Discord music bot: paste a link or type a song name. <span class="tool-stack">Discord</span></li>
-        <li><b>Play-Time</b>: A small Windows app that tracks daily time spent in chosen programs. <span class="tool-stack">C# · WinForms</span></li>
-        <li><b>Crossword Solver</b>: Solves a crossword game from a screenshot using image reading and backtracking. <span class="tool-stack">Java</span></li>
+        <li><b>Crossword Solver</b>: Solves a crossword game from a screenshot by reading the grid and backtracking. <span class="tool-stack">Java</span></li>
+        <li><b>Window Share</b>: Streams a covered window into a VS Code tab to watch it beside its log. <span class="tool-stack">TypeScript · PowerShell</span></li>
+        <li><b>Play-Time</b>: Tracks time in chosen programs like Steam's playtime, with tamper-resistant storage. <span class="tool-stack">C# · WinForms</span></li>
+        <li><b>Suwisa</b>: A home-server Discord bot that reads Thai receipts locally, no AI API, to track spending. <span class="tool-stack">Python · Docker</span></li>
       </ul>
     </section>
 

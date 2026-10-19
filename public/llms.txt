@@ -13,7 +13,7 @@ Resume: resume.html
 ### Factory ERP
 Every department working from the same data.
 - Problem: Each department kept its own Excel files, so the same product had different numbers depending on who you asked.
-- Solution: Built a central system single-handedly, one module per department, with role-based access and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are being built.
+- Solution: Built a central system single-handedly: 14 modules, seven for department work from bill of materials and purchasing to production, store and delivery, and the rest for sign-in, user roles, settings and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are being built. Developed with AI agents (Claude Code), kept on track by written architecture and decision records, project rules, checks that block a commit when they fail, and specialist subagents for review, database, UI and tests.
 - Result: Line leaders record output every half-day, so planned and actual production sit side by side on one screen, and every department reads the same numbers.
 - Stack: Next.js, PostgreSQL
 
@@ -65,12 +65,6 @@ Quality records that are easy to find and easy to audit.
 - Solution: Moved nearly all IT quality documents to digital files in one searchable library, and reviewed the company against the automotive industry's information security checklist.
 - Result: Passed the first audit with no action requests, and turned the auditor's recommendations into a risk analysis and response plan.
 - Stack: IATF 16949, ISO 9001
-
-## Small Tools
-- [Suwisa](https://github.com/NsamaX/Suwisa): a Discord assistant that reads Thai receipts and transfer slips on its own server, no AI API needed (Python, Docker)
-- [Manora](https://github.com/NsamaX/Discord-Music): a Discord music bot: paste a link or type a song name (Discord)
-- [Play-Time](https://github.com/NsamaX/Play-Time): a small Windows app that tracks daily time spent in chosen programs (C#, WinForms)
-- [Crossword Solver](https://github.com/NsamaX/Crossword-Solver): solves a crossword game from a screenshot using image reading and backtracking (Java)
 
 ## What I can do
 - IT Support: Looking after computers and helping people work without interruptions.

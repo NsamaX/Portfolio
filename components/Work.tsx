@@ -1,13 +1,12 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
-import { PROJECTS, TILTS, TOOLS } from '@/lib/content';
+import Image from 'next/image';
+import { PROJECTS, TILTS } from '@/lib/content';
 import { Handles, Placeholder } from './Decor';
 
 const pad = (n: number) => String(n).padStart(2, '0');
 const total = pad(PROJECTS.length);
-const COL_MIN = 300;
-const COL_GAP = 32;
 // Three explicit columns filled row by row, so the cards read 01 → 08 left to right.
 const ROW_COLS = [0, 1, 2].map(c => PROJECTS.map((_, i) => i).filter(i => i % 3 === c));
 
@@ -17,16 +16,6 @@ export default function Work() {
   const closeRef = useRef<HTMLButtonElement>(null);
   const dlgRef = useRef<HTMLDivElement>(null);
   const returnRef = useRef<HTMLElement | null>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
-  const [wide, setWide] = useState(true);
-
-  useEffect(() => {
-    const el = gridRef.current;
-    if (!el) return;
-    const ro = new ResizeObserver(([e]) => setWide(e.contentRect.width >= 3 * COL_MIN + 2 * COL_GAP));
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
 
   const src = (image: string) => (image && !failed[image] ? encodeURI(image) : '');
   const fail = (image: string) => () => setFailed(f => ({ ...f, [image]: true }));
@@ -81,6 +70,7 @@ export default function Work() {
     const t = TILTS[i % TILTS.length];
     const s = src(p.image);
     const alt = `${p.title} — diagram`;
+    const [rw, rh] = p.ratio.split('/').map(Number);
     return (
       <div key={p.title} data-reveal="1" className="project">
         {p.fav && (
@@ -104,8 +94,7 @@ export default function Work() {
           <div className="card-num">PROJECT {pad(i + 1)}</div>
           <div className="card-body">
             {s ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img className="card-img" src={s} alt={alt} loading="lazy" onError={fail(p.image)} />
+              <Image className="card-img" src={s} alt={alt} width={rw * 100} height={rh * 100} sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" onError={fail(p.image)} />
             ) : (
               <div className="card-img placeholder" role="img" aria-label={alt} style={{ aspectRatio: p.ratio }}>
                 <span>{p.image || 'image coming soon'}</span>
@@ -131,42 +120,12 @@ export default function Work() {
 
   return (
     <>
-      <div ref={gridRef} className={wide ? 'projects-rows' : 'projects'}>
-        {wide
-          ? ROW_COLS.map((col, c) => <div key={c} className="projects-col">{col.map(renderProject)}</div>)
-          : PROJECTS.map((_, i) => renderProject(i))}
-      </div>
-
-      <div data-reveal="1" className="subhead subhead-tools">
-        <h3>Small Tools</h3>
-      </div>
-      <div className="tools">
-        {TOOLS.map((tool, i) => {
-          const s = src(tool.image);
-          const title = `${tool.name} — ${tool.description}`;
-          return (
-            <a key={tool.name} data-reveal="1" className="tool" href={tool.url} target="_blank" rel="noopener" aria-label={`${title} (GitHub)`}>
-              <figure style={{ '--tilt': `${TILTS[(i + 2) % TILTS.length] * 1.4}deg` } as CSSProperties}>
-                <div className="tool-img">
-                  {s ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={s} alt={title} loading="lazy" onError={fail(tool.image)} />
-                  ) : (
-                    <Placeholder label={tool.image || 'image coming soon'} alt={title} />
-                  )}
-                </div>
-                <figcaption>
-                  <span>{title}</span>
-                  {tool.tags.length > 0 && (
-                    <div className="tags">
-                      {tool.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
-                    </div>
-                  )}
-                </figcaption>
-              </figure>
-            </a>
-          );
-        })}
+      {/* Both layouts are in the HTML and a container query shows one, so the first paint is already right on any screen. */}
+      <div className="projects-wrap">
+        <div className="projects-rows">
+          {ROW_COLS.map((col, c) => <div key={c} className="projects-col">{col.map(renderProject)}</div>)}
+        </div>
+        <div className="projects">{PROJECTS.map((_, i) => renderProject(i))}</div>
       </div>
 
       {cur && (

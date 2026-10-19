@@ -10,19 +10,11 @@ export type Project = {
   result: string;
 };
 
-export type Tool = {
-  name: string;
-  description: string;
-  image: string;
-  url: string;
-  tags: string[];
-};
-
 export const PROJECTS: Project[] = [
-  { title: 'Factory ERP', image: '/projects/Enterprise Resource Planning.png', ratio: '16/10', tags: ['Next.js', 'PostgreSQL'], fav: true,
+  { title: 'Factory ERP', image: '/projects/Enterprise Resource Planning.png', ratio: '7/4', tags: ['Next.js', 'PostgreSQL'], fav: true,
     summary: 'Every department working from the same data.',
     problem: 'Each department kept its own Excel files, so the same product had different numbers depending on who you asked.',
-    solution: 'Built a central system single-handedly, one module per department, with role-based access and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are being built.',
+    solution: 'Built a central system single-handedly: 14 modules, seven for department work from bill of materials and purchasing to production, store and delivery, and the rest for sign-in, user roles, settings and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are being built. Developed with AI agents (Claude Code), kept on track by written architecture and decision records, project rules, checks that block a commit when they fail, and specialist subagents for review, database, UI and tests.',
     result: 'Line leaders record output every half-day, so planned and actual production sit side by side on one screen, and every department reads the same numbers.' },
   { title: 'Company Website', image: '/projects/Company Website.png', ratio: '16/10', tags: ['Next.js', 'TypeScript'],
     summary: "The company's public face for clients in Thailand and Japan.",
@@ -59,13 +51,6 @@ export const PROJECTS: Project[] = [
     problem: 'IT quality records were paper forms and scattered files, hard to search and slow to show an auditor.',
     solution: "Moved nearly all IT quality documents to digital files in one searchable library, and reviewed the company against the automotive industry's information security checklist.",
     result: "Passed the first audit with no action requests, and turned the auditor's recommendations into a risk analysis and response plan." },
-];
-
-export const TOOLS: Tool[] = [
-  { name: 'Suwisa', description: 'a Discord assistant that reads Thai receipts and transfer slips on its own server, no AI API needed', image: '/projects/Suwisa.png', url: 'https://github.com/NsamaX/Suwisa', tags: ['Python', 'Docker'] },
-  { name: 'Manora', description: 'a Discord music bot: paste a link or type a song name', image: '/projects/Manora.png', url: 'https://github.com/NsamaX/Discord-Music', tags: ['Discord'] },
-  { name: 'Play-Time', description: 'a small Windows app that tracks daily time spent in chosen programs', image: '/projects/Play Time.png', url: 'https://github.com/NsamaX/Play-Time', tags: ['C#', 'WinForms'] },
-  { name: 'Crossword Solver', description: 'solves a crossword game from a screenshot using image reading and backtracking', image: '/projects/Crossword Solver.png', url: 'https://github.com/NsamaX/Crossword-Solver', tags: ['Java'] },
 ];
 
 export const SKILLS = [
