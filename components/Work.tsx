@@ -68,7 +68,8 @@ export default function Work() {
   const renderProject = (i: number) => {
     const p = PROJECTS[i];
     const t = TILTS[i % TILTS.length];
-    const s = src(p.image);
+    const card = p.thumb ?? p.image;
+    const s = src(card);
     const alt = `${p.title} — diagram`;
     const [rw, rh] = p.ratio.split('/').map(Number);
     return (
@@ -94,10 +95,10 @@ export default function Work() {
           <div className="card-num">PROJECT {pad(i + 1)}</div>
           <div className="card-body">
             {s ? (
-              <Image className="card-img" src={s} alt={alt} width={rw * 100} height={rh * 100} sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" onError={fail(p.image)} />
+              <Image className="card-img" src={s} alt={alt} width={rw * 100} height={rh * 100} sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" onError={fail(card)} />
             ) : (
               <div className="card-img placeholder" role="img" aria-label={alt} style={{ aspectRatio: p.ratio }}>
-                <span>{p.image || 'image coming soon'}</span>
+                <span>{card || 'image coming soon'}</span>
               </div>
             )}
             <div className="card-text">
