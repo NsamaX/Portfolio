@@ -7,8 +7,10 @@ import { Handles, Placeholder } from './Decor';
 
 const pad = (n: number) => String(n).padStart(2, '0');
 const total = pad(PROJECTS.length);
-// Three explicit columns filled row by row, so the cards read 01 → 08 left to right.
-const ROW_COLS = [0, 1, 2].map(c => PROJECTS.map((_, i) => i).filter(i => i % 3 === c));
+// Explicit columns filled row by row, so the cards read 01 → 08 left to right.
+const toCols = (n: number) => Array.from({ length: n }, (_, c) => PROJECTS.map((_, i) => i).filter(i => i % n === c));
+const COLS_3 = toCols(3);
+const COLS_2 = toCols(2);
 
 export default function Work() {
   const [active, setActive] = useState(-1);
@@ -68,10 +70,11 @@ export default function Work() {
   const renderProject = (i: number) => {
     const p = PROJECTS[i];
     const t = TILTS[i % TILTS.length];
-    const card = p.thumb ?? p.image;
+    const card = p.thumb?.src ?? p.image;
+    const ratio = p.thumb?.ratio ?? p.ratio;
     const s = src(card);
     const alt = `${p.title} — diagram`;
-    const [rw, rh] = p.ratio.split('/').map(Number);
+    const [rw, rh] = ratio.split('/').map(Number);
     return (
       <div key={p.title} data-reveal="1" className="project">
         {p.fav && (
@@ -97,7 +100,7 @@ export default function Work() {
             {s ? (
               <Image className="card-img" src={s} alt={alt} width={rw * 100} height={rh * 100} sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" onError={fail(card)} />
             ) : (
-              <div className="card-img placeholder" role="img" aria-label={alt} style={{ aspectRatio: p.ratio }}>
+              <div className="card-img placeholder" role="img" aria-label={alt} style={{ aspectRatio: ratio }}>
                 <span>{card || 'image coming soon'}</span>
               </div>
             )}
@@ -121,10 +124,13 @@ export default function Work() {
 
   return (
     <>
-      {/* Both layouts are in the HTML and a container query shows one, so the first paint is already right on any screen. */}
+      {/* Every layout is in the HTML and a container query shows one, so the first paint is already right on any screen. */}
       <div className="projects-wrap">
-        <div className="projects-rows">
-          {ROW_COLS.map((col, c) => <div key={c} className="projects-col">{col.map(renderProject)}</div>)}
+        <div className="projects-rows cols-3">
+          {COLS_3.map((col, c) => <div key={c} className="projects-col">{col.map(renderProject)}</div>)}
+        </div>
+        <div className="projects-rows cols-2">
+          {COLS_2.map((col, c) => <div key={c} className="projects-col">{col.map(renderProject)}</div>)}
         </div>
         <div className="projects">{PROJECTS.map((_, i) => renderProject(i))}</div>
       </div>
@@ -144,8 +150,15 @@ export default function Work() {
             <div className="dialog-media">
               <span aria-hidden="true" className="tape" />
               {src(cur.image) ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={src(cur.image)} alt={`${cur.title} — diagram`} onError={fail(cur.image)} />
+                <Image
+                  src={src(cur.image)}
+                  alt={`${cur.title} — diagram`}
+                  width={Number(cur.ratio.split('/')[0]) * 100}
+                  height={Number(cur.ratio.split('/')[1]) * 100}
+                  sizes="(max-width: 860px) 100vw, 1040px"
+                  quality={90}
+                  onError={fail(cur.image)}
+                />
               ) : (
                 <Placeholder label={cur.image || 'image coming soon'} alt={`${cur.title} — diagram`} />
               )}

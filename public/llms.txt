@@ -13,7 +13,7 @@ Resume: resume.html
 ### Factory ERP
 Every department working from the same data.
 - Problem: Each department kept its own Excel files, so the same product had different numbers depending on who you asked.
-- Solution: Built a central system single-handedly: 14 modules, seven for department work from bill of materials and purchasing to production, store and delivery, and the rest for sign-in, user roles, settings and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are being built. Developed with AI agents (Claude Code), kept on track by written architecture and decision records, project rules, checks that block a commit when they fail, and specialist subagents for review, database, UI and tests.
+- Solution: Designed and delivered a central system single-handedly: 14 modules with role-based access and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are being built. Developed with AI (Claude Code), held to one standard by written rules and automatic checks on every change.
 - Result: Line leaders record output every half-day, so planned and actual production sit side by side on one screen, and every department reads the same numbers.
 - Stack: Next.js, PostgreSQL
 

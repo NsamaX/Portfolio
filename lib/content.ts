@@ -1,8 +1,8 @@
 export type Project = {
   title: string;
   image: string;
-  thumb?: string;
   ratio: string;
+  thumb?: { src: string; ratio: string };
   tags: string[];
   fav?: boolean;
   summary: string;
@@ -12,10 +12,10 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
-  { title: 'Factory ERP', image: '/projects/Enterprise Resource Planning.png', thumb: '/projects/Enterprise Resource Planning Card.png', ratio: '602/315', tags: ['Next.js', 'PostgreSQL'], fav: true,
+  { title: 'Factory ERP', image: '/projects/Enterprise Resource Planning.png', ratio: '1535/958', thumb: { src: '/projects/Enterprise Resource Planning Card.png', ratio: '602/315' }, tags: ['Next.js', 'PostgreSQL'], fav: true,
     summary: 'Every department working from the same data.',
     problem: 'Each department kept its own Excel files, so the same product had different numbers depending on who you asked.',
-    solution: 'Built a central system single-handedly: 14 modules, seven for department work from bill of materials and purchasing to production, store and delivery, and the rest for sign-in, user roles, settings and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are being built. Developed with AI agents (Claude Code), kept on track by written architecture and decision records, project rules, checks that block a commit when they fail, and specialist subagents for review, database, UI and tests.',
+    solution: 'Designed and delivered a central system single-handedly: 14 modules with role-based access and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are being built. Developed with AI (Claude Code), held to one standard by written rules and automatic checks on every change.',
     result: 'Line leaders record output every half-day, so planned and actual production sit side by side on one screen, and every department reads the same numbers.' },
   { title: 'Company Website', image: '/projects/Company Website.png', ratio: '16/10', tags: ['Next.js', 'TypeScript'],
     summary: "The company's public face for clients in Thailand and Japan.",
