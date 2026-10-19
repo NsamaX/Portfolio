@@ -98,7 +98,7 @@ export default function Work() {
           <div className="card-num">PROJECT {pad(i + 1)}</div>
           <div className="card-body">
             {s ? (
-              <Image className="card-img" src={s} alt={alt} width={rw * 100} height={rh * 100} sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" onError={fail(card)} />
+              <Image className="card-img" src={s} alt={alt} width={rw * 100} height={rh * 100} sizes="(max-width: 686px) 100vw, (max-width: 1043px) 50vw, 400px" onError={fail(card)} />
             ) : (
               <div className="card-img placeholder" role="img" aria-label={alt} style={{ aspectRatio: ratio }}>
                 <span>{card || 'image coming soon'}</span>

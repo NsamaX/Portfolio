@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
   { title: 'Factory ERP', image: '/projects/Enterprise Resource Planning.png', ratio: '1535/958', thumb: { src: '/projects/Enterprise Resource Planning Card.png', ratio: '602/315' }, tags: ['Next.js', 'PostgreSQL'], fav: true,
     summary: 'Every department working from the same data.',
     problem: 'Each department kept its own Excel files, so the same product had different numbers depending on who you asked.',
-    solution: 'Designed and delivered a central system single-handedly: 14 modules with role-based access and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are being built. Developed with AI (Claude Code), held to one standard by written rules and automatic checks on every change.',
+    solution: 'Designed and delivered a central system single-handedly: 14 modules with role-based access and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are being built. Developed with AI (Claude Code); every change is checked automatically before it goes live.',
     result: 'Line leaders record output every half-day, so planned and actual production sit side by side on one screen, and every department reads the same numbers.' },
   { title: 'Company Website', image: '/projects/Company Website.png', ratio: '16/10', tags: ['Next.js', 'TypeScript'],
     summary: "The company's public face for clients in Thailand and Japan.",
