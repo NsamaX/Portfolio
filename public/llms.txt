@@ -1,8 +1,8 @@
 # Vijuksama Hongthongdaeng
 
-> Factory IT: support, servers and practical in-house software. Sole IT for a 230-person factory at Nozomi Enterprise (Thailand). Making the complex simple.
+> Factory IT: support, servers and practical in-house software. Sole IT for a 340-person factory at Nozomi Enterprise (Thailand). Making the complex simple.
 
-- 230 people supported as the only IT
+- 340 people supported as the only IT
 - 45,200฿ cut from IT costs every year
 - 15 min max data loss if a server fails
 
@@ -73,5 +73,5 @@ Quality records that are easy to find and easy to audit.
 - Tools: Linux, Proxmox, Docker, Git, Vercel, PostgreSQL, Next.js, Claude
 
 ## Experience
-- Nov 2025 – Present · IT Coordinator, Nozomi Enterprise (Thailand): Sole IT for a 230-person factory, cutting total IT costs by 45,200฿/year.
+- Nov 2025 – Present · IT Coordinator, Nozomi Enterprise (Thailand): Sole IT for a 340-person factory, cutting total IT costs by 45,200฿/year.
 - 2021 – 2025 · Silpakorn University: B.Sc. Information Technology — graduation project: an NFC card-tracking app.

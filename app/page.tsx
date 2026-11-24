@@ -13,7 +13,7 @@ const jsonLd = {
       '@id': '#me',
       name: 'Vijuksama Hongthongdaeng',
       jobTitle: 'IT Coordinator',
-      description: 'Sole IT for a 230-person factory. Making the complex simple.',
+      description: 'Sole IT for a 340-person factory. Making the complex simple.',
       email: 'mailto:vijuksama@gmail.com',
       sameAs: ['https://github.com/NsamaX'],
       worksFor: { '@type': 'Organization', name: 'Nozomi Enterprise (Thailand)' },
@@ -176,7 +176,7 @@ export default function Home() {
             <div className="timeline-body">
               <span>IT COORDINATOR</span>
               <h3>Nozomi Enterprise (Thailand)</h3>
-              <p>Sole IT for a 230-person factory, cutting total IT costs by 45,200฿/year.</p>
+              <p>Sole IT for a 340-person factory, cutting total IT costs by 45,200฿/year.</p>
             </div>
           </li>
           <li data-reveal="1">
