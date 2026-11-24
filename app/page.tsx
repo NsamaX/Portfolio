@@ -19,7 +19,6 @@ const jsonLd = {
       worksFor: { '@type': 'Organization', name: 'Nozomi Enterprise (Thailand)' },
       alumniOf: { '@type': 'CollegeOrUniversity', name: 'Silpakorn University' },
       knowsAbout: ['Linux', 'Proxmox', 'Docker', 'Git', 'Vercel', 'PostgreSQL', 'Next.js', 'Claude', 'Wazuh', 'WireGuard', 'Nginx', 'Uptime Kuma', 'n8n'],
-      seeks: 'Not looking, happy to chat.',
     },
     {
       '@type': 'ItemList',
@@ -197,10 +196,6 @@ export default function Home() {
               <span>Want to</span>
               <span><Mark color="var(--coral)">work</Mark> <span className="it">to</span>gether?</span>
             </h2>
-            <p className="status">
-              <span aria-hidden="true" className="status-dot" />
-              <span>Not looking, <span className="it">happy to chat</span>.</span>
-            </p>
           </div>
           <div data-reveal="1" className="contact-right">
             <a href="mailto:vijuksama@gmail.com" className="email">vijuksama@gmail.com<Scribble color="#BF3E1E" /></a>

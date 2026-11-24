@@ -66,7 +66,7 @@ export const SKILLS = [
 ];
 
 export const STATS = [
-  { value: '340', label: 'people supported as the only IT' },
+  { value: '340', label: 'people in a factory with one IT' },
   { value: '45,200฿', label: 'cut from IT costs every year' },
   { value: '15 min', label: 'max data loss if a server fails' },
 ];

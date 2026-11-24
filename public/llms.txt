@@ -2,11 +2,11 @@
 
 > Factory IT: support, servers and practical in-house software. Sole IT for a 340-person factory at Nozomi Enterprise (Thailand). Making the complex simple.
 
-- 340 people supported as the only IT
+- 340 people in a factory with one IT
 - 45,200฿ cut from IT costs every year
 - 15 min max data loss if a server fails
 
-Contact: vijuksama@gmail.com · GitHub: https://github.com/NsamaX · Status: Not looking, happy to chat.
+Contact: vijuksama@gmail.com · GitHub: https://github.com/NsamaX
 Resume: resume.html
 
 ## Work

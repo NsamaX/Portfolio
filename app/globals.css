@@ -539,18 +539,6 @@ a { color: var(--ink); text-decoration: none; }
   white-space: nowrap;
 }
 .contact-title > span:first-child { padding-left: clamp(16px, 5vw, 80px); }
-.status {
-  margin: 0;
-  align-self: flex-end;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--serif);
-  font-size: clamp(22px, 2.4vw, 30px);
-  line-height: 1.1;
-  letter-spacing: -.01em;
-}
-.status-dot { flex: none; width: 11px; height: 11px; border-radius: 50%; background: var(--teal); }
 .email {
   position: relative;
   align-self: flex-end;
@@ -576,7 +564,6 @@ a { color: var(--ink); text-decoration: none; }
 .resume-btn:hover { background: var(--ink); color: var(--amber); }
 @media (max-width: 860px) {
   .contact-grid { grid-template-columns: 1fr; align-content: center; }
-  .status { align-self: flex-start; padding-left: clamp(48px, 18vw, 160px); }
 }
 .footer {
   display: flex;
