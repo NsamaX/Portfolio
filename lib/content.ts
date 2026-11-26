@@ -12,17 +12,17 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
-  { title: 'Factory ERP', image: '/projects/Enterprise Resource Planning.png', ratio: '1535/958', thumb: { src: '/projects/Enterprise Resource Planning Card.png', ratio: '602/315' }, tags: ['Next.js', 'PostgreSQL'], fav: true,
+  { title: 'Factory ERP', image: '/projects/Enterprise Resource Planning.png', ratio: '1535/958', thumb: { src: '/projects/Enterprise Resource Planning Card.png', ratio: '602/315' }, tags: ['Next.js', 'PostgreSQL'],
     summary: 'Every department working from the same data.',
     problem: 'Each department kept its own Excel files, so the same product had different numbers depending on who you asked.',
-    solution: 'Designed and delivered a central system single-handedly: 14 modules with role-based access and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are in trial use. Developed with AI (Claude Code); every change is checked automatically before it is committed.',
+    solution: 'Designed and delivered a central system single-handedly, with role-based access and a record of who changed what. Bill of materials, marketing, purchasing and production are in daily use; delivery and store are in trial use. Developed with AI (Claude Code); every change is checked automatically before it is committed.',
     result: 'Line leaders record output every half-day, so planned and actual production sit side by side on one screen, and every department reads the same numbers.' },
   { title: 'Company Website', image: '/projects/Company Website.png', ratio: '16/10', tags: ['Next.js', 'TypeScript'],
     summary: "The company's public face for clients in Thailand and Japan.",
     problem: 'Clients needed one place to see products and certifications in English and Japanese.',
     solution: 'Built a bilingual site with a language switch; all text lives in two files outside the code.',
     result: 'Contacts, certifications and product photos can be updated in one place without touching code.' },
-  { title: 'Server from Old PCs', image: '/diagrams/servers.svg', ratio: '41/28', tags: ['Proxmox', 'Linux', 'Docker'],
+  { title: 'Zero-Budget Server Cluster', image: '/diagrams/servers.svg', ratio: '41/28', tags: ['Proxmox', 'Linux', 'Docker'], fav: true,
     summary: "Turning old computers into the company's servers.",
     problem: 'The company had no server and no budget, and was paying every month for cloud file storage.',
     solution: 'Turned two old desktops into a main server and a backup server, then added a standby server. Core systems are copied to the standby every 15 minutes, and everything is backed up nightly and checked weekly.',
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
   { title: 'Automated Monitoring', image: '/diagrams/monitoring.svg', ratio: '41/30', tags: ['Uptime Kuma', 'n8n'],
     summary: 'Knowing about problems before anyone calls.',
     problem: 'Outages were only noticed when staff phoned in, and disks and backups were checked by hand.',
-    solution: 'Built four layers of alerts into one channel: 25 service checks every minute, a heartbeat watched from outside, security events, and failed server jobs. A health check every morning covers disks, storage and backups.',
+    solution: 'Built four layers of alerts into one channel: every service checked every minute, a heartbeat watched from outside, security events, and failed server jobs. A health check every morning covers disks, storage and backups.',
     result: 'Quiet while everything is fine. Even if the whole factory loses power or internet, an outside service notices the silence and raises the alarm.' },
   { title: 'Work From Home', image: '/diagrams/remote-access.svg', ratio: '41/25', tags: ['WireGuard', 'Nginx'],
     summary: 'Safe access to company systems from anywhere.',
@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
   { title: 'Antivirus Defense', image: '/diagrams/security.svg', ratio: '82/47', tags: ['Wazuh', 'Defender'],
     summary: 'One place to see the security of every computer.',
     problem: "The company paid for antivirus every year but couldn't see which machines had problems.",
-    solution: "Moved 35 computers to Windows' built-in antivirus and connected them to a free, self-hosted security dashboard that only raises an alert for serious events.",
+    solution: "Moved every company computer to Windows' built-in antivirus and connected them to a free, self-hosted security dashboard that only raises an alert for serious events.",
     result: 'Saves 9,200฿/year. In a test with a harmless sample file, the alert arrived within a minute.' },
   { title: 'IT Paperwork Bot', image: '/diagrams/paperwork.svg', ratio: '41/28', tags: ['n8n', 'Node.js', 'Claude'],
     summary: 'Records that fill themselves in, but only after a person says yes.',
@@ -66,7 +66,7 @@ export const SKILLS = [
 ];
 
 export const STATS = [
-  { value: '340', label: 'people in a factory with one IT' },
+  { value: '300+', label: 'people in a factory with one IT' },
   { value: '45,200฿', label: 'cut from IT costs every year' },
   { value: '15 min', label: 'max data loss if a server fails' },
 ];

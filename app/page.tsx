@@ -13,7 +13,7 @@ const jsonLd = {
       '@id': '#me',
       name: 'Vijuksama Hongthongdaeng',
       jobTitle: 'IT Coordinator',
-      description: 'Sole IT for a 340-person factory. Making the complex simple.',
+      description: 'Sole IT for a 300+ person factory. Making the complex simple.',
       email: 'mailto:vijuksama@gmail.com',
       sameAs: ['https://github.com/NsamaX'],
       worksFor: { '@type': 'Organization', name: 'Nozomi Enterprise (Thailand)' },
@@ -123,7 +123,7 @@ export default function Home() {
 
       <section id="work" aria-labelledby="h-proj" className="band work">
         <h2 id="h-proj" data-reveal="1" className="band-title work-title">
-          <span>Things</span>
+          <span>Things</span>{' '}
           <span>I&apos;ve <Mark color="var(--amber)"><span className="it">built</span></Mark>.</span>
         </h2>
 
@@ -143,7 +143,7 @@ export default function Home() {
 
       <section aria-labelledby="h-do" className="band skillset">
         <h2 id="h-do" data-reveal="1" className="band-title">
-          <span>What I</span>
+          <span>What I</span>{' '}
           <span>can <Mark color="var(--sage)"><span className="it">do</span></Mark>.</span>
         </h2>
         <div data-reveal="1" className="folders">
@@ -166,7 +166,7 @@ export default function Home() {
 
       <section aria-labelledby="h-exp" className="band experience">
         <h2 id="h-exp" data-reveal="1" className="band-title">
-          <span>Where I&apos;ve</span>
+          <span>Where I&apos;ve</span>{' '}
           <span>been <span className="it">so far</span>.</span>
         </h2>
         <ol className="timeline">
@@ -175,7 +175,7 @@ export default function Home() {
             <div className="timeline-body">
               <span>IT COORDINATOR</span>
               <h3>Nozomi Enterprise (Thailand)</h3>
-              <p>Sole IT for a 340-person factory, cutting total IT costs by 45,200฿/year.</p>
+              <p>Sole IT for a 300+ person factory, cutting total IT costs by 45,200฿/year.</p>
             </div>
           </li>
           <li data-reveal="1">
@@ -193,7 +193,7 @@ export default function Home() {
         <div className="contact-grid">
           <div data-reveal="1" className="contact-left">
             <h2 id="h-contact" className="band-title contact-title">
-              <span>Want to</span>
+              <span>Want to</span>{' '}
               <span><Mark color="var(--coral)">work</Mark> <span className="it">to</span>gether?</span>
             </h2>
           </div>
